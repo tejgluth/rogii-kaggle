@@ -1,0 +1,92 @@
+{
+  "n_train_wells": 773,
+  "n_test_wells": 3,
+  "n_typewell_files": 773,
+  "train_total_rows": 5092255,
+  "test_total_rows": 19221,
+  "train_columns": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "ANCC",
+    "ASTNU",
+    "ASTNL",
+    "EGFDU",
+    "EGFDL",
+    "BUDA",
+    "TVT",
+    "GR",
+    "TVT_input"
+  ],
+  "test_columns": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "GR",
+    "TVT_input"
+  ],
+  "typewell_columns": [
+    "TVT",
+    "GR",
+    "Geology"
+  ],
+  "tvt_mean": 11503.643960852312,
+  "tvt_std": 639.9710847783145,
+  "tvt_min": 9245.19,
+  "tvt_max": 12893.89,
+  "gr_mean": 87.75241378924949,
+  "gr_std": 23.76833546921526,
+  "gr_tvt_corr_mean": -0.2313602855482145,
+  "gr_tvt_corr_std": 0.25311199424883957,
+  "has_missing_values": true,
+  "missing_value_columns": [
+    "ANCC",
+    "EGFDL",
+    "GR",
+    "TVT_input"
+  ],
+  "train_missing_values": {
+    "MD": 0,
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "ANCC": 45634,
+    "ASTNU": 0,
+    "ASTNL": 0,
+    "EGFDU": 0,
+    "EGFDL": 6067,
+    "BUDA": 0,
+    "TVT": 0,
+    "GR": 1507972,
+    "TVT_input": 3783989
+  },
+  "test_missing_values": {
+    "MD": 0,
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "GR": 3784,
+    "TVT_input": 14151
+  },
+  "tvt_distribution": {
+    "count": 5092255,
+    "mean": 11503.643960852312,
+    "std": 639.9710847783145,
+    "min": 9245.19,
+    "max": 12893.89,
+    "p5": 10679.01,
+    "p25": 10987.93,
+    "p50": 11354.51,
+    "p75": 12038.26,
+    "p95": 12669.42
+  },
+  "per_well_tvt_range": {
+    "count": 773,
+    "mean": 734.4689262613196,
+    "std": 175.48437690380618,
+    "min": 158.92999999999847,
+    "max": 1256.7000000000007
+  }
+}

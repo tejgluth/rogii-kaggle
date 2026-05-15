@@ -1,0 +1,28 @@
+{
+  "experiment_id": "exp003",
+  "phase": "feature_engineering",
+  "description": "Typewell GR cross-correlation features: sliding-window cross-correlation between lateral GR and typewell GR. For each row, compute best_lag, best_corr, corr_top3_mean, corr_argmax_position, and the lag where DTW/correlation distance to typewell is minimized. This is the core TVT domain signal and is expected to massively beat the baseline.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "typewell_best_lag",
+    "typewell_best_corr",
+    "typewell_corr_at_lag_0",
+    "typewell_corr_max_minus_mean",
+    "typewell_corr_peakiness",
+    "typewell_gr_at_best_lag",
+    "typewell_gr_minus_local_gr_at_best_lag",
+    "typewell_lag_smoothness_rollmean_50"
+  ],
+  "base_experiment": "exp_b001",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp003.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp003.npy",
+  "save_result_path": "experiments/results/exp003.json",
+  "implementation_notes": [
+    "For each well, take a rolling GR window (e.g., 51 samples centered on each row) and cross-correlate against the corresponding typewell's GR series over lag range [-60, +60] in TVT units.",
+    "The typewell GR is indexed by TVT. Use TVT_input_filled as the prior center for the search window when available; otherwise search globally within the well's typewell TVT range.",
+    "Report at every row: best_lag (argmax of correlation), best_corr (max value), peakiness = (max - median) / (std + 1e-6).",
+    "Smooth best_lag along MD with a rolling mean (window 50) since TVT changes smoothly — that smoothed lag IS effectively a TVT estimate.",
+    "Use GroupKFold by well_id, 5 folds. Compare CV RMSE to exp_b001 (37.11). Save OOF and test predictions in the exact row order of the train and test CSVs.",
+    "Add the feature-extraction code to src/features.py as a new function `add_typewell_correlation_features(df, typewell_df)`."
+  ]
+}

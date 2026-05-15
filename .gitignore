@@ -1,0 +1,52 @@
+# Data — never commit raw competition data
+data/raw/
+data/processed/
+
+# Experiment artifacts — large numpy files
+experiments/oof/*.npy
+experiments/test_preds/*.npy
+
+# Secrets
+.env
+*.env
+**/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Conda / venv
+.conda/
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kaggle credentials
+~/.kaggle/kaggle.json
+kaggle.json
+
+# Submission files (too large for git, keep locally)
+submission*.csv
+
+# Codex temp files
+experiments/specs/*_prompt.txt

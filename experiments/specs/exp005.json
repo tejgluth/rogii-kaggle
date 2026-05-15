@@ -1,0 +1,31 @@
+{
+  "experiment_id": "exp005",
+  "phase": "feature_engineering",
+  "description": "Trajectory-derived features: dog-leg severity (DLS) proxies from XYZ deltas, TVD/Z gradient, cumulative lateral distance from heel, XY displacement from heel, smoothed Z trend, and curvature proxies. These capture structural geometry that complements GR-based features.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "x_diff_5",
+    "y_diff_5",
+    "z_diff_5",
+    "z_gradient_rollmean_30",
+    "dls_xyz",
+    "dls_xyz_rollmean_30",
+    "lateral_dist_from_heel",
+    "xy_dist_from_heel",
+    "z_curvature",
+    "md_step",
+    "inclination_proxy",
+    "azimuth_proxy",
+    "depth_below_heel_z"
+  ],
+  "base_experiment": "exp_b001",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp005.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp005.npy",
+  "save_result_path": "experiments/results/exp005.json",
+  "implementation_notes": [
+    "Compute deltas within each well (groupby well_id). DLS proxy = sqrt(dx^2+dy^2+dz^2) per MD step normalized by md_step.",
+    "Inclination proxy = atan2(sqrt(dx^2+dy^2), dz). Azimuth proxy = atan2(dy, dx).",
+    "Z curvature = second difference of z smoothed with rolling window 30.",
+    "Use GroupKFold(5) by well_id. Compare CV RMSE to exp_b001 (37.11). Add code to src/features.py."
+  ]
+}

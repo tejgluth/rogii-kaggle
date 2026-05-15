@@ -1,0 +1,27 @@
+{
+  "experiment_id": "exp_b002",
+  "model": "xgboost",
+  "cv_rmse": 37.82233810424805,
+  "cv_rmse_std": 5.038665361430741,
+  "features_used": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "depth_from_heel",
+    "depth_fraction",
+    "gr_filled",
+    "gr_rolling_mean_10",
+    "gr_rolling_mean_30",
+    "gr_rolling_std_10",
+    "gr_rolling_mean_100",
+    "tvt_input_filled",
+    "x_diff",
+    "y_diff",
+    "z_diff",
+    "lateral_speed"
+  ],
+  "n_features": 16,
+  "training_time_seconds": 127.97099161148071,
+  "notes": "XGBoost baseline with basic MD/XYZ/GR features"
+}

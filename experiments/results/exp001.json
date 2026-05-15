@@ -1,0 +1,10 @@
+{
+  "experiment_id": "exp001",
+  "model": "none",
+  "cv_rmse": null,
+  "cv_rmse_std": null,
+  "features_used": [],
+  "n_features": 0,
+  "training_time_seconds": 0,
+  "notes": "TVT ranges from 9,245.1900 to 12,893.8900, with mean 11,503.6440 and std 639.9711."
+}

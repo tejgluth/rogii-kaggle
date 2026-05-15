@@ -1,0 +1,42 @@
+{
+  "experiment_id": "exp004",
+  "phase": "feature_engineering",
+  "description": "Expanded GR rolling statistics and per-well normalization: multi-window rolling mean/std/min/max/slope, GR diff at multiple lags, GR percentile rank within well, GR z-score within well, well-level GR aggregates (mean/std/min/max/skew/kurt) broadcast as columns. Cheap, broad coverage of the GR signal beyond the few rolling features in the baseline.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "gr_rolling_mean_5",
+    "gr_rolling_mean_20",
+    "gr_rolling_mean_50",
+    "gr_rolling_std_5",
+    "gr_rolling_std_20",
+    "gr_rolling_std_50",
+    "gr_rolling_std_100",
+    "gr_rolling_min_30",
+    "gr_rolling_max_30",
+    "gr_rolling_min_100",
+    "gr_rolling_max_100",
+    "gr_rolling_slope_30",
+    "gr_rolling_slope_100",
+    "gr_diff_1",
+    "gr_diff_3",
+    "gr_diff_5",
+    "gr_diff_20",
+    "gr_pct_rank_well",
+    "gr_zscore_well",
+    "gr_well_mean",
+    "gr_well_std",
+    "gr_well_min",
+    "gr_well_max",
+    "gr_well_skew"
+  ],
+  "base_experiment": "exp_b001",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp004.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp004.npy",
+  "save_result_path": "experiments/results/exp004.json",
+  "implementation_notes": [
+    "Build on the baseline feature pipeline; add the listed features on top of exp_b001's set.",
+    "Use GroupKFold(5) by well_id. LightGBM GPU if available.",
+    "Slope = rolling linear regression slope of GR vs MD within window. Implement efficiently (e.g., via cumulative sums) to avoid O(N*W) cost.",
+    "Add new feature functions to src/features.py without overwriting existing ones."
+  ]
+}

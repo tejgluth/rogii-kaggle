@@ -1,0 +1,4 @@
+experiment_id,timestamp,phase,model,cv_rmse,cv_rmse_std,n_features,base_experiment,description,notes,oof_path,test_path,training_time_seconds
+exp001,2026-05-14T15:36:19,eda,none,,,,,,"773 train wells, 3 test, TVT mean=11503.6 std=640. Test has only 6 cols: MD,X,Y,Z,GR,TVT_input. GR missing 30%, TVT_input missing 74%.",experiments/oof/oof_none_exp001.npy,experiments/test_preds/test_none_exp001.npy,
+exp_b002,2026-05-14T15:41:52,baseline,xgboost,37.82,,,,,XGBoost baseline 16 features MD/XYZ/GR. cv_rmse_std=5.04. 128s training.,MISSING,MISSING,
+exp_b001,2026-05-14T15:46:58,baseline,lightgbm,37.11,,,,,LightGBM baseline 16 features MD/XYZ/GR. cv_rmse_std=6.30. 456s training.,MISSING,MISSING,

@@ -1,0 +1,26 @@
+{
+  "experiment_id": "exp006",
+  "phase": "feature_engineering",
+  "description": "DTW (Dynamic Time Warping) lag features between lateral GR window and typewell GR. For each row, compute DTW distance at multiple lag offsets and extract the best-matching lag and distance profile. Complements cross-correlation in exp003 by being robust to local stretching/squeezing of the GR signal.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_distance_at_lag_0",
+    "dtw_distance_spread",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence"
+  ],
+  "base_experiment": "exp_b001",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp006.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp006.npy",
+  "save_result_path": "experiments/results/exp006.json",
+  "implementation_notes": [
+    "Use fastdtw or a hand-coded constrained DTW with Sakoe-Chiba band (radius=5) for speed.",
+    "For each row, take a centered GR window of size 41 from the lateral well, and compare to the typewell GR at lag offsets in [-40, +40] (step 2 is fine for speed).",
+    "Cache typewell GR series per well to avoid recomputation.",
+    "dtw_confidence = (second_best_distance - best_distance) / (best_distance + 1e-6).",
+    "Aggressively downsample (every 5th MD row) for the DTW computation, then interpolate features back to all rows — total runtime budget < 30 min.",
+    "Use GroupKFold(5) by well_id. Compare CV RMSE to exp_b001 (37.11). Add code to src/features.py."
+  ]
+}

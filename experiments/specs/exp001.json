@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp001",
+  "phase": "eda",
+  "description": "Full EDA of train/test data — shapes, GR stats, TVT distribution, typewell coverage, missing values",
+  "model": "none",
+  "features_to_add": [],
+  "base_experiment": null,
+  "data_train_dir": "data/raw/rogii-wellbore-geology-prediction/train",
+  "data_test_dir": "data/raw/rogii-wellbore-geology-prediction/test",
+  "save_oof_path": "experiments/oof/oof_none_exp001.npy",
+  "save_test_path": "experiments/test_preds/test_none_exp001.npy",
+  "save_result_path": "experiments/results/exp001.json",
+  "save_eda_report": "experiments/results/eda_report.md",
+  "save_eda_stats": "experiments/results/eda_stats.json",
+  "notes": "EDA only — no model training. OOF/test pred files should be empty placeholders."
+}
