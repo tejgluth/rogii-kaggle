@@ -1,0 +1,63 @@
+[
+  {
+    "exp": "exp051",
+    "lat": 2.7545504570007324,
+    "params": {
+      "objective": "reg:squarederror",
+      "learning_rate": 0.03,
+      "max_depth": 6,
+      "min_child_weight": 20,
+      "subsample": 0.85,
+      "colsample_bytree": 0.7,
+      "reg_lambda": 2.0,
+      "seed": 7
+    },
+    "elapsed": 436.69267654418945
+  },
+  {
+    "exp": "exp052",
+    "lat": 3.615208148956299,
+    "params": {
+      "objective": "reg:squarederror",
+      "learning_rate": 0.025,
+      "max_depth": 10,
+      "min_child_weight": 10,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 3.0,
+      "seed": 11
+    },
+    "elapsed": 668.4665780067444
+  },
+  {
+    "exp": "exp053",
+    "lat": 24.475168228149414,
+    "params": {
+      "objective": "reg:pseudohubererror",
+      "huber_slope": 1.0,
+      "learning_rate": 0.03,
+      "max_depth": 8,
+      "min_child_weight": 20,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 2.0,
+      "seed": 23
+    },
+    "elapsed": 1225.2371315956116
+  },
+  {
+    "exp": "exp054",
+    "lat": 4.997705459594727,
+    "params": {
+      "objective": "reg:absoluteerror",
+      "learning_rate": 0.03,
+      "max_depth": 7,
+      "min_child_weight": 15,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 2.0,
+      "seed": 31
+    },
+    "elapsed": 1228.8297715187073
+  }
+]
