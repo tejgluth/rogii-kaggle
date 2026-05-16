@@ -1,0 +1,27 @@
+{
+  "experiment_id": "exp018",
+  "phase": "feature_engineering",
+  "description": "Geology-constrained DTW. The current DTW search (exp006) finds the best lag over a wide window without using geological priors. This experiment constrains the DTW search to only consider lags where the aligned typewell position lies in a geologically plausible layer near the previous depth's TVT. This should sharpen the dtw_best_lag signal especially in transitions where multiple plausible alignments exist and the unconstrained DTW jumps spuriously.",
+  "model": "catboost",
+  "features_to_add": [
+    "dtw_best_lag_constrained",
+    "dtw_min_distance_constrained",
+    "dtw_lag_change_from_prev",
+    "dtw_constrained_vs_free_diff",
+    "dtw_constrained_confidence"
+  ],
+  "base_experiment": "exp014",
+  "save_oof_path": "experiments/oof/oof_catboost_exp018.npy",
+  "save_test_path": "experiments/test_preds/test_catboost_exp018.npy",
+  "save_result_path": "experiments/results/exp018.json",
+  "implementation_notes": [
+    "Build on the exp014 feature set; ADD the 5 new constrained-DTW features. Drop nothing.",
+    "Implementation sketch for constrained DTW: for each depth row in a well, restrict the DTW lag search range to [prev_tvt - delta, prev_tvt + delta] where prev_tvt is the rolling mean of the last 50 free-DTW estimates, and delta=20 ft. For test wells without sufficient prior context, fall back to free DTW.",
+    "dtw_lag_change_from_prev = abs(this row's dtw_best_lag - prev row's dtw_best_lag) capped at 50. Large changes signal noisy alignment.",
+    "dtw_constrained_vs_free_diff = constrained_lag - free_lag. Disagreement is a useful signal.",
+    "Use numba JIT (as in src/features.py) for speed. The constrained search is at most 2*delta lags per row, so should be faster than the existing free DTW.",
+    "Pass geology label columns as cat_features. CatBoost params identical to exp014.",
+    "5-fold GroupKFold by well_id. Save raw OOF and test predictions in original CSV row order.",
+    "Target: beat exp014 (30.454). The constrained DTW should improve folds 1 and 3 where free-DTW alignment was noisiest."
+  ]
+}

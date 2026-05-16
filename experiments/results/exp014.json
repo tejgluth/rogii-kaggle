@@ -1,0 +1,93 @@
+{
+  "experiment_id": "exp014",
+  "model": "catboost",
+  "phase": "feature_engineering",
+  "base_experiment": "exp009",
+  "cv_rmse": 30.4541072845459,
+  "cv_rmse_std": 4.693139963681282,
+  "fold_rmse": [
+    26.053983688354492,
+    35.77812194824219,
+    26.680051803588867,
+    34.7313117980957,
+    27.57683563232422
+  ],
+  "features_used": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "depth_from_heel",
+    "depth_fraction",
+    "gr_filled",
+    "gr_rolling_mean_10",
+    "gr_rolling_mean_30",
+    "gr_rolling_std_10",
+    "gr_rolling_mean_100",
+    "tvt_input_filled",
+    "x_diff",
+    "y_diff",
+    "z_diff",
+    "lateral_speed",
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence",
+    "tw_geology_at_aligned_tvt",
+    "tw_geology_above_layer",
+    "tw_geology_below_layer",
+    "tw_geology_layer_thickness",
+    "tw_geology_distance_to_layer_top",
+    "tw_geology_distance_to_layer_bottom"
+  ],
+  "dropped_features": [
+    "tw_geology_target_enc"
+  ],
+  "categorical_features": [
+    "tw_geology_at_aligned_tvt",
+    "tw_geology_above_layer",
+    "tw_geology_below_layer"
+  ],
+  "n_features": 26,
+  "training_time_seconds": 4414.548985719681,
+  "notes": "Trained CatBoost on the exp009 DTW and Typewell geology feature set while dropping tw_geology_target_enc so native CatBoost categorical handling does not double-count the aligned geology label. Compared with exp009 LightGBM RMSE 34.5811, exp014 improved by 4.1270 RMSE. This did help, but the OOF predictions are still useful for stacking if their errors are decorrelated from LightGBM/XGBoost.",
+  "oof_path": "experiments/oof/oof_catboost_exp014.npy",
+  "test_path": "experiments/test_preds/test_catboost_exp014.npy",
+  "feature_params": {
+    "source_feature_set": "exp009",
+    "dtw_max_lag": 40,
+    "dtw_lag_step": 2,
+    "dtw_window": 41,
+    "dtw_sakoe_chiba_radius": 5,
+    "dtw_sample_step": 5,
+    "target_encoding_column_dropped": "tw_geology_target_enc"
+  },
+  "model_params": {
+    "task_type": "GPU",
+    "iterations": 6000,
+    "learning_rate": 0.05,
+    "depth": 8,
+    "l2_leaf_reg": 5.0,
+    "random_seed": 42,
+    "od_type": "Iter",
+    "od_wait": 200,
+    "eval_metric": "RMSE",
+    "loss_function": "RMSE",
+    "allow_writing_files": false,
+    "verbose": 200,
+    "fold_best_iterations": [
+      2272,
+      4151,
+      2135,
+      1957,
+      3507
+    ],
+    "test_prediction_strategy": "mean_of_5_fold_models"
+  },
+  "postprocessing": {
+    "test_predictions": "postprocess_per_well",
+    "smooth": true,
+    "clip": true
+  },
+  "gpu_feature_loading_available": false
+}

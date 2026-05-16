@@ -1,0 +1,17 @@
+{
+  "experiment_id": "exp010",
+  "phase": "feature_engineering",
+  "description": "XGBoost trained on the exp006 (DTW) feature set. The exp006 LightGBM result was 36.394; running an XGBoost on the same features tests whether tree algorithm choice matters and — more importantly — produces diverse OOF predictions for later stacking. Stacking gains usually come from algorithmic diversity, not feature diversity, when one feature set dominates.",
+  "model": "xgboost",
+  "features_to_add": [],
+  "base_experiment": "exp006",
+  "save_oof_path": "experiments/oof/oof_xgboost_exp010.npy",
+  "save_test_path": "experiments/test_preds/test_xgboost_exp010.npy",
+  "save_result_path": "experiments/results/exp010.json",
+  "implementation_notes": [
+    "Use the EXACT same feature matrix as exp006 — load it via the function added to src/features.py.",
+    "XGBoost params: device='cuda', tree_method='hist', max_depth=8, eta=0.05, subsample=0.85, colsample_bytree=0.85, min_child_weight=8, n_estimators=4000 with early_stopping_rounds=100.",
+    "5-fold GroupKFold by well_id. Save OOF and test predictions matching the row order of train and test CSVs.",
+    "Compare to exp006 (LGBM 36.394). Whatever the result, the OOF is needed for stacking — so this experiment is valuable even if RMSE is slightly worse, as long as it's competitive (within ~1 RMSE)."
+  ]
+}

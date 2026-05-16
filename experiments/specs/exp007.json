@@ -1,0 +1,34 @@
+{
+  "experiment_id": "exp007",
+  "phase": "feature_engineering",
+  "description": "Combine the alignment-based winners: typewell cross-correlation features (from exp003) AND DTW lag features (from exp006), on top of the baseline feature set. These two signals are complementary — xcorr captures linear similarity, DTW captures alignment under stretch — so combining them should beat either alone.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "typewell_best_lag",
+    "typewell_best_corr",
+    "typewell_corr_at_lag_0",
+    "typewell_corr_max_minus_mean",
+    "typewell_corr_peakiness",
+    "typewell_gr_at_best_lag",
+    "typewell_gr_minus_local_gr_at_best_lag",
+    "typewell_lag_smoothness_rollmean_50",
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_distance_at_lag_0",
+    "dtw_distance_spread",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence",
+    "xcorr_minus_dtw_lag",
+    "lag_agreement_strength"
+  ],
+  "base_experiment": "exp_b001",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp007.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp007.npy",
+  "save_result_path": "experiments/results/exp007.json",
+  "implementation_notes": [
+    "Reuse the feature extraction functions added to src/features.py by exp003 and exp006 — do not re-implement; import them.",
+    "Two new interaction features: xcorr_minus_dtw_lag = typewell_best_lag - dtw_best_lag (when they agree, alignment is confident); lag_agreement_strength = typewell_best_corr * dtw_confidence.",
+    "Use exp_b001 baseline features as the foundation. Same LightGBM params as baseline. 5-fold GroupKFold by well_id.",
+    "Compare against exp006 (36.394) as the target to beat. If CV RMSE < 36.394, save as the new best."
+  ]
+}

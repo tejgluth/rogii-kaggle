@@ -1,0 +1,20 @@
+{
+  "experiment_id": "exp022",
+  "model": "nnls_stack+savgol",
+  "phase": "stacking+postprocessing",
+  "cv_rmse": 29.547569274902344,
+  "filter": "savgol",
+  "p1": 1001,
+  "p2": 3,
+  "members": [
+    "exp014",
+    "exp013",
+    "exp012",
+    "exp009",
+    "exp011",
+    "exp006"
+  ],
+  "notes": "NNLS stack + best smoothing filter from exp021 sweep.",
+  "oof_path": "experiments/oof/oof_stack_exp022.npy",
+  "test_path": "experiments/test_preds/test_stack_exp022.npy"
+}

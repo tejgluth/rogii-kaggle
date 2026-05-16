@@ -1,0 +1,67 @@
+{
+  "experiment_id": "exp007",
+  "model": "lightgbm",
+  "phase": "feature_engineering",
+  "base_experiment": "exp_b001",
+  "cv_rmse": 37.622344970703125,
+  "cv_rmse_std": 5.561345639676818,
+  "fold_rmse": [
+    33.28095626831055,
+    42.60786056518555,
+    35.0267448425293,
+    43.84712600708008,
+    31.700366973876953
+  ],
+  "features_used": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "depth_from_heel",
+    "depth_fraction",
+    "gr_filled",
+    "gr_rolling_mean_10",
+    "gr_rolling_mean_30",
+    "gr_rolling_std_10",
+    "gr_rolling_mean_100",
+    "tvt_input_filled",
+    "x_diff",
+    "y_diff",
+    "z_diff",
+    "lateral_speed",
+    "typewell_best_lag",
+    "typewell_best_corr",
+    "typewell_corr_at_lag_0",
+    "typewell_corr_max_minus_mean",
+    "typewell_corr_peakiness",
+    "typewell_gr_at_best_lag",
+    "typewell_gr_minus_local_gr_at_best_lag",
+    "typewell_lag_smoothness_rollmean_50",
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_distance_at_lag_0",
+    "dtw_distance_spread",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence",
+    "xcorr_minus_dtw_lag",
+    "lag_agreement_strength"
+  ],
+  "n_features": 32,
+  "training_time_seconds": 2255.539547920227,
+  "notes": "Combined exp003 Typewell GR rolling cross-correlation features and exp006 constrained DTW features on top of exp_b001, plus xcorr_minus_dtw_lag and lag_agreement_strength. Compared with exp_b001 RMSE 37.1134, exp007 changed RMSE by -0.5089; compared with exp006 target 36.3943, it did not improve by 1.2280. The combined signals should help when linear correlation and stretch-aware DTW agree on the same typewell offset; disagreement can add noise where GR motifs are ambiguous or repeated.",
+  "oof_path": "experiments/oof/oof_lightgbm_exp007.npy",
+  "test_path": "experiments/test_preds/test_lightgbm_exp007.npy",
+  "feature_params": {
+    "typewell_correlation": {
+      "max_lag": 60,
+      "window": 51
+    },
+    "dtw": {
+      "max_lag": 40,
+      "lag_step": 2,
+      "window": 41,
+      "sakoe_chiba_radius": 5,
+      "sample_step": 5
+    }
+  }
+}

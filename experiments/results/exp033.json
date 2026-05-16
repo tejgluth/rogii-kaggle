@@ -1,0 +1,14 @@
+{
+  "experiment_id": "exp033",
+  "model": "catboost_seedbag3",
+  "phase": "feature_engineering",
+  "cv_rmse_lateral": 3.9330410957336426,
+  "seeds": [
+    42,
+    1337,
+    2024
+  ],
+  "notes": "3-seed CatBoost average on exp026 features.",
+  "oof_path": "experiments/oof/oof_catboost_exp033.npy",
+  "test_path": "experiments/test_preds/test_catboost_exp033.npy"
+}

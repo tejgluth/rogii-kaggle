@@ -1,0 +1,14 @@
+{
+  "experiment_id": "exp040",
+  "model": "xgboost_seedbag3",
+  "phase": "feature_engineering",
+  "cv_rmse_lateral": 3.0547640323638916,
+  "seeds": [
+    42,
+    1337,
+    2024
+  ],
+  "notes": "3-seed XGBoost bag on exp026 features.",
+  "oof_path": "experiments/oof/oof_xgboost_exp040.npy",
+  "test_path": "experiments/test_preds/test_xgboost_exp040.npy"
+}

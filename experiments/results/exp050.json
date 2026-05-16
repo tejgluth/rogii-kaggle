@@ -7,9 +7,12 @@
   "base_members": [
     "xgboost_exp063",
     "xgboost_exp064",
+    "xgboost_exp067",
     "xgboost_exp057",
     "xgboost_exp051",
+    "xgboost_exp068",
     "xgboost_exp060",
+    "xgboost_exp066",
     "xgboost_exp058",
     "xgboost_exp059",
     "xgboost_exp038",
@@ -194,7 +197,7 @@
     {
       "method": "grid_top3_simplex",
       "lat_rmse": 2.692397434518621,
-      "info": "weights={'xgboost_exp063': 0.85, 'xgboost_exp064': 0.15, 'xgboost_exp057': -0.0}"
+      "info": "weights={'xgboost_exp063': 0.85, 'xgboost_exp064': 0.15, 'xgboost_exp067': -0.0}"
     },
     {
       "method": "grid_top3_simplex_savgol_w501_p3",

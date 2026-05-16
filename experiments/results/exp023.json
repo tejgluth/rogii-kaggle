@@ -1,0 +1,40 @@
+{
+  "experiment_id": "exp023",
+  "model": "lgbm_meta+savgol",
+  "phase": "stacking",
+  "cv_rmse": 32.50848388671875,
+  "raw_rmse": 33.58772659301758,
+  "fold_rmses": [
+    33.097286224365234,
+    37.414608001708984,
+    30.801820755004883,
+    38.2349967956543,
+    27.11600685119629
+  ],
+  "members": [
+    "exp014",
+    "exp013",
+    "exp012",
+    "exp009",
+    "exp011",
+    "exp006",
+    "exp003",
+    "exp010"
+  ],
+  "lgbm_params": {
+    "objective": "regression",
+    "metric": "rmse",
+    "learning_rate": 0.02,
+    "num_leaves": 15,
+    "min_data_in_leaf": 200,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "lambda_l2": 1.0,
+    "verbose": -1,
+    "num_threads": -1
+  },
+  "notes": "LightGBM meta-learner on 8 OOFs + savgol(1001,3) per-well smoothing.",
+  "oof_path": "experiments/oof/oof_stack_exp023.npy",
+  "test_path": "experiments/test_preds/test_stack_exp023.npy"
+}

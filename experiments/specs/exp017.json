@@ -1,0 +1,19 @@
+{
+  "experiment_id": "exp017",
+  "phase": "feature_engineering",
+  "description": "CatBoost seed bagging on exp014 feature set. Train 3 CatBoost models with different random seeds (42, 1337, 2024) and average their OOF and test predictions. Variance reduction via seed averaging typically buys 0.1-0.3 RMSE without adding features and produces a more stable model whose OOF errors decorrelate slightly from a single-seed model, helping stacking.",
+  "model": "catboost",
+  "features_to_add": [],
+  "base_experiment": "exp014",
+  "save_oof_path": "experiments/oof/oof_catboost_exp017.npy",
+  "save_test_path": "experiments/test_preds/test_catboost_exp017.npy",
+  "save_result_path": "experiments/results/exp017.json",
+  "implementation_notes": [
+    "Use the EXACT exp014 feature matrix (exp009 features minus tw_geology_target_enc; geology label columns passed as cat_features).",
+    "For EACH of 3 seeds (42, 1337, 2024): run 5-fold GroupKFold by well_id. Save per-seed OOF then average across seeds → final OOF.",
+    "CatBoost params: task_type='GPU', iterations=6000, learning_rate=0.05, depth=8, l2_leaf_reg=5.0, od_type='Iter', od_wait=200, eval_metric='RMSE'. Only vary random_seed across runs.",
+    "For test predictions: average across all 15 fold models (3 seeds × 5 folds).",
+    "Apply per-well savgol(1001,3) smoothing as a final step (call src.postprocess or include inline). Save BOTH raw averaged predictions to oof_path/test_path and a smoothed version to oof_path.replace('.npy','_smoothed.npy') so we can stack on raw and submit smoothed.",
+    "Target: beat exp014 (30.454). Even 0.2-0.3 improvement is valuable. Critically, the averaged OOF gives stacking more diversity vs exp014 alone."
+  ]
+}

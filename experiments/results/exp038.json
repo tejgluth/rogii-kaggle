@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp038",
+  "model": "xgboost_delta_bwell_ncc",
+  "phase": "feature_engineering",
+  "cv_rmse_lateral": 2.97733473777771,
+  "fold_rmses_full": [
+    4.955757141113281,
+    4.970561504364014,
+    4.860550403594971,
+    4.038907527923584,
+    4.944882869720459
+  ],
+  "notes": "XGBoost (CUDA) on exp026 features. For stacking diversity.",
+  "oof_path": "experiments/oof/oof_xgboost_exp038.npy",
+  "test_path": "experiments/test_preds/test_xgboost_exp038.npy"
+}

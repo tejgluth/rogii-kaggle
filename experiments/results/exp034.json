@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp034",
+  "model": "3way_avg_cb_lgb_kern+savgol",
+  "phase": "stacking",
+  "cv_rmse_lateral": 3.3132364749908447,
+  "weights": {
+    "cb": 0.5499999999999999,
+    "lgbm": 0.40000000000000013,
+    "kern": 0.04999999999999993
+  },
+  "savgol_window": 201,
+  "savgol_poly": 2,
+  "notes": "3-way avg of exp031/26/28 + savgol(,)",
+  "oof_path": "experiments/oof/oof_stack_exp034.npy",
+  "test_path": "experiments/test_preds/test_stack_exp034.npy"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp041",
+  "model": "4way_avg+savgol",
+  "phase": "stacking",
+  "cv_rmse_lateral": 2.9612815380096436,
+  "weights": {
+    "exp026": 0.0,
+    "exp031": 0.05,
+    "exp038": 0.95,
+    "exp040": 0.0
+  },
+  "savgol_window": 301,
+  "notes": "4-way avg of LGB+CB+XGB+XGBbag + savgol",
+  "oof_path": "experiments/oof/oof_stack_exp041.npy",
+  "test_path": "experiments/test_preds/test_stack_exp041.npy"
+}

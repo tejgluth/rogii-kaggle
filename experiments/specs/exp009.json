@@ -1,0 +1,31 @@
+{
+  "experiment_id": "exp009",
+  "phase": "feature_engineering",
+  "description": "Typewell Geology features. The typewell CSVs include a `Geology` column (categorical layer labels) indexed by TVT. Using the DTW best-lag alignment from exp006, look up the typewell's Geology label at the aligned TVT for every lateral row. Encode it as both a categorical (LightGBM native) and via target encoding (fold-safe). This is a new signal channel — geology layers carry direct TVT information that GR alone smears.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "tw_geology_at_aligned_tvt",
+    "tw_geology_target_enc",
+    "tw_geology_above_layer",
+    "tw_geology_below_layer",
+    "tw_geology_layer_thickness",
+    "tw_geology_distance_to_layer_top",
+    "tw_geology_distance_to_layer_bottom",
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence"
+  ],
+  "base_experiment": "exp006",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp009.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp009.npy",
+  "save_result_path": "experiments/results/exp009.json",
+  "implementation_notes": [
+    "Reuse DTW features from src/features.py (added by exp006). Do NOT recompute.",
+    "For each lateral row, compute aligned_tvt = current TVT estimate from dtw_best_lag (effectively the typewell TVT the lateral GR aligns to). Look up Geology label at that depth in the per-well typewell.",
+    "Target encoding of geology label MUST be computed inside each CV fold (out-of-fold) to prevent leakage. Use mean TVT per geology, smoothed with prior mean (e.g., bayesian smoothing with k=20).",
+    "Layer thickness and distance-to-top/bottom: from the typewell, find the run of consecutive same-Geology rows containing the aligned depth; record total thickness and current row's position within it.",
+    "Pass categorical feature via LightGBM's categorical_feature parameter.",
+    "Use GroupKFold(5) by well_id. Target to beat: exp006 (36.394). Add code to src/features.py."
+  ]
+}

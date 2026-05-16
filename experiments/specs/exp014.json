@@ -1,0 +1,17 @@
+{
+  "experiment_id": "exp014",
+  "phase": "feature_engineering",
+  "description": "CatBoost on the exp009 feature set. CatBoost handles categorical features natively (geology labels) and often produces predictions that are decorrelated from LightGBM/XGBoost, making it valuable for stacking. exp009 LGBM=34.58, exp012 XGB=34.60; CatBoost is the third diverse model.",
+  "model": "catboost",
+  "features_to_add": [],
+  "base_experiment": "exp009",
+  "save_oof_path": "experiments/oof/oof_catboost_exp014.npy",
+  "save_test_path": "experiments/test_preds/test_catboost_exp014.npy",
+  "save_result_path": "experiments/results/exp014.json",
+  "implementation_notes": [
+    "Use the EXACT exp009 feature matrix. Pass the geology label columns as cat_features (native CatBoost categorical handling — drop the fold-safe target-encoded version of the same column to avoid double-counting).",
+    "CatBoost params: task_type='GPU' (CUDA), iterations=6000, learning_rate=0.05, depth=8, l2_leaf_reg=5.0, random_seed=42, od_type='Iter', od_wait=200, eval_metric='RMSE'.",
+    "5-fold GroupKFold by well_id. Save OOF and test predictions in original CSV row order.",
+    "Target: be competitive (within 0.5 RMSE of exp009). Stacking diversity matters more than absolute score here."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "experiment_id": "exp021",
+  "model": "exp014+savgol",
+  "phase": "postprocessing",
+  "base_experiment": "exp014",
+  "cv_rmse": 29.59624671936035,
+  "filter": "savgol",
+  "p1": 1001,
+  "p2": 3,
+  "all_results": [
+    [
+      "savgol",
+      1001,
+      3,
+      29.59624671936035
+    ],
+    [
+      "savgol",
+      1501,
+      4,
+      29.631357192993164
+    ],
+    [
+      "savgol",
+      701,
+      3,
+      29.645854949951172
+    ],
+    [
+      "savgol",
+      701,
+      2,
+      29.65170669555664
+    ],
+    [
+      "savgol",
+      1001,
+      2,
+      29.65887451171875
+    ],
+    [
+      "savgol",
+      1001,
+      4,
+      29.681291580200195
+    ],
+    [
+      "savgol",
+      501,
+      2,
+      29.707298278808594
+    ],
+    [
+      "savgol",
+      501,
+      3,
+      29.7188777923584
+    ],
+    [
+      "gauss",
+      60,
+      null,
+      29.71993064880371
+    ],
+    [
+      "savgol",
+      2001,
+      4,
+      29.72079849243164
+    ],
+    [
+      "uniform",
+      200,
+      null,
+      29.72728157043457
+    ],
+    [
+      "savgol",
+      401,
+      2,
+      29.753190994262695
+    ],
+    [
+      "savgol",
+      701,
+      4,
+      29.756481170654297
+    ],
+    [
+      "savgol",
+      1501,
+      3,
+      29.758481979370117
+    ],
+    [
+      "savgol",
+      401,
+      3,
+      29.766925811767578
+    ],
+    [
+      "gauss",
+      100,
+      null,
+      29.782684326171875
+    ],
+    [
+      "savgol",
+      301,
+      2,
+      29.818485260009766
+    ],
+    [
+      "savgol",
+      501,
+      4,
+      29.825843811035156
+    ],
+    [
+      "savgol",
+      301,
+      3,
+      29.83611488342285
+    ],
+    [
+      "gauss",
+      30,
+      null,
+      29.855777740478516
+    ]
+  ],
+  "notes": "Extended smoothing window sweep + Gaussian/uniform alternatives.",
+  "oof_path": "experiments/oof/oof_catboost_exp021.npy",
+  "test_path": "experiments/test_preds/test_catboost_exp021.npy"
+}

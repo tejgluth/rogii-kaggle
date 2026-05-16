@@ -1,0 +1,51 @@
+{
+  "experiment_id": "exp006",
+  "model": "lightgbm",
+  "phase": "feature_engineering",
+  "base_experiment": "exp_b001",
+  "cv_rmse": 36.39430618286133,
+  "cv_rmse_std": 5.708267250605514,
+  "fold_rmse": [
+    30.78206443786621,
+    43.282318115234375,
+    34.83854675292969,
+    40.560462951660156,
+    30.714380264282227
+  ],
+  "features_used": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "depth_from_heel",
+    "depth_fraction",
+    "gr_filled",
+    "gr_rolling_mean_10",
+    "gr_rolling_mean_30",
+    "gr_rolling_std_10",
+    "gr_rolling_mean_100",
+    "tvt_input_filled",
+    "x_diff",
+    "y_diff",
+    "z_diff",
+    "lateral_speed",
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_distance_at_lag_0",
+    "dtw_distance_spread",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence"
+  ],
+  "n_features": 22,
+  "training_time_seconds": 1311.3577868938446,
+  "notes": "Added constrained DTW Typewell GR lag features over lags [-40, 40] with step 2, window 41, Sakoe-Chiba radius 5, computed every 5th row and interpolated back to all rows. Compared with exp_b001 RMSE 37.1134, exp006 improved by 0.7191 RMSE. DTW should help where local GR motifs align with stretched or squeezed typewell patterns; it may fail when TVT_input is sparse/noisy or GR motifs are non-unique across nearby lags.",
+  "oof_path": "experiments/oof/oof_lightgbm_exp006.npy",
+  "test_path": "experiments/test_preds/test_lightgbm_exp006.npy",
+  "feature_params": {
+    "max_lag": 40,
+    "lag_step": 2,
+    "window": 41,
+    "sakoe_chiba_radius": 5,
+    "sample_step": 5
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp013",
+  "phase": "feature_engineering",
+  "description": "Tuned LightGBM on the exp009 feature set. exp009 used default-ish params; aggressive regularization plus a smaller learning rate and more iterations often squeezes 0.1-0.3 RMSE out of GBM on tabular regression. This is a hyperparameter search, not a feature change.",
+  "model": "lightgbm",
+  "features_to_add": [],
+  "base_experiment": "exp009",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp013.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp013.npy",
+  "save_result_path": "experiments/results/exp013.json",
+  "implementation_notes": [
+    "Use the EXACT exp009 feature matrix from src/features.py. Do not add or remove features.",
+    "LightGBM tuned params to try (run as a single training, NOT a full grid — pick the strongest combo from intuition): learning_rate=0.02, n_estimators=8000, early_stopping_rounds=200, num_leaves=63, min_data_in_leaf=200, lambda_l1=0.5, lambda_l2=2.0, feature_fraction=0.7, bagging_fraction=0.7, bagging_freq=1, max_depth=-1, min_gain_to_split=0.0, device='gpu', objective='regression', metric='rmse'.",
+    "5-fold GroupKFold by well_id. Categorical features for geology should still be passed as categorical_feature.",
+    "Save OOF and test predictions matching original row order.",
+    "Compare to exp009 (34.581). Even a 0.1-0.2 improvement is valuable."
+  ]
+}

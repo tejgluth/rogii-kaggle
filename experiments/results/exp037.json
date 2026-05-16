@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp037",
+  "model": "4way_avg+savgol",
+  "phase": "stacking",
+  "cv_rmse_lateral": 3.3189568519592285,
+  "weights": {
+    "exp026": 0.45,
+    "exp031": 0.55,
+    "exp033": 0.0,
+    "exp036": 0.0
+  },
+  "savgol_window": 201,
+  "notes": "4-way grid-tuned avg of exp026/31/33/36 + savgol",
+  "oof_path": "experiments/oof/oof_stack_exp037.npy",
+  "test_path": "experiments/test_preds/test_stack_exp037.npy"
+}

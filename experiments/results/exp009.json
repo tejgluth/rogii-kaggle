@@ -1,0 +1,62 @@
+{
+  "experiment_id": "exp009",
+  "model": "lightgbm",
+  "phase": "feature_engineering",
+  "base_experiment": "exp006",
+  "cv_rmse": 34.58112335205078,
+  "cv_rmse_std": 4.271514510837035,
+  "fold_rmse": [
+    31.2492733001709,
+    38.4521598815918,
+    32.42713928222656,
+    39.460533142089844,
+    30.259994506835938
+  ],
+  "features_used": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "depth_from_heel",
+    "depth_fraction",
+    "gr_filled",
+    "gr_rolling_mean_10",
+    "gr_rolling_mean_30",
+    "gr_rolling_std_10",
+    "gr_rolling_mean_100",
+    "tvt_input_filled",
+    "x_diff",
+    "y_diff",
+    "z_diff",
+    "lateral_speed",
+    "dtw_best_lag",
+    "dtw_min_distance",
+    "dtw_best_lag_rollmean_50",
+    "dtw_confidence",
+    "tw_geology_at_aligned_tvt",
+    "tw_geology_above_layer",
+    "tw_geology_below_layer",
+    "tw_geology_target_enc",
+    "tw_geology_layer_thickness",
+    "tw_geology_distance_to_layer_top",
+    "tw_geology_distance_to_layer_bottom"
+  ],
+  "categorical_features": [
+    "tw_geology_at_aligned_tvt",
+    "tw_geology_above_layer",
+    "tw_geology_below_layer"
+  ],
+  "n_features": 27,
+  "training_time_seconds": 453.39759135246277,
+  "notes": "Built on exp006 DTW lag features and added Typewell Geology at aligned TVT, native categorical geology/adjacent-layer labels, fold-safe smoothed geology target encoding, and containing-layer thickness plus distance-to-top/bottom. Compared with exp006 RMSE 36.3943, exp009 improved by 1.8132 RMSE. The signal should help when layer labels provide direct TVT context beyond GR; it can hurt if DTW picks the wrong local alignment or if broad labels are too coarse.",
+  "oof_path": "experiments/oof/oof_lightgbm_exp009.npy",
+  "test_path": "experiments/test_preds/test_lightgbm_exp009.npy",
+  "feature_params": {
+    "dtw_max_lag": 40,
+    "dtw_lag_step": 2,
+    "dtw_window": 41,
+    "dtw_sakoe_chiba_radius": 5,
+    "dtw_sample_step": 5,
+    "target_encoding_smoothing": 20.0
+  }
+}

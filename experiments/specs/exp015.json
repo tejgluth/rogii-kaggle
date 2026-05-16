@@ -1,0 +1,17 @@
+{
+  "experiment_id": "exp015",
+  "phase": "feature_engineering",
+  "description": "Tuned CatBoost on exp009 features. exp014's CatBoost (30.45) was a 4.13 RMSE win using default-ish params — there is likely more to squeeze with depth 10, smaller learning rate, more iterations, and tuned regularization.",
+  "model": "catboost",
+  "features_to_add": [],
+  "base_experiment": "exp014",
+  "save_oof_path": "experiments/oof/oof_catboost_exp015.npy",
+  "save_test_path": "experiments/test_preds/test_catboost_exp015.npy",
+  "save_result_path": "experiments/results/exp015.json",
+  "implementation_notes": [
+    "Use the EXACT exp014 feature matrix (exp009 features minus the target-encoded geology label, geology label passed as cat_features).",
+    "CatBoost tuned params: task_type='GPU', iterations=12000, learning_rate=0.03, depth=10, l2_leaf_reg=3.0, bagging_temperature=0.5, random_strength=1.0, random_seed=42, od_type='Iter', od_wait=300, eval_metric='RMSE', loss_function='RMSE', grow_policy='SymmetricTree' (default).",
+    "5-fold GroupKFold by well_id. Save OOF and test predictions in original CSV row order.",
+    "Compare to exp014 (30.454). Even a 0.2-0.5 improvement matters."
+  ]
+}

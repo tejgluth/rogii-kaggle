@@ -1,0 +1,322 @@
+OpenAI Codex v0.130.0
+--------
+workdir: /home/tejas/Desktop/rogii-kaggle
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e2ce5-a913-75f1-81c9-0e70c115abd9
+--------
+user
+# System Context — ROGII Wellbore Geology Prediction
+
+You are an ML engineer working on a Kaggle regression competition to predict
+True Vertical Thickness (TVT) along horizontal oil/gas wellbores.
+
+## Environment
+
+- Hardware: NVIDIA DGX Spark (or Mac M4 Pro fallback)
+- CUDA available: yes (use GPU for all models)
+- Python 3.11+, conda environment: `rogii`
+- Working directory: the root of this repository
+
+## Critical Libraries (always import these)
+
+```python
+try:
+    import cudf as pd          # GPU pandas
+    import cuml                # GPU sklearn
+    GPU = True
+except ImportError:
+    import pandas as pd        # CPU fallback
+    GPU = False
+    print("WARNING: cuDF not available, using CPU pandas")
+
+import numpy as np
+import lightgbm as lgb
+import xgboost as xgb
+from sklearn.model_selection import GroupKFold
+```
+
+## Data Location
+
+```
+data/raw/train/    — training well files (CSV or LAS format)
+data/raw/test/     — test well files
+data/processed/    — feature-engineered datasets (write here)
+```
+
+## Validation Strategy (Non-Negotiable)
+
+Always use `GroupKFold(n_splits=5)` splitting by `well_id`.
+NEVER let rows from the same well appear in both train and validation.
+
+```python
+from sklearn.model_selection import GroupKFold
+gkf = GroupKFold(n_splits=5)
+for fold, (train_idx, val_idx) in enumerate(gkf.split(X, y, groups=well_ids)):
+    ...
+```
+
+## Competition Metric
+
+RMSE: `np.sqrt(np.mean((y_pred - y_true)**2))`
+Lower is better. Report per-fold RMSE and overall mean ± std.
+
+## Physical Constraints
+
+- TVT must be smooth — apply Savitzky-Golay smoothing to final predictions
+- TVT should stay within physically reasonable bounds per well
+- Never use future depth information to predict current TVT (data leakage)
+
+
+---
+
+## Your Specific Task
+
+# Phase 3: Feature Engineering
+
+Your experiment spec tells you which features to add. Read the spec carefully.
+Build on the best previous experiment unless told otherwise.
+
+## Feature Engineering Ideas (Pick From These Based on Spec)
+
+### GR Signal Features
+```python
+# Rolling statistics at multiple windows
+for w in [5, 10, 20, 30, 50, 100]:
+    df[f"gr_mean_{w}"] = df.groupby("well_id")["gr"].transform(
+        lambda x: x.rolling(w, min_periods=1).mean())
+    df[f"gr_std_{w}"] = df.groupby("well_id")["gr"].transform(
+        lambda x: x.rolling(w, min_periods=1).std())
+    df[f"gr_min_{w}"] = df.groupby("well_id")["gr"].transform(
+        lambda x: x.rolling(w, min_periods=1).min())
+    df[f"gr_max_{w}"] = df.groupby("well_id")["gr"].transform(
+        lambda x: x.rolling(w, min_periods=1).max())
+
+# GR gradient (rate of change)
+df["gr_diff_1"] = df.groupby("well_id")["gr"].diff(1)
+df["gr_diff_5"] = df.groupby("well_id")["gr"].diff(5)
+
+# GR percentile rank within well
+df["gr_pct_rank"] = df.groupby("well_id")["gr"].transform(
+    lambda x: x.rank(pct=True))
+
+# GR z-score within well
+df["gr_zscore"] = df.groupby("well_id")["gr"].transform(
+    lambda x: (x - x.mean()) / (x.std() + 1e-8))
+```
+
+### Typewell Correlation Features (Most Powerful)
+```python
+from scipy.signal import correlate
+from scipy.spatial.distance import cdist
+
+def compute_typewell_correlation(well_gr, typewell_gr, max_lag=50):
+    """Cross-correlation between well GR and Typewell GR at various lags."""
+    corr = correlate(well_gr, typewell_gr, mode="full")
+    lags = np.arange(-max_lag, max_lag + 1)
+    # Extract correlation values at each lag
+    center = len(corr) // 2
+    corr_at_lags = corr[center - max_lag: center + max_lag + 1]
+    best_lag = lags[np.argmax(corr_at_lags)]
+    best_corr = corr_at_lags[np.argmax(corr_at_lags)]
+    return best_lag, best_corr, corr_at_lags
+
+# For each well, compute at every depth sample:
+# - The best-matching typewell lag in a sliding window
+# - The correlation coefficient at that lag
+# This is the core TVT signal!
+```
+
+### DTW Features (Dynamic Time Warping)
+```python
+# DTW distance between local GR window and typewell GR
+# Use fastdtw or tslearn for speed
+# Window: 20-50 samples each side
+# Compute at lag offsets: -30 to +30 ft
+# The lag with minimum DTW distance estimates TVT shift
+from fastdtw import fastdtw
+
+def dtw_lag_features(well_gr, typewell_gr, window=30, lag_range=40):
+    dtw_distances = []
+    for lag in range(-lag_range, lag_range + 1):
+        shifted_typewell = np.roll(typewell_gr, lag)
+        dist, _ = fastdtw(well_gr[:window], shifted_typewell[:window])
+        dtw_distances.append(dist)
+    return np.array(dtw_distances)
+```
+
+### Trajectory Features
+```python
+# Dog-leg severity (DLS) — rate of direction change
+df["dls"] = np.sqrt(
+    df.groupby("well_id")["inclination"].diff()**2 +
+    df.groupby("well_id")["azimuth"].diff()**2
+)
+
+# Structural dip estimate from TVD change rate
+df["tvd_gradient"] = df.groupby("well_id")["tvd"].diff()
+
+# Cumulative lateral distance
+df["lateral_dist"] = df.groupby("well_id")["md"].transform(
+    lambda x: x - x.iloc[0])
+
+# XY displacement from well heel
+df["xy_dist"] = np.sqrt(
+    (df.groupby("well_id")["x"].transform(lambda x: x - x.iloc[0]))**2 +
+    (df.groupby("well_id")["y"].transform(lambda x: x - x.iloc[0]))**2
+)
+```
+
+### Lag/Lead Features
+```python
+# Previous TVT values can be used as features (careful: no leakage in CV)
+# Only use these after verifying no leakage with GroupKFold
+for lag in [1, 3, 5, 10, 20]:
+    df[f"gr_lag_{lag}"] = df.groupby("well_id")["gr"].shift(lag)
+    df[f"gr_lead_{lag}"] = df.groupby("well_id")["gr"].shift(-lag)
+```
+
+### Target Encoding
+```python
+# Well-level GR statistics as context
+well_stats = df.groupby("well_id")["gr"].agg(["mean", "std", "min", "max"])
+df = df.join(well_stats, on="well_id", rsuffix="_well")
+```
+
+## Instructions
+
+1. Read the experiment spec to know which features to add
+2. Build on the feature set from `base_experiment` (load that code from src/)
+3. Add ONLY the features specified — don't add everything at once
+4. Run with LightGBM GPU unless spec says otherwise
+5. Compare CV RMSE to base_experiment CV RMSE
+6. In result JSON notes, explain: did the feature help? Why or why not?
+7. Add successful feature code to `src/features.py`
+
+
+---
+
+## Experiment Spec
+
+{
+  "experiment_id": "exp016",
+  "phase": "feature_engineering",
+  "description": "CatBoost on the exp011 deeper-geology feature set. The deeper-geology features (multi-row geology context at +/-5/+/-15, layer index, layer position fraction, layer-conditional GR residuals) hurt LightGBM in exp011 (+0.26 vs exp009) but CatBoost handles categorical and ordered features much better \u2014 those same features may help here. Worth testing because exp014's leap suggests CatBoost has more headroom with geology-derived signals.",
+  "model": "catboost",
+  "features_to_add": [
+    "tw_geology_lag_+5",
+    "tw_geology_lag_-5",
+    "tw_geology_lag_+15",
+    "tw_geology_lag_-15",
+    "tw_geology_layer_index",
+    "tw_geology_layer_index_from_bottom",
+    "tw_geology_n_layers_total",
+    "tw_layer_position_fraction",
+    "tw_layer_top_tvt",
+    "tw_layer_bottom_tvt",
+    "tw_geology_layer_mean_gr",
+    "tw_geology_layer_std_gr",
+    "gr_minus_layer_mean_gr",
+    "gr_minus_layer_mean_gr_zscore",
+    "tw_distinct_geologies_in_window_50"
+  ],
+  "base_experiment": "exp011",
+  "save_oof_path": "experiments/oof/oof_catboost_exp016.npy",
+  "save_test_path": "experiments/test_preds/test_catboost_exp016.npy",
+  "save_result_path": "experiments/results/exp016.json",
+  "implementation_notes": [
+    "Reuse exp011 feature pipeline from src/features.py. Drop the target-encoded geology column (CatBoost handles cats natively).",
+    "Pass all geology label columns (aligned + offset) as cat_features.",
+    "CatBoost params: task_type='GPU', iterations=10000, learning_rate=0.04, depth=9, l2_leaf_reg=5.0, bagging_temperature=0.5, od_type='Iter', od_wait=250, eval_metric='RMSE'.",
+    "5-fold GroupKFold by well_id. Save OOF and test predictions matching CSV row order.",
+    "Target: beat exp014 (30.454). If matched or close, the diverse OOF is still useful for stacking."
+  ]
+}
+
+---
+
+## Worker Instructions
+
+# Codex Worker Instructions
+
+You are a Codex worker agent. You have been given a specific ML experiment
+to implement and run. Follow these rules exactly.
+
+## Rules
+
+1. **Read the experiment spec** — it tells you exactly what to build
+2. **Use GPU everywhere** — `device="cuda"` for all models, `cudf` for data loading
+3. **GroupKFold by well_id** — never mix wells across folds
+4. **Save all output files** — OOF, test preds, and result JSON
+5. **Write clean, runnable Python** — no pseudocode, no TODOs
+6. **Run the code** — don't just write it, execute it
+7. **Verify outputs exist** — check file sizes before finishing
+8. **Write result JSON** — include cv_rmse, notes, and all required fields
+
+## File Structure
+
+```
+ROOT/
+├── src/               ← import utilities from here
+│   ├── data_loader.py
+│   ├── features.py
+│   └── evaluate.py
+├── data/
+│   ├── raw/train/     ← source data
+│   └── processed/     ← write processed data here
+└── experiments/
+    ├── oof/           ← write OOF predictions here
+    ├── test_preds/    ← write test predictions here
+    └── results/       ← write result JSON here
+```
+
+## Import Pattern
+
+```python
+import sys
+sys.path.insert(0, ".")  # run from ROOT
+
+from src.data_loader import load_wells
+from src.features import build_features
+from src.evaluate import compute_cv_rmse
+```
+
+## Completion Signal
+
+Print this exact line as your final output:
+```
+EXPERIMENT COMPLETE: cv_rmse=X.XXXX
+```
+
+If the experiment failed, print:
+```
+EXPERIMENT FAILED: <reason in one line>
+```
+
+
+---
+
+## Required Output Files
+
+You MUST create ALL of these files before finishing:
+
+1. OOF predictions: experiments/oof/oof_catboost_exp016.npy
+   - Shape: (n_train_rows,) — one prediction per training row
+   - Format: numpy float32 array
+
+2. Test predictions: experiments/test_preds/test_catboost_exp016.npy
+   - Shape: (n_test_rows,) — one prediction per test row
+   - Format: numpy float32 array
+
+3. Result JSON: experiments/results/exp016.json
+   - Must follow the exact schema in CLAUDE.md
+   - Include cv_rmse, cv_rmse_std, features_used, training_time_seconds, notes
+
+Verify all three files exist and are non-empty before exiting.
+Print "EXPERIMENT COMPLETE: cv_rmse=X.XX" as your final output line.
+ERROR: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 1:14 PM.
+ERROR: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 1:14 PM.

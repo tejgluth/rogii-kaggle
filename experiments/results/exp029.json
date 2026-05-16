@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp029",
+  "model": "nnls_stack_delta+savgol",
+  "phase": "stacking",
+  "cv_rmse_lateral": 4.159230709075928,
+  "savgol_window": 201,
+  "savgol_poly": 2,
+  "members": [
+    "exp025",
+    "exp026"
+  ],
+  "notes": "NNLS stack of delta-target OOFs + per-well savgol smoothing on lateral rows.",
+  "oof_path": "experiments/oof/oof_stack_exp029.npy",
+  "test_path": "experiments/test_preds/test_stack_exp029.npy"
+}

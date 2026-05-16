@@ -1,0 +1,22 @@
+{
+  "experiment_id": "exp042",
+  "phase": "feature_engineering",
+  "description": "PyTorch neural net on exp026 features with delta target. Provide a fundamentally different signal (non-tree) for stacking diversity. Current best single-model is XGBoost at 2.98 lateral RMSE. A simple MLP or 1D-CNN trained on delta target with GroupKFold(5) — if it gets within 1.5x of XGB (~4 RMSE), even small stack weight will help.",
+  "model": "pytorch_nn",
+  "features_to_add": [],
+  "base_experiment": "exp026",
+  "save_oof_path": "experiments/oof/oof_nn_exp042.npy",
+  "save_test_path": "experiments/test_preds/test_nn_exp042.npy",
+  "save_result_path": "experiments/results/exp042.json",
+  "implementation_notes": [
+    "Reuse the exp026 feature builder by importing scripts/run_exp026_bwell_ncc.build_well. Train on lateral rows only (where TVT_input is NaN).",
+    "Architecture: 4-layer MLP with hidden dims [256, 256, 128, 64], BatchNorm + ReLU + Dropout(0.2). Input = standardized 73 features. Output = delta target (TVT − last_known_TVT).",
+    "Standardize features per-column using StandardScaler fit on training fold. Standardize the target too; un-standardize at predict time.",
+    "Use AdamW(lr=1e-3, weight_decay=1e-4), batch size 4096, 30 epochs with cosine LR schedule. Train on CUDA.",
+    "5-fold GroupKFold by well_id. Save full-length OOF in original CSV row order (heel rows = TVT_input value; lateral rows = last_known + NN delta prediction).",
+    "Save absolute TVT predictions (not delta) to oof_path and test_path, length 5092255 and 19221 respectively.",
+    "Target: lateral CV RMSE below 5.0 (for diversity) or below 3.5 (genuinely competitive).",
+    "Also produce test_preds in full 19221-row CSV order — for test, lateral rows get last_known + NN prediction; non-lateral (heel) rows get TVT_input.",
+    "Result JSON must include cv_rmse_lateral, cv_rmse, n_features, fold_rmses_lateral, model_arch_str, notes."
+  ]
+}

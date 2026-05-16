@@ -1,0 +1,19 @@
+{
+  "experiment_id": "exp043",
+  "phase": "feature_engineering",
+  "description": "Optuna-tuned XGBoost on exp026 features with delta target. Current best XGBoost (exp038) uses arbitrary params (max_depth=8 lr=0.03 lambda=2) and hits 2.98 lateral RMSE. Optuna search over depth, learning_rate, min_child_weight, subsample, colsample_bytree, reg_lambda, reg_alpha should squeeze out 0.1-0.3 more.",
+  "model": "xgboost",
+  "features_to_add": [],
+  "base_experiment": "exp038",
+  "save_oof_path": "experiments/oof/oof_xgboost_exp043.npy",
+  "save_test_path": "experiments/test_preds/test_xgboost_exp043.npy",
+  "save_result_path": "experiments/results/exp043.json",
+  "implementation_notes": [
+    "Reuse exp026 feature builder via scripts/run_exp026_bwell_ncc.build_well.",
+    "Run Optuna with TPE sampler, 30 trials, optimizing lateral CV RMSE (5-fold GroupKFold by well_id, train on delta target).",
+    "Search space: max_depth=[6,7,8,9,10], learning_rate=loguniform(0.01,0.1), min_child_weight=[5,10,20,50,100], subsample=[0.6,0.7,0.8,0.9,1.0], colsample_bytree=[0.5,0.6,0.7,0.8,0.9,1.0], reg_lambda=loguniform(0.1,10.0), reg_alpha=loguniform(0.01,5.0).",
+    "Use early_stopping_rounds=150, max num_boost_round=5000. CUDA device.",
+    "After best params found, retrain 5-fold and save full-length OOF + test predictions.",
+    "Target: lateral CV RMSE below 2.8."
+  ]
+}

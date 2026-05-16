@@ -1,0 +1,59 @@
+{
+  "experiment_id": "exp008",
+  "model": "lightgbm",
+  "phase": "feature_engineering",
+  "base_experiment": "exp_b001",
+  "cv_rmse": 37.01572036743164,
+  "cv_rmse_std": 6.053748277340811,
+  "fold_rmse": [
+    31.743011474609375,
+    44.010414123535156,
+    34.192264556884766,
+    42.15497970581055,
+    30.993425369262695
+  ],
+  "features_used": [
+    "MD",
+    "X",
+    "Y",
+    "Z",
+    "depth_from_heel",
+    "depth_fraction",
+    "gr_filled",
+    "gr_rolling_mean_10",
+    "gr_rolling_mean_30",
+    "gr_rolling_std_10",
+    "gr_rolling_mean_100",
+    "tvt_input_filled",
+    "x_diff",
+    "y_diff",
+    "z_diff",
+    "lateral_speed",
+    "tw_xcorr_best_lag_w21",
+    "tw_xcorr_best_corr_w21",
+    "tw_xcorr_best_lag_w51",
+    "tw_xcorr_best_corr_w51",
+    "tw_xcorr_best_lag_w101",
+    "tw_xcorr_best_corr_w101",
+    "tw_xcorr_lag_agreement",
+    "tw_xcorr_lag_consensus_smooth_50",
+    "tw_norm_gr_residual_at_best_lag",
+    "tw_typewell_gr_zscore_at_best_lag"
+  ],
+  "n_features": 26,
+  "training_time_seconds": 2325.712151288986,
+  "notes": "Added robust per-well/typewell z-scored Pearson Typewell alignment features at windows 21, 51, and 101 over TVT lags [-80, 80]. The median lag across scales was used for smooth consensus and normalized GR residual features. Compared with exp_b001 RMSE 37.1134, exp008 improved by 0.0977; against exp006 target 36.3943, it trailed by 0.6214. Normalization should help when train/test GR scale differs; multi-scale lags help only if local GR motifs have a stable Typewell correspondence.",
+  "oof_path": "experiments/oof/oof_lightgbm_exp008.npy",
+  "test_path": "experiments/test_preds/test_lightgbm_exp008.npy",
+  "feature_params": {
+    "max_lag": 80,
+    "windows": [
+      21,
+      51,
+      101
+    ],
+    "normalization": "per well/typewell robust zscore median and MAD*1.4826",
+    "lag_agreement": "std of best lags across windows",
+    "lag_consensus": "centered rolling mean 50 of median best lag"
+  }
+}

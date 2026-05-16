@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp012",
+  "phase": "feature_engineering",
+  "description": "XGBoost trained on the exact feature set used in exp009 (DTW + typewell Geology). exp009 LightGBM achieved 34.58, and exp010 showed XGBoost on DTW alone trailed LGBM by only 0.31. Running XGBoost on the strongest feature set should produce a competitive model and — critically — a diverse OOF for stacking with exp009. This is essential for Phase 4.",
+  "model": "xgboost",
+  "features_to_add": [],
+  "base_experiment": "exp009",
+  "save_oof_path": "experiments/oof/oof_xgboost_exp012.npy",
+  "save_test_path": "experiments/test_preds/test_xgboost_exp012.npy",
+  "save_result_path": "experiments/results/exp012.json",
+  "implementation_notes": [
+    "Use the EXACT feature matrix from exp009 (DTW + Geology features). Reuse the feature-builder function in src/features.py.",
+    "Encode categorical geology labels as integer codes for XGBoost (it doesn't have native LGBM-style categorical handling; integer codes work since trees split on values). Use the same fold-safe target encoding.",
+    "XGBoost params: device='cuda', tree_method='hist', max_depth=8, eta=0.05, subsample=0.85, colsample_bytree=0.85, min_child_weight=8, n_estimators=4000, early_stopping_rounds=100, eval_metric='rmse'.",
+    "5-fold GroupKFold by well_id. Save OOF and test predictions in original CSV row order.",
+    "Compare to exp009 (LGBM 34.581). Even if slightly worse, the diversity is the goal."
+  ]
+}

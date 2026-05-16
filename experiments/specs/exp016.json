@@ -1,0 +1,34 @@
+{
+  "experiment_id": "exp016",
+  "phase": "feature_engineering",
+  "description": "CatBoost on the exp011 deeper-geology feature set. The deeper-geology features (multi-row geology context at +/-5/+/-15, layer index, layer position fraction, layer-conditional GR residuals) hurt LightGBM in exp011 (+0.26 vs exp009) but CatBoost handles categorical and ordered features much better — those same features may help here. Worth testing because exp014's leap suggests CatBoost has more headroom with geology-derived signals.",
+  "model": "catboost",
+  "features_to_add": [
+    "tw_geology_lag_+5",
+    "tw_geology_lag_-5",
+    "tw_geology_lag_+15",
+    "tw_geology_lag_-15",
+    "tw_geology_layer_index",
+    "tw_geology_layer_index_from_bottom",
+    "tw_geology_n_layers_total",
+    "tw_layer_position_fraction",
+    "tw_layer_top_tvt",
+    "tw_layer_bottom_tvt",
+    "tw_geology_layer_mean_gr",
+    "tw_geology_layer_std_gr",
+    "gr_minus_layer_mean_gr",
+    "gr_minus_layer_mean_gr_zscore",
+    "tw_distinct_geologies_in_window_50"
+  ],
+  "base_experiment": "exp011",
+  "save_oof_path": "experiments/oof/oof_catboost_exp016.npy",
+  "save_test_path": "experiments/test_preds/test_catboost_exp016.npy",
+  "save_result_path": "experiments/results/exp016.json",
+  "implementation_notes": [
+    "Reuse exp011 feature pipeline from src/features.py. Drop the target-encoded geology column (CatBoost handles cats natively).",
+    "Pass all geology label columns (aligned + offset) as cat_features.",
+    "CatBoost params: task_type='GPU', iterations=10000, learning_rate=0.04, depth=9, l2_leaf_reg=5.0, bagging_temperature=0.5, od_type='Iter', od_wait=250, eval_metric='RMSE'.",
+    "5-fold GroupKFold by well_id. Save OOF and test predictions matching CSV row order.",
+    "Target: beat exp014 (30.454). If matched or close, the diverse OOF is still useful for stacking."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "experiment_id": "exp027",
+  "phase": "feature_engineering",
+  "description": "Port the public 9.956-LB kernel build_well() feature factory into our pipeline. This is the HIGHEST-VALUE work because the kernel achieves <10 RMSE on LB. Build all 200+ features per row: particle filter on ANCC formation, 7 beam search paths through typewell GR (Numba JIT, allow ±2 lag), multi-scale NCC at hws=(8,15,25) + score-weighted ensemble, per-formation b_well segment anchors (full/early/mid/late/WLS), KNN imputation of formation depths and dense ANCC from neighboring wells, plus all GR rolling/lag/lead/diff/envelope/energy features and TVT-anchor GR offset features (tda/tdbc/tdsc/tdpf). TARGET: delta_target = TVT - last_known_TVT. Reference notebook attached.",
+  "model": "lightgbm+catboost",
+  "features_to_add": [
+    "pf_ancc", "pf_ancc_std", "pf_z", "beam_{tag}_d (7 configs)",
+    "sc8_d/sc15_d/sc25_d + scores", "sc_ens_d (score-weighted)",
+    "tvtF_{fm}/tvtFw_{fm}/tvtF50_{fm} (6 formations × 3 vars)",
+    "bw_{fm}/bww_{fm}/bw50_{fm}/bw_early_{fm}/bw_mid_{fm}",
+    "form_mean_d/form_std_d/form_rng_d",
+    "dense_ancc/dense_std/dense_dist/tvt_dense_d/tvt_densew_d",
+    "gr_d1/gr_d2/gr_env/gr_nrg",
+    "grm{w}/grs{w} for w in [5,21,51,101]",
+    "glag{lag}/glead{lag} for lag in [1,5,15,30]",
+    "tda{offset} (11 offsets relative to last_known TVT)",
+    "tdbc/tdsc/tdpf offset features",
+    "slp_all/slp_50/slp_z/slp_b_d_all",
+    "frac/frac2/sqrt_frac (lateral position)"
+  ],
+  "base_experiment": "none",
+  "save_oof_path": "experiments/oof/oof_combined_exp027.npy",
+  "save_test_path": "experiments/test_preds/test_combined_exp027.npy",
+  "save_result_path": "experiments/results/exp027.json",
+  "implementation_notes": [
+    "READ /tmp/kaggle_better/rogii-better-solution-lb-9-956.ipynb FIRST — port build_well() and helper functions (run_pf_ancc/run_pf_z/beam_search/multi_scale_ncc/FormationPlaneKNN/DenseANCCImputer) verbatim except adapt paths.",
+    "Use Numba @njit for beam search and particle filter — Python loops over 773 wells × 1000s of rows = unacceptable.",
+    "Target = TVT - last_known_TVT (delta from heel). Predict only on lateral rows (TVT_input is NaN). Reconstruct absolute TVT = last_known + pred.",
+    "Train 3 LightGBM (seeds 42/7/123, lrs 0.025/0.020/0.030) + 3 CatBoost (same seeds, depth=7, iterations=8000).",
+    "5-fold GroupKFold by well_id. Save raw OOF and test predictions in original CSV row order (length 5092255 train, 19221 test).",
+    "Apply per-well savgol(17,3) smoothing as the kernel does for test predictions. Output savgol-smoothed predictions to oof_path/test_path; raw to *_raw.npy.",
+    "Use task_type='GPU' for both LGBM and CatBoost.",
+    "Target: <12 RMSE. Even 12 is a 3x improvement over our current 29.5. The kernel hits ~10 on LB so we should be close to that on CV."
+  ]
+}

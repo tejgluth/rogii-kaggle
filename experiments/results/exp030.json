@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp030",
+  "model": "lgbm_delta_bwell_ncc_tda",
+  "phase": "feature_engineering",
+  "cv_rmse": 10.551339149475098,
+  "cv_rmse_lateral": 9.919278144836426,
+  "fold_rmses_lateral": [
+    8.695106506347656,
+    9.875530242919922,
+    9.15583324432373,
+    11.280142784118652,
+    10.376858711242676
+  ],
+  "n_features": 101,
+  "notes": "exp026 + TDA offsets + GR lag/lead + diff/env/energy + multi-window rolling + slope features",
+  "oof_path": "experiments/oof/oof_lightgbm_exp030.npy",
+  "test_path": "experiments/test_preds/test_lightgbm_exp030.npy"
+}

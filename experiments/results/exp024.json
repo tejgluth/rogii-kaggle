@@ -1,0 +1,19 @@
+{
+  "experiment_id": "exp024",
+  "model": "nnls+med401+savgol1001",
+  "phase": "stacking+postprocess",
+  "cv_rmse": 29.547515869140625,
+  "med_window": 401,
+  "savgol_window": 1001,
+  "members": [
+    "exp014",
+    "exp013",
+    "exp012",
+    "exp009",
+    "exp011",
+    "exp006"
+  ],
+  "notes": "NNLS stack with median+savgol cascade smoothing.",
+  "oof_path": "experiments/oof/oof_stack_exp024.npy",
+  "test_path": "experiments/test_preds/test_stack_exp024.npy"
+}

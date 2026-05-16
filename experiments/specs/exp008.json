@@ -1,0 +1,30 @@
+{
+  "experiment_id": "exp008",
+  "phase": "feature_engineering",
+  "description": "Refine typewell alignment with per-well GR normalization and multi-scale window correlation. EDA showed test GR mean=76.5 vs train GR mean=87.8 — scale mismatch hurts raw cross-correlation. Normalize lateral GR and typewell GR (z-score within well/typewell) before computing correlations, and compute alignment features at multiple window scales (21, 51, 101) to capture both fine and coarse geological structure.",
+  "model": "lightgbm",
+  "features_to_add": [
+    "tw_xcorr_best_lag_w21",
+    "tw_xcorr_best_corr_w21",
+    "tw_xcorr_best_lag_w51",
+    "tw_xcorr_best_corr_w51",
+    "tw_xcorr_best_lag_w101",
+    "tw_xcorr_best_corr_w101",
+    "tw_xcorr_lag_agreement",
+    "tw_xcorr_lag_consensus_smooth_50",
+    "tw_norm_gr_residual_at_best_lag",
+    "tw_typewell_gr_zscore_at_best_lag"
+  ],
+  "base_experiment": "exp_b001",
+  "save_oof_path": "experiments/oof/oof_lightgbm_exp008.npy",
+  "save_test_path": "experiments/test_preds/test_lightgbm_exp008.npy",
+  "save_result_path": "experiments/results/exp008.json",
+  "implementation_notes": [
+    "Z-score normalize lateral GR within each well (robust: subtract well-median, divide by well-MAD*1.4826). Z-score normalize typewell GR per typewell file the same way.",
+    "Use Pearson correlation (not raw correlate sum) of normalized windows — this is what makes correlation comparable across scales of GR.",
+    "Search range: lags in [-80, +80] in TVT units. For each scale (21, 51, 101), record best_lag and best_corr.",
+    "tw_xcorr_lag_agreement = std of the three best_lag estimates across scales — low std means high confidence.",
+    "tw_xcorr_lag_consensus_smooth_50 = rolling-mean(50) of the median best_lag across scales — smooth TVT estimate.",
+    "Use GroupKFold(5) by well_id. Target to beat: exp006 (36.394)."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp031",
+  "model": "catboost_delta_bwell_ncc",
+  "phase": "feature_engineering",
+  "cv_rmse": 6.446012020111084,
+  "cv_rmse_lateral": 3.7125065326690674,
+  "fold_rmses_lateral": [
+    3.1457948684692383,
+    5.614002227783203,
+    1.862273097038269,
+    1.7836798429489136,
+    4.556081771850586
+  ],
+  "n_features": 73,
+  "notes": "CatBoost (GPU) on exp026 feature set with delta target.",
+  "oof_path": "experiments/oof/oof_catboost_exp031.npy",
+  "test_path": "experiments/test_preds/test_catboost_exp031.npy"
+}

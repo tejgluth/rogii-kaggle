@@ -1,0 +1,12 @@
+{
+  "experiment_id": "exp032",
+  "model": "avg_cb60_lgbm40+savgol",
+  "phase": "stacking",
+  "cv_rmse_lateral": 3.311476707458496,
+  "weight_cb": 0.6000000000000002,
+  "savgol_window": 201,
+  "savgol_poly": 2,
+  "notes": "Simple 0.60*exp031 + 0.40*exp026 + per-well savgol",
+  "oof_path": "experiments/oof/oof_stack_exp032.npy",
+  "test_path": "experiments/test_preds/test_stack_exp032.npy"
+}

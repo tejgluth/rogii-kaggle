@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp036",
+  "model": "catboost_deep_d10_lr03",
+  "phase": "feature_engineering",
+  "cv_rmse_lateral": 3.9940552711486816,
+  "fold_rmses_full": [
+    6.565979957580566,
+    7.315032482147217,
+    6.2353620529174805,
+    5.489506721496582,
+    7.437005043029785
+  ],
+  "notes": "Deeper CatBoost depth=10 lr=0.03 iter=12000 on exp026 features.",
+  "oof_path": "experiments/oof/oof_catboost_exp036.npy",
+  "test_path": "experiments/test_preds/test_catboost_exp036.npy"
+}

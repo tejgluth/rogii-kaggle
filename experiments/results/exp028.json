@@ -1,0 +1,14 @@
+{
+  "experiment_id": "exp028",
+  "model": "kernel_port_lgb3+cb1+ridge+pp",
+  "phase": "feature_engineering",
+  "cv_rmse_lateral_delta": 10.430368423461914,
+  "cv_rmse_abs_tvt": 10.398388862609863,
+  "alpha": 1.0000000000000004,
+  "tau": 100.0,
+  "w_pf": 0.1,
+  "n_features": 195,
+  "notes": "Port of public 9.956-LB kernel. Particle filter ANCC+Z, 7 beam searches, multi-scale NCC, formation b_well anchoring, KNN imputation. Saved OOF/test in full CSV row order for stacking.",
+  "oof_path": "experiments/oof/oof_combined_exp028.npy",
+  "test_path": "experiments/test_preds/test_combined_exp028.npy"
+}
