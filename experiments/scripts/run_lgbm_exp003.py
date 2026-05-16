@@ -145,16 +145,23 @@ def prepare_features(
     return df, global_gr_median, global_tvt_input_median
 
 
-def write_experiment_log(cv_rmse: float, notes: str) -> None:
+def write_experiment_log(result: dict[str, Any]) -> None:
     log_path = REPO_ROOT / "experiments" / "experiment_log.csv"
     row = pd.DataFrame(
         [
             {
                 "experiment_id": EXPERIMENT_ID,
-                "cv_rmse": cv_rmse,
-                "model": "lightgbm",
                 "phase": "feature_engineering",
-                "notes": notes,
+                "model": "lightgbm",
+                "cv_rmse": result["cv_rmse"],
+                "cv_rmse_std": result["cv_rmse_std"],
+                "n_features": result["n_features"],
+                "base_experiment": "exp_b001",
+                "description": "Typewell GR rolling cross-correlation features over lag range [-60, 60].",
+                "notes": result["notes"],
+                "oof_path": str(OOF_PATH.relative_to(REPO_ROOT)),
+                "test_path": str(TEST_PREDS_PATH.relative_to(REPO_ROOT)),
+                "training_time_seconds": result["training_time_seconds"],
             }
         ]
     )
@@ -261,7 +268,7 @@ def main() -> None:
         "notes": notes,
     }
     RESULT_PATH.write_text(json.dumps(jsonable(result), indent=2) + "\n")
-    write_experiment_log(cv_rmse, notes)
+    write_experiment_log(result)
 
     if oof.shape != (len(train_df),):
         raise ValueError(f"Unexpected OOF shape: {oof.shape}, expected {(len(train_df),)}")

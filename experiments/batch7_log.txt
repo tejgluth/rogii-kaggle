@@ -1,0 +1,10 @@
+[Orchestrator] Spawning 2 workers (max_parallel=2)
+[Worker] Spawning Codex for exp016...
+[Worker] Spawning Codex for exp015...
+[Worker] exp016 DONE — cv_rmse=31.232831954956055 (4283s)
+[Worker] exp015 TIMEOUT
+
+[Orchestrator] Batch complete: 1 succeeded, 1 failed
+[Orchestrator] Best this batch: exp016 cv_rmse=31.232831954956055
+RESULT: {'experiment_id': 'exp015', 'success': False, 'error_message': 'Codex worker timed out after 7200s'}
+RESULT: {'experiment_id': 'exp016', 'success': True, 'cv_rmse': 31.232831954956055, 'elapsed_seconds': 4282.8163986206055}
