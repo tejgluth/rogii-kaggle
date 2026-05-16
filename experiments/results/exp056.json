@@ -1,0 +1,9 @@
+{
+  "experiment_id": "exp056",
+  "phase": "stacking",
+  "model": "residual_probe_lgbm",
+  "stack_old": 2.6626193523406982,
+  "stack_new_w1": 2.4063894748687744,
+  "best_shrinkage_w": 1.0,
+  "best_lat_rmse": 2.406374957758993
+}
