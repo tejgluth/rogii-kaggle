@@ -1,0 +1,320 @@
+{
+  "experiment_id": "exp050",
+  "phase": "stacking",
+  "winner": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w301_p2",
+  "winner_lat_rmse": 2.9597667674534387,
+  "n_candidates_tried": 92,
+  "base_members": [
+    "xgboost_exp038",
+    "xgboost_exp040",
+    "catboost_exp031",
+    "catboost_exp033",
+    "catboost_exp036",
+    "lightgbm_exp026",
+    "lightgbm_exp030",
+    "combined_exp028",
+    "lightgbm_exp025"
+  ],
+  "log": [
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w301_p2",
+      "lat_rmse": 2.9597667674534387,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w301_p3",
+      "lat_rmse": 2.9597832648939573,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w301_p3",
+      "lat_rmse": 2.960428970340798,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w301_p2",
+      "lat_rmse": 2.9604804653680463,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3",
+      "lat_rmse": 2.9612423702885935,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p2",
+      "lat_rmse": 2.9612842409064872,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w301_p3",
+      "lat_rmse": 2.9615863608259025,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w301_p2",
+      "lat_rmse": 2.961635106274894,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w301_p2",
+      "lat_rmse": 2.96239153969036,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w301_p3",
+      "lat_rmse": 2.9625251910382473,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w201_p2",
+      "lat_rmse": 2.962674435307444,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w201_p3",
+      "lat_rmse": 2.962732579629596,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w201_p2",
+      "lat_rmse": 2.963448331235876,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w201_p3",
+      "lat_rmse": 2.963515636212814,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w101_p2",
+      "lat_rmse": 2.9672938320754443,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w101_p3",
+      "lat_rmse": 2.967333381993447,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w101_p2",
+      "lat_rmse": 2.968556274919372,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w101_p3",
+      "lat_rmse": 2.9685944965188784,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w51_p2",
+      "lat_rmse": 2.97065779556221,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w51_p3",
+      "lat_rmse": 2.9706701446309722,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w501_p3",
+      "lat_rmse": 2.970841387504482,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w501_p3",
+      "lat_rmse": 2.970889118807139,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w501_p3",
+      "lat_rmse": 2.971192064015211,
+      "info": ""
+    },
+    {
+      "method": "hillclimb_avg_savgol_w501_p2",
+      "lat_rmse": 2.9713312870949764,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w501_p3",
+      "lat_rmse": 2.971352922317088,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w501_p2",
+      "lat_rmse": 2.971456850848917,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w501_p2",
+      "lat_rmse": 2.971808140912241,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w501_p2",
+      "lat_rmse": 2.9718736779491666,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w51_p2",
+      "lat_rmse": 2.9722013901695887,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "hillclimb_avg_savgol_w51_p3",
+      "lat_rmse": 2.9722149757326,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w501_p3",
+      "lat_rmse": 2.9746383935735623,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w501_p2",
+      "lat_rmse": 2.974742572054234,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex",
+      "lat_rmse": 2.9753417577681818,
+      "info": "weights={'xgboost_exp038': 0.95, 'xgboost_exp040': 0.0, 'catboost_exp031': 0.05}"
+    },
+    {
+      "method": "hillclimb_avg",
+      "lat_rmse": 2.977334588431775,
+      "info": "members=['xgboost_exp038']"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w301_p3",
+      "lat_rmse": 2.978383173203544,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w301_p2",
+      "lat_rmse": 2.978446653000946,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w501_p2",
+      "lat_rmse": 2.990046466805061,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w501_p3",
+      "lat_rmse": 2.9902590133696014,
+      "info": ""
+    },
+    {
+      "method": "hillclimb_avg_savgol_w801_p3",
+      "lat_rmse": 3.0265425060985467,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w801_p3",
+      "lat_rmse": 3.028091412751777,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w801_p3",
+      "lat_rmse": 3.028104878731057,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w801_p3",
+      "lat_rmse": 3.028248857000995,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w801_p3",
+      "lat_rmse": 3.0323072829920026,
+      "info": ""
+    },
+    {
+      "method": "hillclimb_avg_savgol_w801_p2",
+      "lat_rmse": 3.0337186777245604,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w801_p2",
+      "lat_rmse": 3.035309317226145,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w801_p2",
+      "lat_rmse": 3.0353424447761577,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w801_p2",
+      "lat_rmse": 3.0354003158452754,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w801_p2",
+      "lat_rmse": 3.0390506503882895,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w801_p3",
+      "lat_rmse": 3.0469704224929557,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w801_p2",
+      "lat_rmse": 3.0525864360797925,
+      "info": ""
+    },
+    {
+      "method": "hillclimb_avg_savgol_w1001_p3",
+      "lat_rmse": 3.0953707871976306,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w1001_p3",
+      "lat_rmse": 3.097647968484445,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w1001_p3",
+      "lat_rmse": 3.0977242550815918,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w1001_p3",
+      "lat_rmse": 3.09779463551699,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med201_savgol_w1001_p3",
+      "lat_rmse": 3.101895913459442,
+      "info": ""
+    },
+    {
+      "method": "hillclimb_avg_savgol_w1001_p2",
+      "lat_rmse": 3.1103718586069724,
+      "info": "hillclimb_avg"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med51_savgol_w1001_p2",
+      "lat_rmse": 3.1125733363701027,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w1001_p2",
+      "lat_rmse": 3.1127258210184734,
+      "info": "grid_top3_simplex"
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med101_savgol_w1001_p2",
+      "lat_rmse": 3.1127366954186493,
+      "info": ""
+    },
+    {
+      "method": "grid_top3_simplex_savgol_w301_p3_med301_savgol_w1001_p3",
+      "lat_rmse": 3.1155170947295896,
+      "info": ""
+    }
+  ]
+}
