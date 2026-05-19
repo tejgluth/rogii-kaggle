@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-ensemble-submission",
+  "title": "ROGII ensemble submission",
+  "code_file": "rogii_ensemble_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": []
+}
