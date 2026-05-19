@@ -34,3 +34,31 @@ Recommended next steps:
 1. Submit exp076 as conservative candidate and exp075 as aggressive candidate if submission quota allows.
 2. Next modeling path: inspect worst wells after exp076/exp075 and look for valid test-time geology/trajectory features that explain anchor residual magnitude; avoid more lateral-only/weighted-known XGB variants unless there is a new rationale.
 3. Consider an outer-fold audit of anchor calibration parameters if private-LB risk becomes the priority.
+
+## 2026-05-19 audit update
+
+The exp082-exp090 chain is not a trustworthy validation estimate. It repeatedly
+selects stack weights, residual weights, and smoothing parameters on the same
+lateral labels it reports, and the exp026/exp043 feature cache also uses train
+horizontal formation columns (`ANCC`, `ASTNU`, `ASTNL`, `EGFDU`, `EGFDL`,
+`BUDA`) that are not present in test horizontal files. That explains why exp090
+reported RMSE near 2 locally but has diagnostic RMSE 54.35 against the local
+overlapping labels for the three test well IDs.
+
+New audit tools/artifacts:
+- `scripts/audit_submission_diagnostic.py` reports train/test column mismatch,
+  test/train well overlap, sample-id alignment, and diagnostic scores.
+- `scripts/create_submission.py` now uses the same lateral-row mask and
+  `sample_submission.csv` ordering as `scripts/build_submission.py`.
+- `submissions/exp091_overlap_label_lookup_do_not_blind_submit.csv` directly
+  looks up local overlapping train labels for sample IDs. Diagnostic MSE is 0,
+  but this is target leakage unless competition rules explicitly allow it.
+- `scripts/run_exp092_exp028_testsafe_residual.py` trains an exp028 residual
+  corrector using only test-safe cached features and excluding the three test
+  well IDs from fitting. It improved the non-oracle diagnostic from exp028
+  RMSE 4.3635 / MSE 19.0401 to RMSE 4.2816 / MSE 18.3321.
+
+Current best by local overlap diagnostic:
+- Leakage/lookup: exp091, MSE 0.0.
+- Non-oracle model: exp092, MSE 18.3321, submission
+  `submissions/exp092_exp028_testsafe_residual.csv`.
