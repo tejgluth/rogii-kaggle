@@ -62,3 +62,29 @@ Current best by local overlap diagnostic:
 - Leakage/lookup: exp091, MSE 0.0.
 - Non-oracle model: exp092, MSE 18.3321, submission
   `submissions/exp092_exp028_testsafe_residual.csv`.
+
+## 2026-05-19 clean-holdout continuation
+
+The stricter overlap diagnostic should score the three overlapping test wells
+with OOF predictions for those wells, not averaged test predictions that may
+come from models trained on the same wells. Under that metric:
+
+- exp028 clean OOF holdout RMSE is 7.2542 / MSE 52.6235.
+- exp093 trains a residual model only on non-test wells and selects its
+  postprocess only on non-test-well OOF rows. Clean holdout improves to RMSE
+  7.1405 / MSE 50.9866. Its legacy test-pred diagnostic is 4.3379, but that is
+  not the clean comparison.
+- Downloaded the Kaggle artifact dataset pieces under
+  `data/artifacts/wellbore-geology-prediction-artifacts/` and evaluated cached
+  OOFs using the same clean-holdout protocol.
+- exp094 is a dev-selected equal blend of local exp028, artifact catboost-3,
+  and artifact lightgbm-4. Clean holdout RMSE is 7.1324 / MSE 50.8705.
+- exp095 is an untuned equal average of all downloaded artifact OOFs plus local
+  exp028. Clean holdout RMSE is 7.1211 / MSE 50.7095. This is currently the best
+  clean OOF-only submission candidate:
+  `submissions/exp095_artifact_all_equal_clean_oof.csv`.
+
+Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
+predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
+that is optimistic because those test predictions may have been trained on the
+overlap wells. Treat clean OOF submissions as the honest comparison surface.

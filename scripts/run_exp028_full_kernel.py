@@ -678,6 +678,60 @@ print("Feature builder OK ✓")
 
 
 # ==================== Cell 7 ====================
+if os.environ.get("EXP028_ARTIFACT_PRED_ONLY") == "1":
+    import joblib
+
+    artifact_model_specs = [
+        spec.strip()
+        for spec in os.environ.get("EXP028_ARTIFACT_MODELS", "").split(",")
+        if spec.strip()
+    ]
+    if not artifact_model_specs:
+        raise SystemExit("Set EXP028_ARTIFACT_MODELS to name:path entries")
+
+    test_paths = sorted(TEST_DIR.glob("*__horizontal_well.csv"))
+    print("Building artifact-prediction test features...")
+    test_df = build_dataset(test_paths, is_train=False, label="test")
+    print(f"test: {test_df.shape}")
+
+    out_dir = ROOT / "experiments" / "test_preds"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    sub_dir = ROOT / "submissions"
+    sub_dir.mkdir(parents=True, exist_ok=True)
+
+    for spec in artifact_model_specs:
+        name, model_path = spec.split(":", 1)
+        models = joblib.load(model_path)
+        if hasattr(models[0], "feature_name"):
+            feature_cols = models[0].feature_name()
+        elif getattr(models[0], "feature_names_", None) and all(str(c).isdigit() for c in models[0].feature_names_):
+            feature_cols = [c for c in test_df.columns if c not in {"well", "id", "target"}]
+        else:
+            feature_cols = list(models[0].feature_names_)
+        missing = [c for c in feature_cols if c not in test_df.columns]
+        if missing:
+            raise ValueError(f"{name}: missing feature columns: {missing[:20]}")
+        Xt = test_df[feature_cols]
+        pred_delta = np.zeros(len(test_df), np.float32)
+        for model in models:
+            if hasattr(model, "best_iteration"):
+                pred_delta += model.predict(Xt, num_iteration=model.best_iteration).astype(np.float32) / len(models)
+            else:
+                pred_delta += model.predict(Xt.values).astype(np.float32) / len(models)
+        pred_abs = (test_df["last_known_tvt"].to_numpy(np.float32) + pred_delta).astype(np.float32)
+        pred_path = out_dir / f"test_artifact_{name}.npy"
+        np.save(pred_path, pred_abs)
+        sub = (
+            pd.read_csv(SAMPLE)[["id"]]
+            .merge(test_df[["id"]].assign(tvt=pred_abs), on="id", how="left")
+        )
+        if int(sub["tvt"].isna().sum()):
+            raise ValueError(f"{name}: missing submission ids")
+        sub_path = sub_dir / f"artifact_{name}.csv"
+        sub.to_csv(sub_path, index=False)
+        print(f"{name}: wrote {pred_path} and {sub_path}")
+    sys.exit(0)
+
 print("Building train..."); t0=time.time()
 train_df=build_dataset(hw_paths,is_train=True,label="train")
 print(f"train: {train_df.shape}  {time.time()-t0:.0f}s")
@@ -863,4 +917,3 @@ _json.dump({
     "test_path": str(EXP_TEST.relative_to(ROOT)),
 }, open(EXP_RESULT, "w"), indent=2)
 print(f"exp028 saved: lateral_delta={min(r_avg,r_stk):.4f} abs_tvt={best_r:.4f}")
-

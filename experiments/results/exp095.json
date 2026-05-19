@@ -1,0 +1,37 @@
+{
+  "experiment_id": "exp095",
+  "phase": "artifact_all_equal",
+  "selection_rule": "untuned equal average of all downloaded artifact OOFs plus local exp028",
+  "heldout_wells": [
+    "000d7d20",
+    "00bbac68",
+    "00e12e8b"
+  ],
+  "members": [
+    "catboost-1",
+    "catboost-2",
+    "catboost-3",
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "lightgbm-4",
+    "local_exp028"
+  ],
+  "weights": {
+    "catboost-1": 0.125,
+    "catboost-2": 0.125,
+    "catboost-3": 0.125,
+    "lightgbm-1": 0.125,
+    "lightgbm-2": 0.125,
+    "lightgbm-3": 0.125,
+    "lightgbm-4": 0.125,
+    "local_exp028": 0.125
+  },
+  "dev_rmse": 10.42547607421875,
+  "dev_mse": 108.6905513741076,
+  "clean_holdout_rmse": 7.121062755584717,
+  "clean_holdout_mse": 50.7095347689758,
+  "clean_holdout_bias": 1.1833646297454834,
+  "submission_path": "submissions/exp095_artifact_all_equal_clean_oof.csv",
+  "note": "This file is clean OOF-only for the overlapping test wells; no artifact test predictions are used."
+}
