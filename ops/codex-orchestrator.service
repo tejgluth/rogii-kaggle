@@ -1,0 +1,9 @@
+[Unit]
+Description=ROGII Kaggle Codex orchestrator continuation run
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/tejas/Desktop/rogii-kaggle
+ExecStart=/home/tejas/Desktop/rogii-kaggle/scripts/launch_codex_orchestrator.sh

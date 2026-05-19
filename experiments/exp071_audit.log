@@ -1,0 +1,85 @@
+Loaded 12 base learners
+  xgboost_exp063               lat_rmse=2.6928 mse=7.2512
+  xgboost_exp064               lat_rmse=2.7103 mse=7.3457
+  xgboost_exp067               lat_rmse=2.7342 mse=7.4757
+  xgboost_exp057               lat_rmse=2.7427 mse=7.5222
+  xgboost_exp051               lat_rmse=2.7546 mse=7.5875
+  xgboost_exp068               lat_rmse=2.7648 mse=7.6442
+  xgboost_exp060               lat_rmse=2.7742 mse=7.6962
+  xgboost_exp066               lat_rmse=2.8257 mse=7.9847
+  xgboost_exp058               lat_rmse=2.9174 mse=8.5113
+  xgboost_exp059               lat_rmse=2.9521 mse=8.7151
+  xgboost_exp038               lat_rmse=2.9773 mse=8.8645
+  xgboost_exp040               lat_rmse=3.0548 mse=9.3316
+    residual inner0: best_iter=42
+    residual inner1: best_iter=161
+    residual inner2: best_iter=127
+fold0: stack_rmse=3.6246 resid_rmse=3.6246 resid_w=0.00 single:xgboost_exp063
+    residual inner0: best_iter=2
+    residual inner1: best_iter=44
+    residual inner2: best_iter=31
+fold1: stack_rmse=4.1826 resid_rmse=3.7436 resid_w=1.00 grid:xgboost_exp051=0.90,xgboost_exp068=0.10,xgboost_exp060=-0.00
+    residual inner0: best_iter=152
+    residual inner1: best_iter=25
+    residual inner2: best_iter=70
+fold2: stack_rmse=1.2700 resid_rmse=1.2700 resid_w=0.00 hill:xgboost_exp063,xgboost_exp051,xgboost_exp063
+    residual inner0: best_iter=43
+    residual inner1: best_iter=36
+    residual inner2: best_iter=10
+fold3: stack_rmse=1.4026 resid_rmse=1.4026 resid_w=0.00 hill:xgboost_exp063,xgboost_exp051,xgboost_exp063
+    residual inner0: best_iter=122
+    residual inner1: best_iter=23
+    residual inner2: best_iter=1
+fold4: stack_rmse=2.6329 resid_rmse=2.6329 resid_w=0.00 single:xgboost_exp063
+{
+  "experiment_id": "exp071",
+  "phase": "audit",
+  "stack_outer_lat_rmse": 2.8697891235351562,
+  "stack_outer_lat_mse": 8.23568961356068,
+  "residual_outer_lat_rmse": 2.745321035385132,
+  "residual_outer_lat_mse": 7.536787587328092,
+  "note": "Residual fold shrinkage is oracle-on-validation; use only as an upper-bound diagnostic.",
+  "folds": [
+    {
+      "fold": 0,
+      "train_stack_rmse": 2.405102310034004,
+      "val_stack_rmse": 3.6245768070220947,
+      "val_best_resid_rmse": 3.6245768070220947,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "single:xgboost_exp063"
+    },
+    {
+      "fold": 1,
+      "train_stack_rmse": 2.2526496585402764,
+      "val_stack_rmse": 4.182634353637695,
+      "val_best_resid_rmse": 3.743617534637451,
+      "val_best_resid_w_oracle": 1.0,
+      "selector": "grid:xgboost_exp051=0.90,xgboost_exp068=0.10,xgboost_exp060=-0.00"
+    },
+    {
+      "fold": 2,
+      "train_stack_rmse": 2.921953372487852,
+      "val_stack_rmse": 1.2699521780014038,
+      "val_best_resid_rmse": 1.2699521780014038,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "hill:xgboost_exp063,xgboost_exp051,xgboost_exp063"
+    },
+    {
+      "fold": 3,
+      "train_stack_rmse": 2.907220903533149,
+      "val_stack_rmse": 1.402580738067627,
+      "val_best_resid_rmse": 1.402580738067627,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "hill:xgboost_exp063,xgboost_exp051,xgboost_exp063"
+    },
+    {
+      "fold": 4,
+      "train_stack_rmse": 2.707556645042364,
+      "val_stack_rmse": 2.6329448223114014,
+      "val_best_resid_rmse": 2.6329448223114014,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "single:xgboost_exp063"
+    }
+  ],
+  "elapsed": 133.40010046958923
+}

@@ -1,0 +1,18 @@
+clean_exp072 raw rmse=2.680753 mse=7.186439
+new best clean_exp072 rmse=2.533151 mse=6.416852 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.52, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.531075 mse=6.406338 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.56, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.530544 mse=6.403654 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.58, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.530371 mse=6.402778 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.6, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.529520 mse=6.398469 cfg={'bias_mode': 'median', 'n_tail': 120, 'bias_shrink': 0.56, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.528954 mse=6.395607 cfg={'bias_mode': 'median', 'n_tail': 120, 'bias_shrink': 0.58, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.528731 mse=6.394479 cfg={'bias_mode': 'median', 'n_tail': 120, 'bias_shrink': 0.6, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.528490 mse=6.393260 cfg={'bias_mode': 'median', 'n_tail': 140, 'bias_shrink': 0.58, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best clean_exp072 rmse=2.528318 mse=6.392392 cfg={'bias_mode': 'median', 'n_tail': 140, 'bias_shrink': 0.6, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+aggressive_exp070 raw rmse=2.394797 mse=5.735052
+new best aggressive_exp070 rmse=2.298975 mse=5.285285 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.3, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best aggressive_exp070 rmse=2.296640 mse=5.274557 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.34, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best aggressive_exp070 rmse=2.296410 mse=5.273500 cfg={'bias_mode': 'median', 'n_tail': 100, 'bias_shrink': 0.36, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best aggressive_exp070 rmse=2.295022 mse=5.267127 cfg={'bias_mode': 'median', 'n_tail': 140, 'bias_shrink': 0.34, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best aggressive_exp070 rmse=2.294810 mse=5.266151 cfg={'bias_mode': 'median', 'n_tail': 140, 'bias_shrink': 0.36, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best aggressive_exp070 rmse=2.294559 mse=5.265000 cfg={'bias_mode': 'median', 'n_tail': 160, 'bias_shrink': 0.34, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}
+new best aggressive_exp070 rmse=2.294367 mse=5.264120 cfg={'bias_mode': 'median', 'n_tail': 160, 'bias_shrink': 0.36, 'slope_mode': 'none', 'slope_shrink': 0.0, 'clip': 0.0}

@@ -1,0 +1,8 @@
+{
+  "experiment_id": "exp070",
+  "phase": "stacking",
+  "best_lat_rmse": 2.394796848297119,
+  "best_method": "savgol_w201_p3",
+  "w_lgb": 1.5,
+  "w_xgb": 0.0
+}

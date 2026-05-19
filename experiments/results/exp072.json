@@ -1,0 +1,9 @@
+{
+  "experiment_id": "exp072",
+  "phase": "postprocess",
+  "base": "exp063",
+  "winner": "savgol_w251_p2_med31_savgol_w201_p3",
+  "lat_rmse": 2.680753469467163,
+  "lat_mse": 7.186439164060232,
+  "note": "Best observed before stopping slow cascade; recomputed and saved directly."
+}

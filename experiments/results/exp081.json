@@ -1,0 +1,9 @@
+{
+  "experiment_id": "exp081",
+  "phase": "postprocess",
+  "base": "exp072",
+  "winner": "median_n140_shrink0.60",
+  "lat_rmse": 2.528317928314209,
+  "lat_mse": 6.392391546635054,
+  "source": "Best clean constant-anchor setting observed during interrupted exp079."
+}

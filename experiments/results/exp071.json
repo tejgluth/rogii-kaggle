@@ -1,0 +1,52 @@
+{
+  "experiment_id": "exp071",
+  "phase": "audit",
+  "stack_outer_lat_rmse": 2.8697891235351562,
+  "stack_outer_lat_mse": 8.23568961356068,
+  "residual_outer_lat_rmse": 2.745321035385132,
+  "residual_outer_lat_mse": 7.536787587328092,
+  "note": "Residual fold shrinkage is oracle-on-validation; use only as an upper-bound diagnostic.",
+  "folds": [
+    {
+      "fold": 0,
+      "train_stack_rmse": 2.405102310034004,
+      "val_stack_rmse": 3.6245768070220947,
+      "val_best_resid_rmse": 3.6245768070220947,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "single:xgboost_exp063"
+    },
+    {
+      "fold": 1,
+      "train_stack_rmse": 2.2526496585402764,
+      "val_stack_rmse": 4.182634353637695,
+      "val_best_resid_rmse": 3.743617534637451,
+      "val_best_resid_w_oracle": 1.0,
+      "selector": "grid:xgboost_exp051=0.90,xgboost_exp068=0.10,xgboost_exp060=-0.00"
+    },
+    {
+      "fold": 2,
+      "train_stack_rmse": 2.921953372487852,
+      "val_stack_rmse": 1.2699521780014038,
+      "val_best_resid_rmse": 1.2699521780014038,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "hill:xgboost_exp063,xgboost_exp051,xgboost_exp063"
+    },
+    {
+      "fold": 3,
+      "train_stack_rmse": 2.907220903533149,
+      "val_stack_rmse": 1.402580738067627,
+      "val_best_resid_rmse": 1.402580738067627,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "hill:xgboost_exp063,xgboost_exp051,xgboost_exp063"
+    },
+    {
+      "fold": 4,
+      "train_stack_rmse": 2.707556645042364,
+      "val_stack_rmse": 2.6329448223114014,
+      "val_best_resid_rmse": 2.6329448223114014,
+      "val_best_resid_w_oracle": 0.0,
+      "selector": "single:xgboost_exp063"
+    }
+  ],
+  "elapsed": 133.40010046958923
+}

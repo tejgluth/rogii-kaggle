@@ -1,0 +1,3 @@
+fold0: best_iter=281 lat_rmse=3.526142
+fold1: best_iter=386 lat_rmse=5.223649
+fold2: best_iter=2590 lat_rmse=2.716133

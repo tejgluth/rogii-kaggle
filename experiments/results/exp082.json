@@ -1,0 +1,157 @@
+{
+  "experiment_id": "exp082",
+  "phase": "stacking",
+  "winner": "nnls_intercept",
+  "lat_rmse": 2.2935430947324416,
+  "lat_mse": 5.260339927394865,
+  "coef": {
+    "stack_exp075": 0.9891444583045232,
+    "stack_exp074": 0.0,
+    "stack_exp070": 0.010860811502533917,
+    "stack_exp056": 0.0,
+    "stack_exp080": 0.0,
+    "xgboost_exp076": 0.0,
+    "xgboost_exp081": 0.0,
+    "xgboost_exp073": 0.0,
+    "stack_exp050": 0.0,
+    "xgboost_exp072": 0.0,
+    "xgboost_exp063": 0.0,
+    "xgboost_exp064": 0.0,
+    "xgboost_exp067": 0.0,
+    "xgboost_exp057": 0.0,
+    "xgboost_exp051": 0.0,
+    "xgboost_exp068": 0.0,
+    "xgboost_exp060": 0.0,
+    "xgboost_exp066": 0.0,
+    "xgboost_exp058": 0.0,
+    "xgboost_exp059": 0.0,
+    "stack_exp039": 0.0,
+    "stack_exp041": 0.0,
+    "xgboost_exp038": 0.0,
+    "xgboost_exp040": 0.0,
+    "intercept": 0.0
+  },
+  "candidate_scores": [
+    {
+      "name": "stack_exp075",
+      "rmse": 2.2943670749664307,
+      "mse": 5.264120274690015
+    },
+    {
+      "name": "stack_exp074",
+      "rmse": 2.2957637310028076,
+      "mse": 5.270531108587932
+    },
+    {
+      "name": "stack_exp070",
+      "rmse": 2.394796848297119,
+      "mse": 5.735051944613815
+    },
+    {
+      "name": "stack_exp056",
+      "rmse": 2.406388521194458,
+      "mse": 5.7907057149364505
+    },
+    {
+      "name": "stack_exp080",
+      "rmse": 2.4331629276275635,
+      "mse": 5.920281832381136
+    },
+    {
+      "name": "xgboost_exp076",
+      "rmse": 2.528301239013672,
+      "mse": 6.392307155198068
+    },
+    {
+      "name": "xgboost_exp081",
+      "rmse": 2.528317928314209,
+      "mse": 6.392391546635054
+    },
+    {
+      "name": "xgboost_exp073",
+      "rmse": 2.534698486328125,
+      "mse": 6.424696416594088
+    },
+    {
+      "name": "stack_exp050",
+      "rmse": 2.662618637084961,
+      "mse": 7.089538006552175
+    },
+    {
+      "name": "xgboost_exp072",
+      "rmse": 2.680753469467163,
+      "mse": 7.186439164060232
+    },
+    {
+      "name": "xgboost_exp063",
+      "rmse": 2.6928069591522217,
+      "mse": 7.251209319258635
+    },
+    {
+      "name": "xgboost_exp064",
+      "rmse": 2.710293769836426,
+      "mse": 7.3456923188141445
+    },
+    {
+      "name": "xgboost_exp067",
+      "rmse": 2.7341763973236084,
+      "mse": 7.4757205716815065
+    },
+    {
+      "name": "xgboost_exp057",
+      "rmse": 2.7426602840423584,
+      "mse": 7.52218543366331
+    },
+    {
+      "name": "xgboost_exp051",
+      "rmse": 2.7545502185821533,
+      "mse": 7.587546906690989
+    },
+    {
+      "name": "xgboost_exp068",
+      "rmse": 2.7648110389709473,
+      "mse": 7.644180081215609
+    },
+    {
+      "name": "xgboost_exp060",
+      "rmse": 2.7741994857788086,
+      "mse": 7.696182786895406
+    },
+    {
+      "name": "xgboost_exp066",
+      "rmse": 2.8257229328155518,
+      "mse": 7.984710093039723
+    },
+    {
+      "name": "xgboost_exp058",
+      "rmse": 2.9174108505249023,
+      "mse": 8.511286070760434
+    },
+    {
+      "name": "xgboost_exp059",
+      "rmse": 2.9521350860595703,
+      "mse": 8.715101566343947
+    },
+    {
+      "name": "stack_exp039",
+      "rmse": 2.961005449295044,
+      "mse": 8.767553270754945
+    },
+    {
+      "name": "stack_exp041",
+      "rmse": 2.9612815380096436,
+      "mse": 8.76918834735676
+    },
+    {
+      "name": "xgboost_exp038",
+      "rmse": 2.97733473777771,
+      "mse": 8.864522140777865
+    },
+    {
+      "name": "xgboost_exp040",
+      "rmse": 3.0547640323638916,
+      "mse": 9.331583293424103
+    }
+  ],
+  "source": "Saved directly after interrupting slow grid sweep; matches observed nnls_intercept output."
+}

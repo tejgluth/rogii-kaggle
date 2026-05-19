@@ -1,0 +1,8 @@
+{
+  "experiment_id": "exp073",
+  "phase": "postprocess",
+  "base": "exp072",
+  "winner": "late_median_n100_decay0_shrink0.5",
+  "lat_rmse": 2.534698486328125,
+  "lat_mse": 6.424696416594088
+}

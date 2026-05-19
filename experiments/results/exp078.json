@@ -1,0 +1,12 @@
+{
+  "experiment_id": "exp078",
+  "phase": "modeling",
+  "model": "xgboost_exp063_known_weight_0.10",
+  "status": "stopped_early",
+  "reason": "Downweighting known heel rows improved fold0 modestly but badly degraded fold1; stopped early.",
+  "partial_folds": [
+    {"fold": 0, "best_iter": 7918, "lat_rmse": 3.551256},
+    {"fold": 1, "best_iter": 6258, "lat_rmse": 4.806433}
+  ],
+  "baseline_exp063_fold_rmses": [3.6245768, 3.5514348, 1.2620890, 1.4025495, 2.6329448]
+}

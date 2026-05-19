@@ -1,0 +1,13 @@
+{
+  "experiment_id": "exp077",
+  "phase": "modeling",
+  "model": "xgboost_lateral_only_exp063_params",
+  "status": "stopped_early",
+  "reason": "Lateral-only training improved fold0 slightly but badly degraded fold1 and fold2; stopped before spending more GPU time.",
+  "partial_folds": [
+    {"fold": 0, "best_iter": 281, "lat_rmse": 3.526142},
+    {"fold": 1, "best_iter": 386, "lat_rmse": 5.223649},
+    {"fold": 2, "best_iter": 2590, "lat_rmse": 2.716133}
+  ],
+  "baseline_exp063_fold_rmses": [3.6245768, 3.5514348, 1.2620890, 1.4025495, 2.6329448]
+}

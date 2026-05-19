@@ -1,0 +1,38 @@
+residual lat-RMSE (baseline = current stack RMSE): 2.4064
+
+=== LGBM residual (more reg) ===
+Training until validation scores don't improve for 150 rounds
+Early stopping, best iteration is:
+[3]	valid_0's rmse: 4.38451
+  lgb fold0: best=3
+Training until validation scores don't improve for 150 rounds
+Early stopping, best iteration is:
+[2]	valid_0's rmse: 3.72608
+  lgb fold1: best=2
+Training until validation scores don't improve for 150 rounds
+Early stopping, best iteration is:
+[1]	valid_0's rmse: 4.29706
+  lgb fold2: best=1
+Training until validation scores don't improve for 150 rounds
+Early stopping, best iteration is:
+[1]	valid_0's rmse: 3.34131
+  lgb fold3: best=1
+Training until validation scores don't improve for 150 rounds
+Early stopping, best iteration is:
+[1]	valid_0's rmse: 4.12565
+  lgb fold4: best=1
+  added lat: 2.3981
+
+=== XGB residual (depth=5, slow) ===
+  xgb fold0: best=0
+  xgb fold1: best=1
+  xgb fold2: best=0
+  xgb fold3: best=0
+  xgb fold4: best=0
+  added lat: 2.4156
+
+best residual combo: w_lgb=1.50 w_xgb=0.00 → lat=2.3952
+
+best with smoothing: savgol_w201_p3 lat=2.3948
+
+=== done ===
