@@ -1,0 +1,10 @@
+{
+  "experiment_id": "exp084",
+  "phase": "postprocess",
+  "base": "exp082 + exp083 residual",
+  "winner": "raw_w2.60_savgol_w201_p3",
+  "residual_weight": 2.6,
+  "lat_rmse": 2.0630435943603516,
+  "lat_mse": 4.256148872231279,
+  "source": "Saved after stopping slow broad sweep; best observed setting was w=2.60, savgol_w201_p3."
+}
