@@ -128,6 +128,10 @@ come from models trained on the same wells. Under that metric:
   `submissions/exp109_artifact_row_ridge_verylowalpha_clean_oof.csv`, Kaggle
   package `kaggle_exp109_artifact_row_ridge_verylowalpha/`, and
   `submissions/FINAL_submission.csv`.
+- exp110 tests replacing exp109's compact row ridge with a full-artifact-feature
+  row ridge. It improves the non-heldout OOF criterion to RMSE 10.3770 but
+  worsens the clean heldout audit to RMSE 6.9163 / MSE 47.8354. Do not promote
+  over exp109.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
