@@ -83,6 +83,23 @@ come from models trained on the same wells. Under that metric:
   exp028. Clean holdout RMSE is 7.1211 / MSE 50.7095. This is currently the best
   clean OOF-only submission candidate:
   `submissions/exp095_artifact_all_equal_clean_oof.csv`.
+- exp097 tried a row-level ridge residual model over all artifact features.
+  Alpha and residual shrink were selected only by non-heldout GroupKFold, but
+  the clean holdout worsened to RMSE 7.2218 / MSE 52.1544. Do not promote.
+- exp098 learns one per-well residual offset from artifact well summaries on top
+  of exp095. Model family and residual weight were selected by 5-fold CV over
+  non-heldout wells only. Clean holdout improved to RMSE 7.1002 / MSE 50.4133.
+- exp099 applies the same well-level residual system to an artifact-only base
+  with no local exp028 component. This is the best Kaggle-input-only route so
+  far: clean holdout RMSE 7.0836 / MSE 50.1777, submission
+  `submissions/exp099_artifact_only_well_residual_clean_oof.csv`, Kaggle package
+  `kaggle_exp099_artifact_well_residual/`.
+- exp100 extends the artifact-only well residual model grid with gradient
+  boosting and selects model/weight by non-heldout well CV only. The selected
+  `gbr_d4` / 0.50 residual correction improves clean holdout to RMSE 6.8816 /
+  MSE 47.3569. This is now the best clean Kaggle-input-only candidate:
+  `submissions/exp100_artifact_only_well_residual_gbr_clean_oof.csv`, Kaggle
+  package `kaggle_exp100_artifact_well_gbr/`, and `submissions/FINAL_submission.csv`.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but

@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-clean-artifact-well-gbr-submission",
+  "title": "ROGII clean artifact well GBR submission",
+  "code_file": "clean_artifact_well_gbr_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": []
+}

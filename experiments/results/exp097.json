@@ -1,0 +1,159 @@
+{
+  "experiment_id": "exp097",
+  "phase": "artifact_feature_ridge_residual",
+  "selection_rule": "alpha and residual weight selected by 3-fold GroupKFold on non-heldout wells only; final residual model trained on non-heldout wells and audited once on the three heldout wells",
+  "heldout_wells": [
+    "000d7d20",
+    "00bbac68",
+    "00e12e8b"
+  ],
+  "base_experiment": "exp095",
+  "base_members": [
+    "catboost-1",
+    "catboost-2",
+    "catboost-3",
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "lightgbm-4",
+    "local_exp028"
+  ],
+  "feature_count": 195,
+  "alphas": [
+    1.0,
+    100.0,
+    10000.0
+  ],
+  "weights": [
+    -0.5,
+    -0.45,
+    -0.4,
+    -0.35,
+    -0.3,
+    -0.25,
+    -0.19999999999999996,
+    -0.14999999999999997,
+    -0.09999999999999998,
+    -0.04999999999999999,
+    0.0,
+    0.050000000000000044,
+    0.10000000000000009,
+    0.15000000000000002,
+    0.20000000000000007,
+    0.25,
+    0.30000000000000004,
+    0.3500000000000001,
+    0.4,
+    0.45000000000000007,
+    0.5
+  ],
+  "selected": {
+    "alpha": 10000.0,
+    "weight": 0.20000000000000007,
+    "best_dev_cv_rmse": 10.393235158400014
+  },
+  "base_dev_rmse": 10.425476874094802,
+  "selected_dev_cv_rmse": 10.393235158400014,
+  "base_clean_holdout_rmse": 7.121063139304303,
+  "clean_holdout_rmse": 7.221797062133544,
+  "clean_holdout_mse": 52.15435280664069,
+  "clean_holdout_bias": 0.9949836730957031,
+  "alpha_results": [
+    {
+      "alpha": 1.0,
+      "base_dev_rmse": 10.425476874094802,
+      "raw_residual_dev_cv_rmse": 11.198183758714784,
+      "best_weight": 0.15000000000000002,
+      "best_dev_cv_rmse": 10.399104777177477,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.32715001099122,
+          "raw_residual_rmse": 10.171049111197929,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.65580209923562,
+          "raw_residual_rmse": 11.191748453229268,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.07643850334485,
+          "raw_residual_rmse": 12.144397187025561,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 64.1272234916687
+    },
+    {
+      "alpha": 100.0,
+      "base_dev_rmse": 10.425476874094802,
+      "raw_residual_dev_cv_rmse": 11.151194447640147,
+      "best_weight": 0.15000000000000002,
+      "best_dev_cv_rmse": 10.398144087295371,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.32715001099122,
+          "raw_residual_rmse": 10.133794262473923,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.65580209923562,
+          "raw_residual_rmse": 11.093781710415444,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.07643850334485,
+          "raw_residual_rmse": 12.135731519607113,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 64.24132919311523
+    },
+    {
+      "alpha": 10000.0,
+      "base_dev_rmse": 10.425476874094802,
+      "raw_residual_dev_cv_rmse": 10.806695007921045,
+      "best_weight": 0.20000000000000007,
+      "best_dev_cv_rmse": 10.393235158400014,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.32715001099122,
+          "raw_residual_rmse": 9.943399305507201,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.65580209923562,
+          "raw_residual_rmse": 10.319651101323943,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.07643850334485,
+          "raw_residual_rmse": 12.041008292951684,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 31.396037101745605
+    }
+  ],
+  "submission_path": "submissions/exp097_artifact_ridge_residual_clean_oof.csv",
+  "elapsed_seconds": 207.29938101768494,
+  "note": "The residual target is y_abs - exp095_base. No heldout labels are used for fitting or selection."
+}

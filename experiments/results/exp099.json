@@ -1,0 +1,121 @@
+{
+  "experiment_id": "exp099",
+  "phase": "artifact_only_well_level_residual",
+  "selection_rule": "artifact-only base; model family and residual weight selected by 5-fold CV over non-heldout wells only; final well residual model trained on non-heldout wells and audited once on heldout wells",
+  "heldout_wells": [
+    "000d7d20",
+    "00bbac68",
+    "00e12e8b"
+  ],
+  "base_experiment": "artifact_only_equal_oof",
+  "base_members": [
+    "catboost-1",
+    "catboost-2",
+    "catboost-3",
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "lightgbm-4"
+  ],
+  "feature_count": 263,
+  "weights": [
+    -1.0,
+    -0.95,
+    -0.9,
+    -0.85,
+    -0.8,
+    -0.75,
+    -0.7,
+    -0.6499999999999999,
+    -0.6,
+    -0.55,
+    -0.5,
+    -0.44999999999999996,
+    -0.3999999999999999,
+    -0.35,
+    -0.29999999999999993,
+    -0.25,
+    -0.19999999999999996,
+    -0.1499999999999999,
+    -0.09999999999999998,
+    -0.04999999999999993,
+    0.0,
+    0.050000000000000044,
+    0.10000000000000009,
+    0.15000000000000013,
+    0.20000000000000018,
+    0.25,
+    0.30000000000000004,
+    0.3500000000000001,
+    0.40000000000000013,
+    0.4500000000000002,
+    0.5,
+    0.55,
+    0.6000000000000001,
+    0.6500000000000001,
+    0.7000000000000002,
+    0.75,
+    0.8,
+    0.8500000000000001,
+    0.9000000000000001,
+    0.9500000000000002,
+    1.0
+  ],
+  "base_dev_rmse": 10.496055764868917,
+  "base_clean_holdout_rmse": 7.133628000054346,
+  "selected": {
+    "name": "rf_200_d4",
+    "raw_dev_cv_rmse": 10.43133423994596,
+    "best_weight": 0.9000000000000001,
+    "best_dev_cv_rmse": 10.430177192137315,
+    "seconds": 2.0862486362457275
+  },
+  "clean_holdout_rmse": 7.083621707566927,
+  "clean_holdout_mse": 50.17769649591338,
+  "clean_holdout_bias": 1.4300733804702759,
+  "heldout_correction_by_well": {
+    "000d7d20": -0.32905468344688416,
+    "00bbac68": 0.22305847704410553,
+    "00e12e8b": 0.41904008388519287
+  },
+  "candidate_results": [
+    {
+      "name": "rf_200_d4",
+      "raw_dev_cv_rmse": 10.43133423994596,
+      "best_weight": 0.9000000000000001,
+      "best_dev_cv_rmse": 10.430177192137315,
+      "seconds": 2.0862486362457275
+    },
+    {
+      "name": "hgb_l2_1",
+      "raw_dev_cv_rmse": 10.585715728946264,
+      "best_weight": 0.3500000000000001,
+      "best_dev_cv_rmse": 10.445645802434996,
+      "seconds": 2.4200382232666016
+    },
+    {
+      "name": "et_300_d4",
+      "raw_dev_cv_rmse": 10.471879399331305,
+      "best_weight": 0.6500000000000001,
+      "best_dev_cv_rmse": 10.458839960179612,
+      "seconds": 1.5106091499328613
+    },
+    {
+      "name": "ridge_1000",
+      "raw_dev_cv_rmse": 10.56050377336223,
+      "best_weight": 0.25,
+      "best_dev_cv_rmse": 10.486518208234344,
+      "seconds": 0.6136739253997803
+    },
+    {
+      "name": "ridge_10000",
+      "raw_dev_cv_rmse": 10.493109772831097,
+      "best_weight": 0.6000000000000001,
+      "best_dev_cv_rmse": 10.490853591975933,
+      "seconds": 0.6120634078979492
+    }
+  ],
+  "submission_path": "submissions/exp099_artifact_only_well_residual_clean_oof.csv",
+  "elapsed_seconds": 39.91897249221802,
+  "note": "No local exp028 files are used. Heldout labels are not used for fitting or selection."
+}
