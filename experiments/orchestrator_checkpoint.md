@@ -109,6 +109,10 @@ come from models trained on the same wells. Under that metric:
   residual. It selects `catboost-3` + `lightgbm-4` by non-heldout CV and lowers
   that criterion to RMSE 10.3596, but the clean heldout audit worsens to RMSE
   7.0398 / MSE 49.5593. Do not promote over exp100.
+- exp103 returns to the exp100 equal-artifact base and tests robust/stochastic
+  GBR well residual variants. The non-heldout CV winner is `gbr_d5_l10` at RMSE
+  10.3852, but the clean heldout audit worsens to RMSE 7.2394 / MSE 52.4094. Do
+  not promote over exp100.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
