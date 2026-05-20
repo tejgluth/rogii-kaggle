@@ -105,6 +105,10 @@ come from models trained on the same wells. Under that metric:
   wells. The selected `mean_dev_rank_top8` ensemble improved the non-heldout CV
   criterion to RMSE 10.3702, but its clean heldout audit worsened to RMSE
   6.9103 / MSE 47.7527. Do not promote over exp100.
+- exp102 tests artifact-only base blends before the exp100-style `gbr_d4` well
+  residual. It selects `catboost-3` + `lightgbm-4` by non-heldout CV and lowers
+  that criterion to RMSE 10.3596, but the clean heldout audit worsens to RMSE
+  7.0398 / MSE 49.5593. Do not promote over exp100.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
