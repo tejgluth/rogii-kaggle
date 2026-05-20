@@ -113,6 +113,15 @@ come from models trained on the same wells. Under that metric:
   GBR well residual variants. The non-heldout CV winner is `gbr_d5_l10` at RMSE
   10.3852, but the clean heldout audit worsens to RMSE 7.2394 / MSE 52.4094. Do
   not promote over exp100.
+- exp104 adds a conservative row-level ridge residual to the exp100 equal-artifact
+  base plus `gbr_d4` well correction. The row model is GroupKFold OOF by
+  non-heldout well; alpha and the well/row residual weights are selected only on
+  non-heldout OOF rows. Selected alpha 10000, well weight 0.50, row weight
+  -0.10 improves clean heldout to RMSE 6.8469 / MSE 46.8801. This is now the
+  best clean Kaggle-input-only candidate:
+  `submissions/exp104_artifact_row_ridge_plus_well_clean_oof.csv`, Kaggle
+  package `kaggle_exp104_artifact_row_ridge_plus_well/`, and
+  `submissions/FINAL_submission.csv`.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
