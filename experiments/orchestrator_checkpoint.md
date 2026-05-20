@@ -117,10 +117,13 @@ come from models trained on the same wells. Under that metric:
   base plus `gbr_d4` well correction. The row model is GroupKFold OOF by
   non-heldout well; alpha and the well/row residual weights are selected only on
   non-heldout OOF rows. Selected alpha 10000, well weight 0.50, row weight
-  -0.10 improves clean heldout to RMSE 6.8469 / MSE 46.8801. This is now the
-  best clean Kaggle-input-only candidate:
-  `submissions/exp104_artifact_row_ridge_plus_well_clean_oof.csv`, Kaggle
-  package `kaggle_exp104_artifact_row_ridge_plus_well/`, and
+  -0.10 improves clean heldout to RMSE 6.8469 / MSE 46.8801.
+- exp105 refines exp104's alpha and residual-weight grid using non-heldout OOF
+  rows only. Selected alpha 3000, well weight 0.525, row weight -0.10 improves
+  clean heldout to RMSE 6.8401 / MSE 46.7872. This is now the best clean
+  Kaggle-input-only candidate:
+  `submissions/exp105_artifact_row_ridge_refined_clean_oof.csv`, Kaggle package
+  `kaggle_exp105_artifact_row_ridge_refined/`, and
   `submissions/FINAL_submission.csv`.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test

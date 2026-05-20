@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-clean-artifact-row-ridge-refined-submission",
+  "title": "ROGII clean artifact row ridge refined submission",
+  "code_file": "clean_artifact_row_ridge_refined_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": []
+}
