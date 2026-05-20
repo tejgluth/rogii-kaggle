@@ -132,6 +132,18 @@ come from models trained on the same wells. Under that metric:
   row ridge. It improves the non-heldout OOF criterion to RMSE 10.3770 but
   worsens the clean heldout audit to RMSE 6.9163 / MSE 47.8354. Do not promote
   over exp109.
+- exp111 keeps exp109's fixed model constants and selects a per-well sequence
+  postprocess only on non-heldout OOF predictions. The selected
+  `savgol_w501_p2_s1` smoother improves non-heldout OOF RMSE from 10.3856 to
+  10.3663 and lowers the clean heldout audit to RMSE 6.7806 / MSE 45.9759.
+- exp112 refines the exp111 smoother family, again selecting only on
+  non-heldout OOF predictions. It selects `savgol_w551_p2_s0.875`, improves the
+  non-heldout OOF criterion to RMSE 10.3660, and lowers the clean heldout audit
+  to RMSE 6.7803 / MSE 45.9719. This is now the best clean Kaggle-input plus
+  artifact candidate: `submissions/exp112_exp109_savgol_refine.csv`, Kaggle
+  package `kaggle_exp112_exp109_savgol_refine/`, and
+  `submissions/FINAL_submission.csv`. The package notebook was executed locally
+  and reproduced the promoted CSV exactly (`max_abs_diff=0.0`).
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
