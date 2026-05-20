@@ -1,0 +1,269 @@
+{
+  "experiment_id": "exp107",
+  "phase": "artifact_row_ridge_lowalpha",
+  "selection_rule": "exp105/106 structure with lower ridge alphas after exp106 selected the lower grid edge; all alpha/weight selection uses non-heldout OOF rows only; final models train on non-heldout data and are audited once on heldout wells",
+  "heldout_wells": [
+    "000d7d20",
+    "00bbac68",
+    "00e12e8b"
+  ],
+  "base_members": [
+    "catboost-1",
+    "catboost-2",
+    "catboost-3",
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "lightgbm-4"
+  ],
+  "row_feature_count": 52,
+  "alphas": [
+    100.0,
+    200.0,
+    500.0,
+    750.0,
+    1000.0,
+    1500.0
+  ],
+  "well_weights": [
+    0.5,
+    0.50625,
+    0.5125,
+    0.5187499999999999,
+    0.5249999999999999,
+    0.5312499999999999,
+    0.5374999999999999,
+    0.5437499999999998,
+    0.5499999999999998
+  ],
+  "row_weights": [
+    -0.125,
+    -0.1225,
+    -0.12,
+    -0.1175,
+    -0.11499999999999999,
+    -0.11249999999999999,
+    -0.10999999999999999,
+    -0.10749999999999998,
+    -0.10499999999999998,
+    -0.10249999999999998,
+    -0.09999999999999998,
+    -0.09749999999999998,
+    -0.09499999999999997,
+    -0.09249999999999997,
+    -0.08999999999999997,
+    -0.08749999999999997,
+    -0.08499999999999996,
+    -0.08249999999999996,
+    -0.07999999999999996,
+    -0.07749999999999996,
+    -0.07499999999999996
+  ],
+  "base_dev_rmse": 10.496055764868917,
+  "base_clean_holdout_rmse": 7.133628000054346,
+  "selected": {
+    "alpha": 100.0,
+    "well_weight": 0.5249999999999999,
+    "row_weight": -0.125,
+    "best_dev_cv_rmse": 10.386438992782056
+  },
+  "clean_holdout_rmse": 6.831670196138561,
+  "clean_holdout_mse": 46.67171766880789,
+  "clean_holdout_bias": 2.2425479888916016,
+  "heldout_well_correction_by_well": {
+    "000d7d20": 2.003901481628418,
+    "00bbac68": -0.1287604719400406,
+    "00e12e8b": 3.942626476287842
+  },
+  "alpha_results": [
+    {
+      "alpha": 100.0,
+      "raw_row_dev_cv_rmse": 10.640935759511308,
+      "best_well_weight": 0.5249999999999999,
+      "best_row_weight": -0.125,
+      "best_dev_cv_rmse": 10.386438992782056,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.627759747057638,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 9.96395956082695,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.153725226558514,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 7.707586288452148
+    },
+    {
+      "alpha": 200.0,
+      "raw_row_dev_cv_rmse": 10.634055017172171,
+      "best_well_weight": 0.5187499999999999,
+      "best_row_weight": -0.1175,
+      "best_dev_cv_rmse": 10.386742214210031,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.622737694163014,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 9.946874549440844,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.153633362923387,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 7.613564491271973
+    },
+    {
+      "alpha": 500.0,
+      "raw_row_dev_cv_rmse": 10.626739160226107,
+      "best_well_weight": 0.5187499999999999,
+      "best_row_weight": -0.10499999999999998,
+      "best_dev_cv_rmse": 10.387211285208835,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.617641615449408,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 9.928666484682688,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.153362060433478,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 7.011484384536743
+    },
+    {
+      "alpha": 750.0,
+      "raw_row_dev_cv_rmse": 10.62443342957606,
+      "best_well_weight": 0.5187499999999999,
+      "best_row_weight": -0.09999999999999998,
+      "best_dev_cv_rmse": 10.387353652187219,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.61702935742296,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 9.922128350796287,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.153139970101401,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 6.867558240890503
+    },
+    {
+      "alpha": 1000.0,
+      "raw_row_dev_cv_rmse": 10.622786618626318,
+      "best_well_weight": 0.5187499999999999,
+      "best_row_weight": -0.09999999999999998,
+      "best_dev_cv_rmse": 10.387401806064894,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.616450780748957,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 9.917667219614739,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.152921483152817,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 6.826414585113525
+    },
+    {
+      "alpha": 1500.0,
+      "raw_row_dev_cv_rmse": 10.621072250408266,
+      "best_well_weight": 0.5187499999999999,
+      "best_row_weight": -0.09749999999999998,
+      "best_dev_cv_rmse": 10.387483014727739,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.615375455819894,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 9.91372424879171,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.152494975078733,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 6.8527302742004395
+    }
+  ],
+  "submission_path": "submissions/exp107_artifact_row_ridge_lowalpha_clean_oof.csv",
+  "elapsed_seconds": 123.29545068740845,
+  "note": "No local exp028 files are used. Heldout labels are not used for fitting or selection."
+}

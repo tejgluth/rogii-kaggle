@@ -1,0 +1,235 @@
+{
+  "experiment_id": "exp110",
+  "phase": "artifact_fullfeature_ridge_plus_well",
+  "selection_rule": "artifact-only equal OOF base; exp100 gbr_d4 well correction OOF and full artifact-feature ridge residual OOF are combined by weights selected on non-heldout rows only; row OOF uses GroupKFold by non-heldout wells; final models train on non-heldout data and are audited once on heldout wells",
+  "heldout_wells": [
+    "000d7d20",
+    "00bbac68",
+    "00e12e8b"
+  ],
+  "base_members": [
+    "catboost-1",
+    "catboost-2",
+    "catboost-3",
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "lightgbm-4"
+  ],
+  "row_feature_count": 195,
+  "alphas": [
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0,
+    1000000.0
+  ],
+  "well_weights": [
+    0.45,
+    0.47500000000000003,
+    0.5,
+    0.5250000000000001,
+    0.55,
+    0.5750000000000002,
+    0.6000000000000001
+  ],
+  "row_weights": [
+    -0.25,
+    -0.225,
+    -0.2,
+    -0.17500000000000002,
+    -0.15000000000000002,
+    -0.12500000000000003,
+    -0.10000000000000003,
+    -0.07500000000000004,
+    -0.050000000000000044,
+    -0.02500000000000005,
+    -5.551115123125783e-17,
+    0.02499999999999991,
+    0.04999999999999993,
+    0.07499999999999996,
+    0.09999999999999992,
+    0.12499999999999989,
+    0.1499999999999999,
+    0.17499999999999993,
+    0.1999999999999999,
+    0.22499999999999987,
+    0.2499999999999999
+  ],
+  "base_dev_rmse": 10.496055764868917,
+  "base_clean_holdout_rmse": 7.133628000054346,
+  "selected": {
+    "alpha": 10000.0,
+    "well_weight": 0.47500000000000003,
+    "row_weight": 0.12499999999999989,
+    "best_dev_cv_rmse": 10.376992143374686
+  },
+  "clean_holdout_rmse": 6.916310697023846,
+  "clean_holdout_mse": 47.835353657766476,
+  "clean_holdout_bias": 1.995653748512268,
+  "heldout_well_correction_by_well": {
+    "000d7d20": 2.003901481628418,
+    "00bbac68": -0.1287604719400406,
+    "00e12e8b": 3.942626476287842
+  },
+  "alpha_results": [
+    {
+      "alpha": 100.0,
+      "raw_row_dev_cv_rmse": 11.233227177181462,
+      "best_well_weight": 0.47500000000000003,
+      "best_row_weight": 0.09999999999999992,
+      "best_dev_cv_rmse": 10.378452472670798,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 10.2084530825006,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 11.182815833022607,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.218121920619009,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 61.1459424495697
+    },
+    {
+      "alpha": 1000.0,
+      "raw_row_dev_cv_rmse": 11.049705085880381,
+      "best_well_weight": 0.47500000000000003,
+      "best_row_weight": 0.12499999999999989,
+      "best_dev_cv_rmse": 10.378142453842717,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 10.098202451441294,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 10.752254565062213,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.194249869875557,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 43.39311861991882
+    },
+    {
+      "alpha": 10000.0,
+      "raw_row_dev_cv_rmse": 10.887230660789266,
+      "best_well_weight": 0.47500000000000003,
+      "best_row_weight": 0.12499999999999989,
+      "best_dev_cv_rmse": 10.376992143374686,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 10.014250855752788,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 10.398956233613939,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.131368512508544,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 30.583173751831055
+    },
+    {
+      "alpha": 100000.0,
+      "raw_row_dev_cv_rmse": 10.79477339869931,
+      "best_well_weight": 0.47500000000000003,
+      "best_row_weight": 0.09999999999999992,
+      "best_dev_cv_rmse": 10.383804724710197,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.869273528155107,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 10.269995249268106,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.112152632166676,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 19.159531593322754
+    },
+    {
+      "alpha": 1000000.0,
+      "raw_row_dev_cv_rmse": 10.608865280362739,
+      "best_well_weight": 0.47500000000000003,
+      "best_row_weight": 0.09999999999999992,
+      "best_dev_cv_rmse": 10.386182782497166,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "base_rmse": 9.378833318698002,
+          "raw_row_rmse": 9.616365602462304,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "base_rmse": 9.72779578251294,
+          "raw_row_rmse": 10.004751427670525,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "base_rmse": 12.16173598864026,
+          "raw_row_rmse": 12.044622020955217,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "seconds": 13.704109907150269
+    }
+  ],
+  "submission_path": "submissions/exp110_artifact_fullfeature_ridge_plus_well_clean_oof.csv",
+  "elapsed_seconds": 261.2245764732361,
+  "note": "No local exp028 files are used. Heldout labels are not used for fitting or selection."
+}

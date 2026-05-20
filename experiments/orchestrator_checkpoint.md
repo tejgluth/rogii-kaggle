@@ -120,11 +120,18 @@ come from models trained on the same wells. Under that metric:
   -0.10 improves clean heldout to RMSE 6.8469 / MSE 46.8801.
 - exp105 refines exp104's alpha and residual-weight grid using non-heldout OOF
   rows only. Selected alpha 3000, well weight 0.525, row weight -0.10 improves
-  clean heldout to RMSE 6.8401 / MSE 46.7872. This is now the best clean
-  Kaggle-input-only candidate:
-  `submissions/exp105_artifact_row_ridge_refined_clean_oof.csv`, Kaggle package
-  `kaggle_exp105_artifact_row_ridge_refined/`, and
+  clean heldout to RMSE 6.8401 / MSE 46.7872.
+- exp106-exp109 continue the same exp105 model family with narrow alpha/weight
+  grids selected only on non-heldout OOF rows. exp109 selects alpha 0.1, well
+  weight 0.525, row weight -0.14, lowering the clean heldout audit to RMSE
+  6.8267 / MSE 46.6040. This is now the best clean Kaggle-input-only candidate:
+  `submissions/exp109_artifact_row_ridge_verylowalpha_clean_oof.csv`, Kaggle
+  package `kaggle_exp109_artifact_row_ridge_verylowalpha/`, and
   `submissions/FINAL_submission.csv`.
+- exp110 tests replacing exp109's compact row ridge with a full-artifact-feature
+  row ridge. It improves the non-heldout OOF criterion to RMSE 10.3770 but
+  worsens the clean heldout audit to RMSE 6.9163 / MSE 47.8354. Do not promote
+  over exp109.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
