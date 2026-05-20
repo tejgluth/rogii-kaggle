@@ -100,6 +100,11 @@ come from models trained on the same wells. Under that metric:
   MSE 47.3569. This is now the best clean Kaggle-input-only candidate:
   `submissions/exp100_artifact_only_well_residual_gbr_clean_oof.csv`, Kaggle
   package `kaggle_exp100_artifact_well_gbr/`, and `submissions/FINAL_submission.csv`.
+- exp101 tests individual well residual models, row-count-weighted variants, and
+  simple mean ensembles. Selection still uses only 5-fold CV over non-heldout
+  wells. The selected `mean_dev_rank_top8` ensemble improved the non-heldout CV
+  criterion to RMSE 10.3702, but its clean heldout audit worsened to RMSE
+  6.9103 / MSE 47.7527. Do not promote over exp100.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
