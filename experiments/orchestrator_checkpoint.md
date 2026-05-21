@@ -139,9 +139,20 @@ come from models trained on the same wells. Under that metric:
 - exp112 refines the exp111 smoother family, again selecting only on
   non-heldout OOF predictions. It selects `savgol_w551_p2_s0.875`, improves the
   non-heldout OOF criterion to RMSE 10.3660, and lowers the clean heldout audit
-  to RMSE 6.7803 / MSE 45.9719. This is now the best clean Kaggle-input plus
-  artifact candidate: `submissions/exp112_exp109_savgol_refine.csv`, Kaggle
-  package `kaggle_exp112_exp109_savgol_refine/`, and
+  to RMSE 6.7803 / MSE 45.9719.
+- exp113 tests a convex artifact-member blend selected by non-heldout GroupKFold
+  before the exp112-style stack. It improves the stack selection criterion to
+  RMSE 10.3620 but worsens the clean heldout audit to RMSE 6.8081 / MSE 46.3498.
+  Do not promote over exp112/exp114.
+- exp114 smooths the equal-artifact base, well residual, and row residual OOF
+  components separately, then selects row alpha, smoother, and residual weights
+  only on non-heldout OOF rows. It selects alpha 0.01,
+  `savgol_w551_p2_s0.875`, well weight 0.525, and row weight -0.15. It improves
+  the non-heldout OOF criterion slightly to RMSE 10.366008 and lowers the clean
+  heldout audit to RMSE 6.7768 / MSE 45.9252. This is now the best clean
+  Kaggle-input plus artifact candidate:
+  `submissions/exp114_smoothed_component_weight_select.csv`, Kaggle package
+  `kaggle_exp114_smoothed_component_weight_select/`, and
   `submissions/FINAL_submission.csv`. The package notebook was executed locally
   and reproduced the promoted CSV exactly (`max_abs_diff=0.0`).
 

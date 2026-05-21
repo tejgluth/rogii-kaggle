@@ -2,9 +2,10 @@
 
 ## Summary
 
-- Keep `exp109` as the current clean Kaggle-ready baseline: RMSE `6.8267`
+- Keep `exp114` as the current clean Kaggle-ready candidate: RMSE `6.7768`
   on the local clean holdout, using only competition input plus
-  `ravaghi/wellbore-geology-prediction-artifacts`.
+  `ravaghi/wellbore-geology-prediction-artifacts`. `exp109` remains the raw
+  residual-stack baseline at RMSE `6.8267`.
 - Improve only with leak-safe experiments: no training, model selection, blend
   weighting, feature selection, or postprocess tuning on the sample/heldout
   wells.

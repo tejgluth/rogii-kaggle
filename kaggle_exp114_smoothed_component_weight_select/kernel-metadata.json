@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-clean-smoothed-component-weight-submission",
+  "title": "ROGII clean smoothed component weight submission",
+  "code_file": "clean_smoothed_component_weight_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "kernel_sources": []
+}
