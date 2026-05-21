@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-exp115-fast-cpu-submission",
+  "title": "ROGII exp115 fast CPU submission",
+  "code_file": "exp115_fast_cpu_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "kernel_sources": []
+}

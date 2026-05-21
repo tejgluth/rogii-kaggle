@@ -166,6 +166,13 @@ come from models trained on the same wells. Under that metric:
   `kaggle_exp115_separate_component_smoothers/`, and
   `submissions/FINAL_submission.csv`. The package notebook was executed locally
   and reproduced the promoted CSV exactly (`max_abs_diff=0.0`).
+- `kaggle_exp115_fast_cpu_submission/` is the preferred competition scoring
+  package for exp115. It hardcodes the cleanly selected exp115 settings, skips
+  the alpha/smoother/weight search, uses CPU/no internet, executed locally in
+  about 411 seconds, and reproduced the promoted exp115 CSV exactly
+  (`max_abs_diff=0.0`, float32 exact). A tested closed-form Ridge speedup was
+  rejected because it changed predictions by up to 0.2455 TVT and is not the
+  exact exp115 model.
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
