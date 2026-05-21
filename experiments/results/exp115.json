@@ -1,0 +1,3656 @@
+{
+  "experiment_id": "exp115",
+  "phase": "separate_component_smoothers",
+  "selection_rule": "base smoother, row-residual smoother, row alpha, and residual weights are selected only on non-heldout OOF rows; sample-submission wells are used only for the final audit",
+  "heldout_wells": [
+    "000d7d20",
+    "00bbac68",
+    "00e12e8b"
+  ],
+  "row_feature_count": 52,
+  "alphas": [
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "well_weights": [
+    0.4875,
+    0.49374999999999997,
+    0.49999999999999994,
+    0.5062499999999999,
+    0.5125,
+    0.5187499999999998,
+    0.5249999999999999,
+    0.5312499999999998,
+    0.5374999999999999,
+    0.5437499999999997,
+    0.5499999999999998,
+    0.5562499999999997,
+    0.5624999999999998
+  ],
+  "row_weights": [
+    -0.18,
+    -0.175,
+    -0.16999999999999998,
+    -0.16499999999999998,
+    -0.15999999999999998,
+    -0.15499999999999997,
+    -0.14999999999999997,
+    -0.14499999999999996,
+    -0.13999999999999996,
+    -0.13499999999999995,
+    -0.12999999999999995,
+    -0.12499999999999994,
+    -0.11999999999999994,
+    -0.11499999999999994
+  ],
+  "base_smoother_candidates": [
+    {
+      "name": "none",
+      "kind": "none"
+    },
+    {
+      "name": "savgol_w501_p2_s0.75",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w501_p2_s0.825",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w501_p2_s0.875",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w501_p2_s0.925",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w501_p2_s1",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w531_p2_s0.75",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w531_p2_s0.825",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w531_p2_s0.875",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w531_p2_s0.925",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w531_p2_s1",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w551_p2_s0.75",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w551_p2_s0.825",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w551_p2_s0.875",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w551_p2_s0.925",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w551_p2_s1",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w571_p2_s0.75",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w571_p2_s0.825",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w571_p2_s0.875",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w571_p2_s0.925",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w571_p2_s1",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w601_p2_s0.75",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w601_p2_s0.825",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w601_p2_s0.875",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w601_p2_s0.925",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w601_p2_s1",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w631_p2_s0.75",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w631_p2_s0.825",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w631_p2_s0.875",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w631_p2_s0.925",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w631_p2_s1",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 1.0
+    }
+  ],
+  "row_smoother_candidates": [
+    {
+      "name": "none",
+      "kind": "none"
+    },
+    {
+      "name": "savgol_w501_p2_s0.75",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w501_p2_s0.825",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w501_p2_s0.875",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w501_p2_s0.925",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w501_p2_s1",
+      "kind": "savgol",
+      "window": 501,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w531_p2_s0.75",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w531_p2_s0.825",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w531_p2_s0.875",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w531_p2_s0.925",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w531_p2_s1",
+      "kind": "savgol",
+      "window": 531,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w551_p2_s0.75",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w551_p2_s0.825",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w551_p2_s0.875",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w551_p2_s0.925",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w551_p2_s1",
+      "kind": "savgol",
+      "window": 551,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w571_p2_s0.75",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w571_p2_s0.825",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w571_p2_s0.875",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w571_p2_s0.925",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w571_p2_s1",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w601_p2_s0.75",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w601_p2_s0.825",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w601_p2_s0.875",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w601_p2_s0.925",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w601_p2_s1",
+      "kind": "savgol",
+      "window": 601,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    {
+      "name": "savgol_w631_p2_s0.75",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.75
+    },
+    {
+      "name": "savgol_w631_p2_s0.825",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.825
+    },
+    {
+      "name": "savgol_w631_p2_s0.875",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    {
+      "name": "savgol_w631_p2_s0.925",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 0.925
+    },
+    {
+      "name": "savgol_w631_p2_s1",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 1.0
+    }
+  ],
+  "selected": {
+    "base_smoother": {
+      "name": "savgol_w571_p2_s0.875",
+      "kind": "savgol",
+      "window": 571,
+      "polyorder": 2,
+      "shrink": 0.875
+    },
+    "base_smoother_name": "savgol_w571_p2_s0.875",
+    "row_smoother": {
+      "name": "savgol_w631_p2_s1",
+      "kind": "savgol",
+      "window": 631,
+      "polyorder": 2,
+      "shrink": 1.0
+    },
+    "row_smoother_name": "savgol_w631_p2_s1",
+    "well_weight": 0.5249999999999999,
+    "row_weight": -0.14999999999999997,
+    "dev_oof_rmse": 10.365913762245057,
+    "dev_well_equal_rmse": 10.0165801572665,
+    "dev_bias": -0.006632874749856625,
+    "alpha": 0.001
+  },
+  "alpha_results": [
+    {
+      "alpha": 0.001,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "raw_row_rmse": 9.648747171752394,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "raw_row_rmse": 10.002565217174341,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "raw_row_rmse": 12.15381722963715,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "best": {
+        "base_smoother": {
+          "name": "savgol_w571_p2_s0.875",
+          "kind": "savgol",
+          "window": 571,
+          "polyorder": 2,
+          "shrink": 0.875
+        },
+        "base_smoother_name": "savgol_w571_p2_s0.875",
+        "row_smoother": {
+          "name": "savgol_w631_p2_s1",
+          "kind": "savgol",
+          "window": 631,
+          "polyorder": 2,
+          "shrink": 1.0
+        },
+        "row_smoother_name": "savgol_w631_p2_s1",
+        "well_weight": 0.5249999999999999,
+        "row_weight": -0.14999999999999997,
+        "dev_oof_rmse": 10.365913762245057,
+        "dev_well_equal_rmse": 10.0165801572665,
+        "dev_bias": -0.006632874749856625,
+        "alpha": 0.001
+      },
+      "top_pairs": [
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365913762245057,
+          "dev_well_equal_rmse": 10.0165801572665,
+          "dev_bias": -0.006632874749856625
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36591674947062,
+          "dev_well_equal_rmse": 10.016584259070852,
+          "dev_bias": -0.006630341795356989
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365919862182256,
+          "dev_well_equal_rmse": 10.016589062404384,
+          "dev_bias": -0.006627603676205715
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.925",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365924543730275,
+          "dev_well_equal_rmse": 10.016592666406893,
+          "dev_bias": -0.006632615444533027
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.925",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365927703050176,
+          "dev_well_equal_rmse": 10.016596674366737,
+          "dev_bias": -0.006630756010354424
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s1",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w551_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36592861223584,
+          "dev_well_equal_rmse": 10.01659957743335,
+          "dev_bias": -0.006625276663496548
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.925",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365930991365964,
+          "dev_well_equal_rmse": 10.016601944230636,
+          "dev_bias": -0.006627816353199395
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.875",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365933824305474,
+          "dev_well_equal_rmse": 10.016603089508562,
+          "dev_bias": -0.006632780197965403
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.875",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937062674112,
+          "dev_well_equal_rmse": 10.016607169449676,
+          "dev_bias": -0.006630835278515284
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s1",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w531_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937511863246,
+          "dev_well_equal_rmse": 10.01660998173692,
+          "dev_bias": -0.006623749844738023
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.925",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36593936566519,
+          "dev_well_equal_rmse": 10.016611866473431,
+          "dev_bias": -0.006625786725616592
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365940431203974,
+          "dev_well_equal_rmse": 10.01661238330546,
+          "dev_bias": -0.006628150263850861
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.825",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36594477921195,
+          "dev_well_equal_rmse": 10.016615522519238,
+          "dev_bias": -0.006632643421530978
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.925",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365947883127886,
+          "dev_well_equal_rmse": 10.016621353471088,
+          "dev_bias": -0.0066247435462578235
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.825",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948068065709,
+          "dev_well_equal_rmse": 10.016619344578977,
+          "dev_bias": -0.00663111401230968
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.875",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948529722111,
+          "dev_well_equal_rmse": 10.016622008859729,
+          "dev_bias": -0.006626234616630078
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36595148732571,
+          "dev_well_equal_rmse": 10.016624579215822,
+          "dev_bias": -0.006628619914751642
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s1",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w501_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36595277303898,
+          "dev_well_equal_rmse": 10.016628161081645,
+          "dev_bias": -0.006621072083369365
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.875",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365956766713586,
+          "dev_well_equal_rmse": 10.016631103870381,
+          "dev_bias": -0.006625026424792657
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.825",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365959289855889,
+          "dev_well_equal_rmse": 10.016633856694902,
+          "dev_bias": -0.006626515940887248
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365960348274164,
+          "dev_well_equal_rmse": 10.016621697648882,
+          "dev_bias": -0.00664396840668286
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s0.925",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w501_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962442874595,
+          "dev_well_equal_rmse": 10.01663851589672,
+          "dev_bias": -0.006621812437629946
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962765302298,
+          "dev_well_equal_rmse": 10.016625213853231,
+          "dev_bias": -0.006641437524553442
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.75",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.75
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.75",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365964350935474,
+          "dev_well_equal_rmse": 10.016636760464728,
+          "dev_bias": -0.006632650415780466
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365965238564469,
+          "dev_well_equal_rmse": 10.016629378029407,
+          "dev_bias": -0.006638700441587278
+        }
+      ],
+      "seconds": 53.96016597747803
+    },
+    {
+      "alpha": 0.003,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "raw_row_rmse": 9.648747515986466,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "raw_row_rmse": 10.00256233517256,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "raw_row_rmse": 12.153817219372417,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "best": {
+        "base_smoother": {
+          "name": "savgol_w571_p2_s0.875",
+          "kind": "savgol",
+          "window": 571,
+          "polyorder": 2,
+          "shrink": 0.875
+        },
+        "base_smoother_name": "savgol_w571_p2_s0.875",
+        "row_smoother": {
+          "name": "savgol_w631_p2_s1",
+          "kind": "savgol",
+          "window": 631,
+          "polyorder": 2,
+          "shrink": 1.0
+        },
+        "row_smoother_name": "savgol_w631_p2_s1",
+        "well_weight": 0.5249999999999999,
+        "row_weight": -0.14999999999999997,
+        "dev_oof_rmse": 10.365913797569693,
+        "dev_well_equal_rmse": 10.016580203602159,
+        "dev_bias": -0.006632947282814275,
+        "alpha": 0.003
+      },
+      "top_pairs": [
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365913797569693,
+          "dev_well_equal_rmse": 10.016580203602159,
+          "dev_bias": -0.006632947282814275
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365916784819499,
+          "dev_well_equal_rmse": 10.0165843108665,
+          "dev_bias": -0.0066304070750188735
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365919897566073,
+          "dev_well_equal_rmse": 10.01658912840222,
+          "dev_bias": -0.006627671287284096
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.925",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365924579071372,
+          "dev_well_equal_rmse": 10.016592705282878,
+          "dev_bias": -0.006632701706943375
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.925",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365927738412498,
+          "dev_well_equal_rmse": 10.016596721758324,
+          "dev_bias": -0.006630863514559511
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s1",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w551_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365928647601265,
+          "dev_well_equal_rmse": 10.01659960558393,
+          "dev_bias": -0.006625359040212736
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.925",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365931026764079,
+          "dev_well_equal_rmse": 10.016602009058197,
+          "dev_bias": -0.006627910646044339
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.875",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36593385965308,
+          "dev_well_equal_rmse": 10.016603154538288,
+          "dev_bias": -0.006632876045088012
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.875",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937098036952,
+          "dev_well_equal_rmse": 10.01660722321323,
+          "dev_bias": -0.006630896413436731
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s1",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w531_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937547221762,
+          "dev_well_equal_rmse": 10.016610027300079,
+          "dev_bias": -0.006623823154834505
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.925",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36593940105068,
+          "dev_well_equal_rmse": 10.016611928585755,
+          "dev_bias": -0.006625838793918333
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36594046660673,
+          "dev_well_equal_rmse": 10.016612420783952,
+          "dev_bias": -0.0066282284958266114
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.825",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36594481457771,
+          "dev_well_equal_rmse": 10.016615563096801,
+          "dev_bias": -0.006632767504697814
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.925",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365947918506581,
+          "dev_well_equal_rmse": 10.016621392493201,
+          "dev_bias": -0.00662485985803634
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.825",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948103453393,
+          "dev_well_equal_rmse": 10.016619418903167,
+          "dev_bias": -0.006631219444144549
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.875",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948565122515,
+          "dev_well_equal_rmse": 10.016622063871104,
+          "dev_bias": -0.006626315698114879
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365951522751665,
+          "dev_well_equal_rmse": 10.01662461871957,
+          "dev_bias": -0.006628721719938628
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s1",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w501_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365952808421804,
+          "dev_well_equal_rmse": 10.016628227551926,
+          "dev_bias": -0.006621158086733435
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.875",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365956802089867,
+          "dev_well_equal_rmse": 10.016631123553001,
+          "dev_bias": -0.006625078752140676
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.825",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365959325262441,
+          "dev_well_equal_rmse": 10.016633942140448,
+          "dev_bias": -0.006626585365289569
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365960383595954,
+          "dev_well_equal_rmse": 10.016621745625114,
+          "dev_bias": -0.006644043012010728
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s0.925",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w501_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962478284308,
+          "dev_well_equal_rmse": 10.016638595776021,
+          "dev_bias": -0.006621871241134897
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962800647509,
+          "dev_well_equal_rmse": 10.016625265354799,
+          "dev_bias": -0.006641500472798831
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.75",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.75
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.75",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365964386312928,
+          "dev_well_equal_rmse": 10.016636804944143,
+          "dev_bias": -0.006632715436396073
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36596527394341,
+          "dev_well_equal_rmse": 10.016629448633392,
+          "dev_bias": -0.006638766239341717
+        }
+      ],
+      "seconds": 53.22513222694397
+    },
+    {
+      "alpha": 0.01,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "raw_row_rmse": 9.64874438437476,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "raw_row_rmse": 10.002556312539546,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "raw_row_rmse": 12.153817225162962,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "best": {
+        "base_smoother": {
+          "name": "savgol_w571_p2_s0.875",
+          "kind": "savgol",
+          "window": 571,
+          "polyorder": 2,
+          "shrink": 0.875
+        },
+        "base_smoother_name": "savgol_w571_p2_s0.875",
+        "row_smoother": {
+          "name": "savgol_w631_p2_s1",
+          "kind": "savgol",
+          "window": 631,
+          "polyorder": 2,
+          "shrink": 1.0
+        },
+        "row_smoother_name": "savgol_w631_p2_s1",
+        "well_weight": 0.5249999999999999,
+        "row_weight": -0.14999999999999997,
+        "dev_oof_rmse": 10.365913952194532,
+        "dev_well_equal_rmse": 10.016580333010964,
+        "dev_bias": -0.006633253734560344,
+        "alpha": 0.01
+      },
+      "top_pairs": [
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365913952194532,
+          "dev_well_equal_rmse": 10.016580333010964,
+          "dev_bias": -0.006633253734560344
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365916939470733,
+          "dev_well_equal_rmse": 10.016584465358626,
+          "dev_bias": -0.006630739690438953
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365920052331946,
+          "dev_well_equal_rmse": 10.016589263708866,
+          "dev_bias": -0.006627998980824905
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.925",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365924733678888,
+          "dev_well_equal_rmse": 10.016592893215982,
+          "dev_bias": -0.006633052714649144
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.925",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365927893051834,
+          "dev_well_equal_rmse": 10.01659685839362,
+          "dev_bias": -0.006631163490148648
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s1",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w551_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36592880233993,
+          "dev_well_equal_rmse": 10.016599778926782,
+          "dev_bias": -0.006625641141608738
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.925",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365931181503678,
+          "dev_well_equal_rmse": 10.016602166699066,
+          "dev_bias": -0.006628222537762233
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.875",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365934014252625,
+          "dev_well_equal_rmse": 10.016603321617687,
+          "dev_bias": -0.006633152965558467
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.875",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937252659393,
+          "dev_well_equal_rmse": 10.016607357161996,
+          "dev_bias": -0.006631184990989666
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s1",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w531_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937701952182,
+          "dev_well_equal_rmse": 10.01661016271367,
+          "dev_bias": -0.006624117949498095
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.925",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365939555769895,
+          "dev_well_equal_rmse": 10.01661206623853,
+          "dev_bias": -0.006626129961934041
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36594062132906,
+          "dev_well_equal_rmse": 10.01661257425036,
+          "dev_bias": -0.006628550231303043
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.825",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36594496915161,
+          "dev_well_equal_rmse": 10.016615737749552,
+          "dev_bias": -0.006633093903007238
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.925",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948073204846,
+          "dev_well_equal_rmse": 10.01662154306934,
+          "dev_bias": -0.006625151803190879
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.825",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948258045735,
+          "dev_well_equal_rmse": 10.01661954697095,
+          "dev_bias": -0.00663153159490872
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.875",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948719809392,
+          "dev_well_equal_rmse": 10.016622224090382,
+          "dev_bias": -0.00662661334228752
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365951677431653,
+          "dev_well_equal_rmse": 10.016624816108632,
+          "dev_bias": -0.006629032057378859
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s1",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w501_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365952963202252,
+          "dev_well_equal_rmse": 10.016628397172152,
+          "dev_bias": -0.006621465315618337
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.875",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365956956776325,
+          "dev_well_equal_rmse": 10.016631247748492,
+          "dev_bias": -0.00662535385928719
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.825",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365959479929833,
+          "dev_well_equal_rmse": 10.016634095196174,
+          "dev_bias": -0.00662688689515637
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365960538232772,
+          "dev_well_equal_rmse": 10.016621874933396,
+          "dev_bias": -0.006644347650432857
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s0.925",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w501_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962633030573,
+          "dev_well_equal_rmse": 10.016638771164445,
+          "dev_bias": -0.006622179247158631
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962955310346,
+          "dev_well_equal_rmse": 10.016625423532462,
+          "dev_bias": -0.006641832311080079
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.75",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.75
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.75",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365964540843605,
+          "dev_well_equal_rmse": 10.016636953691856,
+          "dev_bias": -0.006633051678464035
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36596542871948,
+          "dev_well_equal_rmse": 10.016629579067391,
+          "dev_bias": -0.006639094450975082
+        }
+      ],
+      "seconds": 53.066234827041626
+    },
+    {
+      "alpha": 0.03,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "raw_row_rmse": 9.648737403014573,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "raw_row_rmse": 10.002548424363571,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "raw_row_rmse": 12.15381721724585,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "best": {
+        "base_smoother": {
+          "name": "savgol_w571_p2_s0.875",
+          "kind": "savgol",
+          "window": 571,
+          "polyorder": 2,
+          "shrink": 0.875
+        },
+        "base_smoother_name": "savgol_w571_p2_s0.875",
+        "row_smoother": {
+          "name": "savgol_w631_p2_s1",
+          "kind": "savgol",
+          "window": 631,
+          "polyorder": 2,
+          "shrink": 1.0
+        },
+        "row_smoother_name": "savgol_w631_p2_s1",
+        "well_weight": 0.5249999999999999,
+        "row_weight": -0.14999999999999997,
+        "dev_oof_rmse": 10.365914039468644,
+        "dev_well_equal_rmse": 10.016580518284561,
+        "dev_bias": -0.006633950310000058,
+        "alpha": 0.03
+      },
+      "top_pairs": [
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365914039468644,
+          "dev_well_equal_rmse": 10.016580518284561,
+          "dev_bias": -0.006633950310000058
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365917026844155,
+          "dev_well_equal_rmse": 10.016584614165799,
+          "dev_bias": -0.006631501286494273
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365920139591157,
+          "dev_well_equal_rmse": 10.016589430359547,
+          "dev_bias": -0.0066287131714114775
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.925",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365924820971395,
+          "dev_well_equal_rmse": 10.016593127042801,
+          "dev_bias": -0.00663376068812506
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.925",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365927980446198,
+          "dev_well_equal_rmse": 10.016596982253276,
+          "dev_bias": -0.006631842191395227
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s1",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w551_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365928889592537,
+          "dev_well_equal_rmse": 10.0165999778484,
+          "dev_bias": -0.006626338494187283
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.925",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365931268783912,
+          "dev_well_equal_rmse": 10.016602402474877,
+          "dev_bias": -0.0066289160046466185
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.875",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365934101531638,
+          "dev_well_equal_rmse": 10.016603501268321,
+          "dev_bias": -0.006633840474378474
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.875",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937340035543,
+          "dev_well_equal_rmse": 10.016607597954327,
+          "dev_bias": -0.006631857734171866
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s1",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w531_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365937789111936,
+          "dev_well_equal_rmse": 10.016610314823351,
+          "dev_bias": -0.006624831103899558
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.925",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36593964303721,
+          "dev_well_equal_rmse": 10.01661227355782,
+          "dev_bias": -0.00662686850287068
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365940708585464,
+          "dev_well_equal_rmse": 10.016612754657913,
+          "dev_bias": -0.006629284627499245
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.825",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365945056386545,
+          "dev_well_equal_rmse": 10.016615945410926,
+          "dev_bias": -0.006633790219400674
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.925",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948160385948,
+          "dev_well_equal_rmse": 10.016621746330006,
+          "dev_bias": -0.0066257784361357175
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.825",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948345360161,
+          "dev_well_equal_rmse": 10.016619732610334,
+          "dev_bias": -0.006632206151414862
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.875",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365948807073929,
+          "dev_well_equal_rmse": 10.016622385782139,
+          "dev_bias": -0.006627254999916442
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365951764660972,
+          "dev_well_equal_rmse": 10.016624942074722,
+          "dev_bias": -0.006629676046424276
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s1",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w501_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365953050332108,
+          "dev_well_equal_rmse": 10.016628611599861,
+          "dev_bias": -0.00662210593706215
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.875",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36595704394033,
+          "dev_well_equal_rmse": 10.01663150318111,
+          "dev_bias": -0.006626028674839609
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.825",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365959567151412,
+          "dev_well_equal_rmse": 10.016634296737987,
+          "dev_bias": -0.0066275277756464605
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365960625517237,
+          "dev_well_equal_rmse": 10.016622060165194,
+          "dev_bias": -0.006645046557289066
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s0.925",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w501_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365962720185195,
+          "dev_well_equal_rmse": 10.016638952201735,
+          "dev_bias": -0.006622889552051043
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365963042690584,
+          "dev_well_equal_rmse": 10.016625571559478,
+          "dev_bias": -0.0066425975337832815
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.75",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.75
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.75",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.3659646279765,
+          "dev_well_equal_rmse": 10.016637068001005,
+          "dev_bias": -0.006633773122346372
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365965515981596,
+          "dev_well_equal_rmse": 10.01662974641556,
+          "dev_bias": -0.006639810195839317
+        }
+      ],
+      "seconds": 52.823285818099976
+    },
+    {
+      "alpha": 0.1,
+      "fold_scores": [
+        {
+          "fold": 0,
+          "raw_row_rmse": 9.648708080804845,
+          "rows": 1256243,
+          "wells": 256
+        },
+        {
+          "fold": 1,
+          "raw_row_rmse": 10.002504986961036,
+          "rows": 1257000,
+          "wells": 257
+        },
+        {
+          "fold": 2,
+          "raw_row_rmse": 12.153817145627386,
+          "rows": 1256595,
+          "wells": 257
+        }
+      ],
+      "best": {
+        "base_smoother": {
+          "name": "savgol_w571_p2_s0.875",
+          "kind": "savgol",
+          "window": 571,
+          "polyorder": 2,
+          "shrink": 0.875
+        },
+        "base_smoother_name": "savgol_w571_p2_s0.875",
+        "row_smoother": {
+          "name": "savgol_w631_p2_s1",
+          "kind": "savgol",
+          "window": 631,
+          "polyorder": 2,
+          "shrink": 1.0
+        },
+        "row_smoother_name": "savgol_w631_p2_s1",
+        "well_weight": 0.5249999999999999,
+        "row_weight": -0.14999999999999997,
+        "dev_oof_rmse": 10.36591494069081,
+        "dev_well_equal_rmse": 10.016581565765396,
+        "dev_bias": -0.006636630143738935,
+        "alpha": 0.1
+      },
+      "top_pairs": [
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36591494069081,
+          "dev_well_equal_rmse": 10.016581565765396,
+          "dev_bias": -0.006636630143738935
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365917928278467,
+          "dev_well_equal_rmse": 10.016585594757395,
+          "dev_bias": -0.0066339876126639925
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365921040848171,
+          "dev_well_equal_rmse": 10.016590537827563,
+          "dev_bias": -0.006631193539516817
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.925",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36592572202378,
+          "dev_well_equal_rmse": 10.016594278814862,
+          "dev_bias": -0.006636334053843959
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.925",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365928881662235,
+          "dev_well_equal_rmse": 10.016598033995267,
+          "dev_bias": -0.006634450787407841
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s1",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w551_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365929790622742,
+          "dev_well_equal_rmse": 10.016601177225986,
+          "dev_bias": -0.006628869635362978
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.925",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365932169851902,
+          "dev_well_equal_rmse": 10.016603439867207,
+          "dev_bias": -0.006631703860683138
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.875",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365935002371083,
+          "dev_well_equal_rmse": 10.016604625730377,
+          "dev_bias": -0.006636429382874012
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.875",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365938241038348,
+          "dev_well_equal_rmse": 10.016608709123227,
+          "dev_bias": -0.006634503373802137
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s1",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w531_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365938689616522,
+          "dev_well_equal_rmse": 10.016611338995947,
+          "dev_bias": -0.0066274169038397675
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.925",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365940543873684,
+          "dev_well_equal_rmse": 10.016613365294514,
+          "dev_bias": -0.006629475026513076
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365941609436408,
+          "dev_well_equal_rmse": 10.016613858554198,
+          "dev_bias": -0.00663184193234895
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.825",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365945956936335,
+          "dev_well_equal_rmse": 10.016617049025976,
+          "dev_bias": -0.006636461504612399
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.925",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365949060760808,
+          "dev_well_equal_rmse": 10.016622830740042,
+          "dev_bias": -0.00662835724182644
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s0.825",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w601_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365949246075424,
+          "dev_well_equal_rmse": 10.016620785194574,
+          "dev_bias": -0.006634822518815795
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.875",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365949707697428,
+          "dev_well_equal_rmse": 10.016623376618131,
+          "dev_bias": -0.006629812822858701
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w571_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365952665215952,
+          "dev_well_equal_rmse": 10.016626022019771,
+          "dev_bias": -0.0066323185774992185
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s1",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w501_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365953950679197,
+          "dev_well_equal_rmse": 10.016629713634886,
+          "dev_bias": -0.006624587600398877
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w531_p2_s0.875",
+            "kind": "savgol",
+            "window": 531,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "row_smoother_name": "savgol_w531_p2_s0.875",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365957944125952,
+          "dev_well_equal_rmse": 10.016632584690475,
+          "dev_bias": -0.006628686748691191
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w551_p2_s0.825",
+            "kind": "savgol",
+            "window": 551,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "row_smoother_name": "savgol_w551_p2_s0.825",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.36596046749753,
+          "dev_well_equal_rmse": 10.016635356553378,
+          "dev_bias": -0.006630232995920514
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s1",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w631_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365961526766661,
+          "dev_well_equal_rmse": 10.01662310580065,
+          "dev_bias": -0.006647724318657725
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w501_p2_s0.925",
+            "kind": "savgol",
+            "window": 501,
+            "polyorder": 2,
+            "shrink": 0.925
+          },
+          "row_smoother_name": "savgol_w501_p2_s0.925",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14499999999999996,
+          "dev_oof_rmse": 10.365963613090752,
+          "dev_well_equal_rmse": 10.016597607543956,
+          "dev_bias": -0.007290731319638271
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w601_p2_s1",
+            "kind": "savgol",
+            "window": 601,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w601_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365963944142521,
+          "dev_well_equal_rmse": 10.016626551336115,
+          "dev_bias": -0.006645082305675337
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.875",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.875
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.875",
+          "row_smoother": {
+            "name": "savgol_w631_p2_s0.75",
+            "kind": "savgol",
+            "window": 631,
+            "polyorder": 2,
+            "shrink": 0.75
+          },
+          "row_smoother_name": "savgol_w631_p2_s0.75",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365965527966932,
+          "dev_well_equal_rmse": 10.016638180120294,
+          "dev_bias": -0.00663625944851609
+        },
+        {
+          "base_smoother": {
+            "name": "savgol_w571_p2_s0.825",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 0.825
+          },
+          "base_smoother_name": "savgol_w571_p2_s0.825",
+          "row_smoother": {
+            "name": "savgol_w571_p2_s1",
+            "kind": "savgol",
+            "window": 571,
+            "polyorder": 2,
+            "shrink": 1.0
+          },
+          "row_smoother_name": "savgol_w571_p2_s1",
+          "well_weight": 0.5249999999999999,
+          "row_weight": -0.14999999999999997,
+          "dev_oof_rmse": 10.365966417241998,
+          "dev_well_equal_rmse": 10.01663085466952,
+          "dev_bias": -0.006642287714435607
+        }
+      ],
+      "seconds": 52.78231692314148
+    }
+  ],
+  "heldout_selected_metrics": {
+    "rmse": 6.776071849014587,
+    "mse": 45.915149703007955,
+    "well_equal_rmse": 6.365666416161057,
+    "bias": 2.24900252742739,
+    "per_well_rmse": {
+      "000d7d20": 4.442338274750894,
+      "00bbac68": 8.91256598535081,
+      "00e12e8b": 4.732538956519349
+    }
+  },
+  "submission_path": "submissions/exp115_separate_component_smoothers.csv",
+  "submission_report": {
+    "submission_rows": 14151,
+    "sample_rows": 14151,
+    "ids_match_sample_order": true,
+    "missing_tvt": 0,
+    "finite_tvt": true,
+    "tvt_min": 11593.224609375,
+    "tvt_max": 12245.1923828125,
+    "tvt_mean": 11905.87890625
+  },
+  "elapsed_seconds": 382.8049097061157,
+  "note": "Heldout labels are not used for fitting or selection."
+}

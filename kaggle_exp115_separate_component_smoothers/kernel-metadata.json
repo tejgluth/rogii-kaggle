@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-clean-separate-component-smoothers-submission",
+  "title": "ROGII clean separate component smoothers submission",
+  "code_file": "clean_separate_component_smoothers_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "kernel_sources": []
+}

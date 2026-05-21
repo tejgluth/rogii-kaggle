@@ -155,6 +155,17 @@ come from models trained on the same wells. Under that metric:
   `kaggle_exp114_smoothed_component_weight_select/`, and
   `submissions/FINAL_submission.csv`. The package notebook was executed locally
   and reproduced the promoted CSV exactly (`max_abs_diff=0.0`).
+- exp115 lets the base artifact prediction and row residual use different
+  Savitzky-Golay smoothers while keeping the same non-heldout GroupKFold row
+  residual and audit-only heldout protocol. It selects alpha 0.001, base
+  `savgol_w571_p2_s0.875`, row `savgol_w631_p2_s1`, well weight 0.525, and row
+  weight -0.15. It improves non-heldout OOF RMSE slightly to 10.365914 and
+  lowers the clean heldout audit to RMSE 6.7761 / MSE 45.9151. This is now the
+  best clean Kaggle-input plus artifact candidate:
+  `submissions/exp115_separate_component_smoothers.csv`, Kaggle package
+  `kaggle_exp115_separate_component_smoothers/`, and
+  `submissions/FINAL_submission.csv`. The package notebook was executed locally
+  and reproduced the promoted CSV exactly (`max_abs_diff=0.0`).
 
 Caveat: `submissions/exp094_artifact_top3_devblend.csv` uses artifact/local test
 predictions and has a much lower overlap-label diagnostic RMSE of 3.0771, but
