@@ -1,7 +1,5 @@
-# Data — never commit raw competition data
-data/raw/
-data/processed/
-data/artifacts/
+# Data — never commit competition data (2GB+ lives at data/<competition>/)
+data/
 
 # Experiment artifacts — large numpy files
 experiments/oof/*.npy
@@ -51,3 +49,28 @@ submission*.csv
 
 # Codex temp files
 experiments/specs/*_prompt.txt
+
+# ---- Large local artifacts (added 2026-06-13) ----
+# Kaggle dataset mirrors and kernel fork outputs (hundreds of MB each)
+kaggle_datasets/
+kaggle_*/output/
+kaggle_*/output_latest/
+
+# Local experiment runs: keep tracked .py/.md scripts, drop heavy data/binaries
+local_runs/**/*.csv
+local_runs/**/*.parquet
+local_runs/**/*.pkl
+local_runs/**/*.pickle
+local_runs/**/*.npy
+local_runs/**/*.npz
+local_runs/**/*.joblib
+local_runs/**/models/
+
+# Large binary/model artifacts — never commit anywhere
+*.parquet
+*.pkl
+*.pickle
+*.npz
+*.joblib
+*.cbm
+catboost_info/
