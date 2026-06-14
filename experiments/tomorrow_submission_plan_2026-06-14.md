@@ -39,8 +39,9 @@ Submit as raw CSVs:
   wells TVT is nearly constant, so GR alignment is only a minor correction.
 - Spatial structural-surface KNN (TVT+Z from neighbors) — **fails** (88–112); `TVT+Z` is
   not single-valued in (X,Y). Only formation contacts are areal (v8's formation-KNN uses them).
-- DP-alignment delta as a tree feature: `local_runs/honest/train_lgbm_dp.py`
-  (geometry-only OOF 14.57 → geometry+DP see `local_runs/dp_lgbm_result.txt`).
+- DP-alignment delta as a tree feature: **negative result** — geometry-only OOF 14.595 →
+  geometry+DP 14.793 (worse). The DP path adds noise to the tree; it is NOT used in the
+  submissions. (`local_runs/honest/train_lgbm_dp.py`.)
 
 ## To actually reach <6 (future work, needs more than a CPU night)
 Leaders are ~1.5–2 RMSE ahead of all public work — a genuinely better core alignment.
