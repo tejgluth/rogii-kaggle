@@ -1,0 +1,19 @@
+{
+  "id": "tejasgluth/rogii-plagiagia-beam-pf-cpu-candidate",
+  "title": "ROGII plagiagia beam PF CPU candidate",
+  "code_file": "rogii-v2-8-beam-pf-ensemble.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "None"
+}

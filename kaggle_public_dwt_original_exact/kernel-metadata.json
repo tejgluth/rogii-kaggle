@@ -1,0 +1,22 @@
+{
+  "id": "tejasgluth/rogii-dwt-original-exact",
+  "title": "ROGII DWT Original Exact",
+  "code_file": "rogii_dwt_original_exact.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [
+    "packagemanager/pm-119017611-at-05-13-2026-06-30-43"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": []
+}

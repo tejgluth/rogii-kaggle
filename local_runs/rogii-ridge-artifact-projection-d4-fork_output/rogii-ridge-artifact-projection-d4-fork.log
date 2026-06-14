@@ -1,0 +1,93 @@
+[{"stream_name":"stderr","time":11.933166073,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.933256379,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.933262803,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.933266998,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.723709615,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":12.723739364,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":12.723744642,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":12.723748329,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":14.139331271,"data":"Scoring mode: SHOW_FIGS=0, fleongg pretrained models required, seed=20260612, threads=1, sp45_pf_seed_mode=ensemble3.\n"}
+,{"stream_name":"stdout","time":18.965597265,"data":"koolbox candidates: ['/kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl']\n"}
+,{"stream_name":"stdout","time":18.965636064,"data":"install local koolbox wheel: /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":22.137124597,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":22.169587946,"data":"Installing collected packages: koolbox\n"}
+,{"stream_name":"stdout","time":22.210863512,"data":"Successfully installed koolbox-0.1.3\n"}
+,{"stream_name":"stdout","time":22.339701398,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":22.339745375,"data":"Installing collected packages: koolbox\n"}
+,{"stream_name":"stdout","time":22.339751455,"data":"Successfully installed koolbox-0.1.3\n"}
+,{"stream_name":"stdout","time":26.627836843,"data":"koolbox discovered OK: /usr/local/lib/python3.12/dist-packages/koolbox/__init__.py\n"}
+,{"stream_name":"stdout","time":26.627871207,"data":"koolbox mode: {'mode': 'native_discovered', 'path': '/usr/local/lib/python3.12/dist-packages/koolbox/__init__.py', 'candidates': ['/kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl'], 'error': None}\n"}
+,{"stream_name":"stderr","time":356.007426441,"data":"[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:   13.0s finished\n"}
+,{"stream_name":"stderr","time":356.007482971,"data":"\n"}
+,{"stream_name":"stderr","time":356.007489681,"data":"[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:   13.0s finished\n"}
+,{"stream_name":"stdout","time":358.202743282,"data":"Loading lightgbm-1 from disk...\n"}
+,{"stream_name":"stdout","time":359.743804472,"data":"Loaded lightgbm-1 with overall RMSE: 10.7668\n"}
+,{"stream_name":"stdout","time":359.743843824,"data":"\n"}
+,{"stream_name":"stdout","time":362.046195098,"data":"Loading lightgbm-2 from disk...\n"}
+,{"stream_name":"stdout","time":363.86685336,"data":"Loaded lightgbm-2 with overall RMSE: 10.4852\n"}
+,{"stream_name":"stdout","time":363.86689251,"data":"\n"}
+,{"stream_name":"stdout","time":372.071557364,"data":"Loading lightgbm-3 from disk...\n"}
+,{"stream_name":"stdout","time":373.310907102,"data":"Loaded lightgbm-3 with overall RMSE: 10.4733\n"}
+,{"stream_name":"stdout","time":373.310960092,"data":"\n"}
+,{"stream_name":"stdout","time":378.115599805,"data":"Loading catboost-1 from disk...\n"}
+,{"stream_name":"stdout","time":380.670740359,"data":"Loaded catboost-1 with overall RMSE: 10.5750\n"}
+,{"stream_name":"stdout","time":380.670777032,"data":"\n"}
+,{"stream_name":"stdout","time":380.670781217,"data":"Loading catboost-2 from disk...\n"}
+,{"stream_name":"stdout","time":383.488132755,"data":"Loaded catboost-2 with overall RMSE: 10.5550\n"}
+,{"stream_name":"stdout","time":383.488204431,"data":"\n"}
+,{"stream_name":"stdout","time":385.357905931,"data":"Training Ridge\n"}
+,{"stream_name":"stdout","time":385.35794308,"data":"\n"}
+,{"stream_name":"stdout","time":386.491272628,"data":"--- Fold 0 - root_mean_squared_error: 9.4973 - Time: 0.59 s\n"}
+,{"stream_name":"stdout","time":387.276413908,"data":"--- Fold 1 - root_mean_squared_error: 10.8118 - Time: 0.58 s\n"}
+,{"stream_name":"stdout","time":388.034352158,"data":"--- Fold 2 - root_mean_squared_error: 9.3836 - Time: 0.55 s\n"}
+,{"stream_name":"stdout","time":388.798129521,"data":"--- Fold 3 - root_mean_squared_error: 11.4277 - Time: 0.56 s\n"}
+,{"stream_name":"stdout","time":389.386483934,"data":"--- Fold 4 - root_mean_squared_error: 10.8220 - Time: 0.56 s\n"}
+,{"stream_name":"stdout","time":389.386524564,"data":"\n"}
+,{"stream_name":"stdout","time":389.386531015,"data":"------ Overall root_mean_squared_error: 10.4197 - Mean root_mean_squared_error: 10.3885 ± 0.8064 - Time: 5.76 s\n"}
+,{"stream_name":"stdout","time":390.018499074,"data":"\n"}
+,{"stream_name":"stdout","time":390.018533078,"data":"Processing 1/3: 000d7d20...\n"}
+,{"stream_name":"stdout","time":390.018540018,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":434.650382389,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":434.650417667,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":434.650424804,"data":"  Selector code=0 variant=pf_scale_5_hold_0.2 n_eval=3836 z_span=100.020\n"}
+,{"stream_name":"stdout","time":434.904348655,"data":"  Added 3836 rows\n"}
+,{"stream_name":"stdout","time":434.904383796,"data":"\n"}
+,{"stream_name":"stdout","time":434.904394545,"data":"Processing 2/3: 00bbac68...\n"}
+,{"stream_name":"stdout","time":434.90439918,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":504.38163671,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":504.381677653,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":504.381682559,"data":"  Selector code=3 variant=pf_scale_5_hold_0.15 n_eval=6014 z_span=176.490\n"}
+,{"stream_name":"stdout","time":504.770669186,"data":"  Added 6014 rows\n"}
+,{"stream_name":"stdout","time":504.770705004,"data":"\n"}
+,{"stream_name":"stdout","time":504.770711911,"data":"Processing 3/3: 00e12e8b...\n"}
+,{"stream_name":"stdout","time":504.770716808,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":556.833257404,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":556.833349958,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":556.83336109,"data":"  Selector code=2 variant=pf_scale_12_beam_0.2_hold_0.15 n_eval=4301 z_span=144.810\n"}
+,{"stream_name":"stdout","time":556.883362767,"data":"  Added 4301 rows\n"}
+,{"stream_name":"stdout","time":557.159770046,"data":"projection applied to 3 wells\n"}
+,{"stream_name":"stdout","time":557.15980166,"data":"wrote projected submission.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":557.703925205,"data":"saved sp45_projection_submission.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":557.759189792,"data":"DATA: /kaggle/input/competitions/rogii-wellbore-geology-prediction | OUT: /kaggle/working | cores: 1 | seed: 20260612 | FAST: False\n"}
+,{"stream_name":"stdout","time":562.764969545,"data":"trackers compiled; numpy RNG reset for scoring.\n"}
+,{"stream_name":"stdout","time":563.314673053,"data":"train wells: 773 | test wells: 3\n"}
+,{"stream_name":"stdout","time":579.041379679,"data":"building lik-PF + features (test)…\n"}
+,{"stream_name":"stdout","time":711.323676089,"data":"INFERENCE mode — loading models from /kaggle/input/datasets/fleongg/rogii-claude-models-pub\n"}
+,{"stream_name":"stdout","time":712.793057473,"data":"submission.csv written (14151 rows) in 150s\n"}
+,{"stream_name":"stdout","time":712.981560279,"data":"          file  w_sp45  w_fleongg  rows     mean_tvt    std_tvt  rmse_vs_sp45  p95_abs_vs_sp45\n"}
+,{"stream_name":"stdout","time":712.981592093,"data":"submission.csv    0.55       0.45 14151 11904.390261 278.455379       1.25845         2.538863\n"}
+,{"stream_name":"stdout","time":712.982361809,"data":"wrote final submission.csv from direct 0.55/0.45 blend (14151, 2)\n"}
+,{"stream_name":"stdout","time":713.190417631,"data":"Diagnostics written: /kaggle/working/run_diagnostics_sp45_fleongg_7519_sp45_pf_seed_ensemble3.json\n"}
+,{"stream_name":"stdout","time":713.190449429,"data":"Final submission sha256: d77c14568cdc93022e34f25ce8cac47a4656a3964e60b3d705d6d48d8983eb2e\n"}
+,{"stream_name":"stdout","time":713.190455927,"data":"Fleongg model dirs: ['/kaggle/input/datasets/fleongg/rogii-claude-models-pub']\n"}
+,{"stream_name":"stderr","time":719.434222266,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":719.434262342,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":719.686025631,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":719.686065353,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":720.494438449,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":720.85510511,"data":"[NbConvertApp] Writing 238814 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":723.480448831,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":725.121848407,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":725.121888111,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":725.122244238,"data":"[NbConvertApp] Writing 1190938 bytes to __results__.html\n"}
+]

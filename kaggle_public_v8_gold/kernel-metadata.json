@@ -1,0 +1,23 @@
+{
+  "id": "z1493916656/rogii-wellbore-v8-gold",
+  "id_no": 122881636,
+  "title": "ROGII Wellbore V8 Gold",
+  "code_file": "rogii-wellbore-v8-gold.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:57e612b484cf3df5026ee4dcc3cb176974b22b2bc0937fb1e16132a8be4cb13c",
+  "machine_shape": "Gpu"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "pilkwang/rogii-eda-target-free-alignment-for-tvt",
+  "id_no": 118068629,
+  "title": "\ud83d\udee2\ufe0f ROGII EDA + Target-Free Alignment for TVT",
+  "code_file": "rogii-eda-target-free-alignment-for-tvt.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "pilkwang/pilkwang-public-dataset-for-notebooks-figures",
+    "pilkwang/rogii-model-package",
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [
+    "packagemanager/pm-118068629-at-06-05-2026-12-29-36"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:c370a5ff133d162d17c2dca332b50f3e85c0b0ed1471ee18e98e3009eee80b08",
+  "machine_shape": "None"
+}

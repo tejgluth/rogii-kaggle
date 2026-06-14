@@ -1,0 +1,23 @@
+{
+  "id": "tejasgluth/rogii-mitch-9398-clean-inference",
+  "title": "ROGII Mitch 9398 clean inference",
+  "code_file": "mitch_9398_clean_inference.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "cpu"
+  ],
+  "dataset_sources": [
+    "iathar/rogii-wellbore-models"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "None"
+}

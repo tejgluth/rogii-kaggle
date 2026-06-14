@@ -1,0 +1,17 @@
+{
+  "id": "tejasgluth/rogii-exp092-cached-model-submission",
+  "title": "ROGII exp092 cached model submission",
+  "code_file": "exp092_cached_model_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [
+    "tejasgluth/rogii-exp092-model-cache"
+  ],
+  "kernel_sources": []
+}

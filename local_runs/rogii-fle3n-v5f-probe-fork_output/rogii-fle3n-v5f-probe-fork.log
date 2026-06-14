@@ -1,0 +1,226 @@
+[{"stream_name":"stderr","time":8.713366551,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.713451059,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.713458145,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.713462631,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.507358446,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.507396809,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.507402347,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.50740687,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.103799131,"data":"train wells: 773   |   test wells (sample shown locally): 3\n"}
+,{"stream_name":"stdout","time":12.103864088,"data":"horizontal-well columns: ['MD', 'X', 'Y', 'Z', 'ANCC', 'ASTNU', 'ASTNL', 'EGFDU', 'EGFDL', 'BUDA', 'TVT', 'GR', 'TVT_input']\n"}
+,{"stream_name":"stdout","time":12.103869755,"data":"typewell columns:        ['TVT', 'GR', 'Geology']\n"}
+,{"stream_name":"stdout","time":12.103874138,"data":"formations:              ['ANCC', 'ASTNU', 'ASTNL', 'EGFDU', 'EGFDL', 'BUDA']\n"}
+,{"stream_name":"stdout","time":25.411348205,"data":"median drift baseline RMSE: 10.3 ft   |   worst 10% of wells carry 49% of squared error\n"}
+,{"stream_name":"stdout","time":27.326515338,"data":"koolbox candidates: ['/kaggle/input/datasets/phongnguyn23021656/koolbox-offline', '/kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl']\n"}
+,{"stream_name":"stdout","time":27.326556179,"data":"using koolbox dir: /kaggle/input/datasets/phongnguyn23021656/koolbox-offline\n"}
+,{"stream_name":"stdout","time":27.326570289,"data":"listing: ['sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl', 'colorlog-6.10.1-py3-none-any.whl', 'sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64 (1).whl', 'koolbox-0.1.3-py3-none-any.whl', 'pytz-2025.2-py2.py3-none-any.whl', 'Unconfirmed 809629.crdownload', 'greenlet-3.3.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl', 'joblib-1.5.2-py3-none-any.whl', 'scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl', 'six-1.17.0-py2.py3-none-any.whl', 'alembic-1.17.2-py3-none-any.whl', 'python_dateutil-2.9.0.post0-py2.py3-none-any.whl', 'scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl', 'pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl', 'packaging-25.0-py3-none-any.whl', 'optuna-4.6.0-py3-none-any.whl', 'Unconfirmed 391801.crdownload']\n"}
+,{"stream_name":"stdout","time":27.32657799,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n"}
+,{"stream_name":"stderr","time":29.707622634,"data":"ERROR: sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":29.911759441,"data":"ERROR: sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":29.911841697,"data":"\n"}
+,{"stream_name":"stderr","time":29.911850394,"data":"ERROR: sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":30.025046549,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/colorlog-6.10.1-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":31.189843966,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/colorlog-6.10.1-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":31.20819122,"data":"colorlog is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":31.392847896,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/colorlog-6.10.1-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":31.392889365,"data":"colorlog is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":31.392897983,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64 (1).whl\n"}
+,{"stream_name":"stderr","time":32.207491952,"data":"ERROR: sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64 (1).whl is not a valid wheel filename.\n"}
+,{"stream_name":"stderr","time":32.410868641,"data":"ERROR: sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64 (1).whl is not a valid wheel filename.\n"}
+,{"stream_name":"stderr","time":32.410907898,"data":"\n"}
+,{"stream_name":"stderr","time":32.410914623,"data":"ERROR: sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64 (1).whl is not a valid wheel filename.\n"}
+,{"stream_name":"stdout","time":32.502286814,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":33.587396419,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":33.602418701,"data":"Installing collected packages: koolbox\n"}
+,{"stream_name":"stdout","time":33.679815994,"data":"Successfully installed koolbox-0.1.3\n"}
+,{"stream_name":"stdout","time":33.790614566,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":33.79068608,"data":"Installing collected packages: koolbox\n"}
+,{"stream_name":"stdout","time":33.790694909,"data":"Successfully installed koolbox-0.1.3\n"}
+,{"stream_name":"stdout","time":34.027654058,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/pytz-2025.2-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":35.15810506,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/pytz-2025.2-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":35.211498772,"data":"pytz is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":35.360594558,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/pytz-2025.2-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":35.360635885,"data":"pytz is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":35.360643607,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/greenlet-3.3.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stderr","time":36.618416343,"data":"ERROR: greenlet-3.3.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":36.823046287,"data":"ERROR: greenlet-3.3.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":36.823088736,"data":"\n"}
+,{"stream_name":"stderr","time":36.823092874,"data":"ERROR: greenlet-3.3.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":36.919680542,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/joblib-1.5.2-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":38.048243984,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/joblib-1.5.2-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":38.069901571,"data":"Installing collected packages: joblib\n"}
+,{"stream_name":"stdout","time":38.069932737,"data":"  Attempting uninstall: joblib\n"}
+,{"stream_name":"stdout","time":38.25101171,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/joblib-1.5.2-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":38.251049426,"data":"Installing collected packages: joblib\n"}
+,{"stream_name":"stdout","time":38.251055348,"data":"  Attempting uninstall: joblib\n"}
+,{"stream_name":"stdout","time":38.409745856,"data":"    Found existing installation: joblib 1.5.3\n"}
+,{"stream_name":"stdout","time":38.432971725,"data":"    Uninstalling joblib-1.5.3:\n"}
+,{"stream_name":"stdout","time":38.604356997,"data":"      Successfully uninstalled joblib-1.5.3\n"}
+,{"stream_name":"stdout","time":38.612995104,"data":"    Found existing installation: joblib 1.5.3\n"}
+,{"stream_name":"stdout","time":38.613037063,"data":"    Uninstalling joblib-1.5.3:\n"}
+,{"stream_name":"stdout","time":38.613043365,"data":"      Successfully uninstalled joblib-1.5.3\n"}
+,{"stream_name":"stdout","time":38.919867506,"data":"Successfully installed joblib-1.5.2\n"}
+,{"stream_name":"stdout","time":39.12315097,"data":"Successfully installed joblib-1.5.2\n"}
+,{"stream_name":"stdout","time":39.123193615,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n"}
+,{"stream_name":"stderr","time":40.335707363,"data":"ERROR: scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":40.539096664,"data":"ERROR: scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":40.539141243,"data":"\n"}
+,{"stream_name":"stderr","time":40.539145678,"data":"ERROR: scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":40.640779155,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/six-1.17.0-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":41.833040514,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/six-1.17.0-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":41.848572191,"data":"six is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":42.035736565,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/six-1.17.0-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":42.035782632,"data":"six is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":42.035792482,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/alembic-1.17.2-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":43.292389213,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/alembic-1.17.2-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":43.314440141,"data":"Installing collected packages: alembic\n"}
+,{"stream_name":"stdout","time":43.314727699,"data":"  Attempting uninstall: alembic\n"}
+,{"stream_name":"stdout","time":43.495237088,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/alembic-1.17.2-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":43.495296342,"data":"Installing collected packages: alembic\n"}
+,{"stream_name":"stdout","time":43.495305648,"data":"  Attempting uninstall: alembic\n"}
+,{"stream_name":"stdout","time":43.51443673,"data":"    Found existing installation: alembic 1.18.4\n"}
+,{"stream_name":"stdout","time":43.538657381,"data":"    Uninstalling alembic-1.18.4:\n"}
+,{"stream_name":"stdout","time":43.649910228,"data":"      Successfully uninstalled alembic-1.18.4\n"}
+,{"stream_name":"stdout","time":43.717616667,"data":"    Found existing installation: alembic 1.18.4\n"}
+,{"stream_name":"stdout","time":43.717664599,"data":"    Uninstalling alembic-1.18.4:\n"}
+,{"stream_name":"stdout","time":43.717686232,"data":"      Successfully uninstalled alembic-1.18.4\n"}
+,{"stream_name":"stdout","time":43.942101572,"data":"Successfully installed alembic-1.17.2\n"}
+,{"stream_name":"stdout","time":44.145198859,"data":"Successfully installed alembic-1.17.2\n"}
+,{"stream_name":"stdout","time":44.14524306,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/python_dateutil-2.9.0.post0-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":45.340893916,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/python_dateutil-2.9.0.post0-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":45.363291634,"data":"python-dateutil is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":45.544170001,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/python_dateutil-2.9.0.post0-py2.py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":45.544211701,"data":"python-dateutil is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n"}
+,{"stream_name":"stdout","time":45.54421609,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n"}
+,{"stream_name":"stderr","time":46.786570563,"data":"ERROR: scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":46.990679341,"data":"ERROR: scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":46.990720425,"data":"\n"}
+,{"stream_name":"stderr","time":46.990726852,"data":"ERROR: scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":47.10327791,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stderr","time":48.229203229,"data":"ERROR: pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":48.433026958,"data":"ERROR: pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":48.433119033,"data":"\n"}
+,{"stream_name":"stderr","time":48.433126087,"data":"ERROR: pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":48.532649502,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/packaging-25.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":49.640062841,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/packaging-25.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":49.655886411,"data":"Installing collected packages: packaging\n"}
+,{"stream_name":"stdout","time":49.656551691,"data":"  Attempting uninstall: packaging\n"}
+,{"stream_name":"stdout","time":49.843345972,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/packaging-25.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":49.843387334,"data":"Installing collected packages: packaging\n"}
+,{"stream_name":"stdout","time":49.843393781,"data":"  Attempting uninstall: packaging\n"}
+,{"stream_name":"stdout","time":50.009807419,"data":"    Found existing installation: packaging 26.0\n"}
+,{"stream_name":"stdout","time":50.015735293,"data":"    Uninstalling packaging-26.0:\n"}
+,{"stream_name":"stdout","time":50.049944959,"data":"      Successfully uninstalled packaging-26.0\n"}
+,{"stream_name":"stdout","time":50.176672289,"data":"Successfully installed packaging-25.0\n"}
+,{"stream_name":"stdout","time":50.212546283,"data":"    Found existing installation: packaging 26.0\n"}
+,{"stream_name":"stdout","time":50.212591495,"data":"    Uninstalling packaging-26.0:\n"}
+,{"stream_name":"stdout","time":50.212595769,"data":"      Successfully uninstalled packaging-26.0\n"}
+,{"stream_name":"stdout","time":50.212616631,"data":"Successfully installed packaging-25.0\n"}
+,{"stream_name":"stdout","time":50.493974431,"data":"install /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/optuna-4.6.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":51.649462332,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/optuna-4.6.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":51.734345378,"data":"Installing collected packages: optuna\n"}
+,{"stream_name":"stdout","time":51.734452561,"data":"  Attempting uninstall: optuna\n"}
+,{"stream_name":"stdout","time":51.803957021,"data":"    Found existing installation: optuna 4.8.0\n"}
+,{"stream_name":"stdout","time":51.852501487,"data":"Processing /kaggle/input/datasets/phongnguyn23021656/koolbox-offline/optuna-4.6.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":51.852536786,"data":"Installing collected packages: optuna\n"}
+,{"stream_name":"stdout","time":51.852542059,"data":"  Attempting uninstall: optuna\n"}
+,{"stream_name":"stdout","time":51.852546831,"data":"    Found existing installation: optuna 4.8.0\n"}
+,{"stream_name":"stdout","time":51.853008353,"data":"    Uninstalling optuna-4.8.0:\n"}
+,{"stream_name":"stdout","time":52.056081038,"data":"    Uninstalling optuna-4.8.0:\n"}
+,{"stream_name":"stdout","time":52.068983453,"data":"      Successfully uninstalled optuna-4.8.0\n"}
+,{"stream_name":"stdout","time":52.271571603,"data":"      Successfully uninstalled optuna-4.8.0\n"}
+,{"stream_name":"stdout","time":52.502992446,"data":"Successfully installed optuna-4.6.0\n"}
+,{"stream_name":"stdout","time":52.706073064,"data":"Successfully installed optuna-4.6.0\n"}
+,{"stream_name":"stdout","time":54.859677418,"data":"koolbox OK: /usr/local/lib/python3.12/dist-packages/koolbox/__init__.py\n"}
+,{"stream_name":"stderr","time":404.655377439,"data":"[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":404.655423097,"data":"\n"}
+,{"stream_name":"stderr","time":404.655429702,"data":"[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":414.375289088,"data":"[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    9.9s finished\n"}
+,{"stream_name":"stderr","time":414.375407487,"data":"\n"}
+,{"stream_name":"stderr","time":414.375415692,"data":"[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    9.9s finished\n"}
+,{"stream_name":"stdout","time":417.132976091,"data":"Loading lightgbm-1 from disk...\n"}
+,{"stream_name":"stdout","time":419.917430766,"data":"Loaded lightgbm-1 with overall RMSE: 10.7668\n"}
+,{"stream_name":"stdout","time":419.91748444,"data":"\n"}
+,{"stream_name":"stdout","time":423.040191755,"data":"Loading lightgbm-2 from disk...\n"}
+,{"stream_name":"stdout","time":426.198622455,"data":"Loaded lightgbm-2 with overall RMSE: 10.4852\n"}
+,{"stream_name":"stdout","time":426.19867742,"data":"\n"}
+,{"stream_name":"stdout","time":440.581806451,"data":"Loading lightgbm-3 from disk...\n"}
+,{"stream_name":"stdout","time":442.554359421,"data":"Loaded lightgbm-3 with overall RMSE: 10.4733\n"}
+,{"stream_name":"stdout","time":442.554410168,"data":"\n"}
+,{"stream_name":"stdout","time":448.384205631,"data":"Loading catboost-1 from disk...\n"}
+,{"stream_name":"stdout","time":452.06582866,"data":"Loaded catboost-1 with overall RMSE: 10.5750\n"}
+,{"stream_name":"stdout","time":452.065877058,"data":"\n"}
+,{"stream_name":"stdout","time":452.277944004,"data":"Loading catboost-2 from disk...\n"}
+,{"stream_name":"stdout","time":455.697847553,"data":"Loaded catboost-2 with overall RMSE: 10.5550\n"}
+,{"stream_name":"stdout","time":455.697898754,"data":"\n"}
+,{"stream_name":"stdout","time":458.071375686,"data":"Training Ridge\n"}
+,{"stream_name":"stdout","time":458.071422263,"data":"\n"}
+,{"stream_name":"stdout","time":459.83067872,"data":"--- Fold 0 - root_mean_squared_error: 9.7208 - Time: 0.98 s\n"}
+,{"stream_name":"stdout","time":460.952156144,"data":"--- Fold 1 - root_mean_squared_error: 10.7276 - Time: 0.80 s\n"}
+,{"stream_name":"stdout","time":462.002708439,"data":"--- Fold 2 - root_mean_squared_error: 9.1033 - Time: 0.77 s\n"}
+,{"stream_name":"stdout","time":463.025917389,"data":"--- Fold 3 - root_mean_squared_error: 11.6101 - Time: 0.77 s\n"}
+,{"stream_name":"stdout","time":463.962946164,"data":"--- Fold 4 - root_mean_squared_error: 10.8230 - Time: 0.85 s\n"}
+,{"stream_name":"stdout","time":463.962993798,"data":"\n"}
+,{"stream_name":"stdout","time":463.963000334,"data":"------ Overall root_mean_squared_error: 10.4344 - Mean root_mean_squared_error: 10.3970 ± 0.8824 - Time: 8.01 s\n"}
+,{"stream_name":"stdout","time":464.75544164,"data":"\n"}
+,{"stream_name":"stdout","time":464.755487438,"data":"Processing 1/3: 000d7d20...\n"}
+,{"stream_name":"stdout","time":464.755495398,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":514.935160394,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":514.93521048,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":514.935218195,"data":"  Selector code=0 variant=pf_scale_5_hold_0.2 n_eval=3836 z_span=100.020\n"}
+,{"stream_name":"stdout","time":515.202101419,"data":"  Added 3836 rows\n"}
+,{"stream_name":"stdout","time":515.202145311,"data":"\n"}
+,{"stream_name":"stdout","time":515.202178326,"data":"Processing 2/3: 00bbac68...\n"}
+,{"stream_name":"stdout","time":515.202184108,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":592.831363272,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":592.831409715,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":592.831418299,"data":"  Selector code=3 variant=pf_scale_5_hold_0.15 n_eval=6014 z_span=176.490\n"}
+,{"stream_name":"stdout","time":593.29508149,"data":"  Added 6014 rows\n"}
+,{"stream_name":"stdout","time":593.295128418,"data":"\n"}
+,{"stream_name":"stdout","time":593.295136488,"data":"Processing 3/3: 00e12e8b...\n"}
+,{"stream_name":"stdout","time":593.295143232,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":648.415730913,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":648.415783871,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":648.415792185,"data":"  Selector code=2 variant=pf_scale_12_beam_0.2_hold_0.15 n_eval=4301 z_span=144.810\n"}
+,{"stream_name":"stdout","time":648.500219937,"data":"  Added 4301 rows\n"}
+,{"stream_name":"stdout","time":648.958002799,"data":"projection applied to 3 wells\n"}
+,{"stream_name":"stdout","time":648.958043855,"data":"wrote projected submission.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":649.546524364,"data":"saved sp45_projection_submission.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":649.644358543,"data":"DATA: /kaggle/input/competitions/rogii-wellbore-geology-prediction | OUT: /kaggle/working | cores: 4 | FAST: False\n"}
+,{"stream_name":"stdout","time":649.84712846,"data":"demo well: 00bbac68\n"}
+,{"stream_name":"stdout","time":656.713889508,"data":"trackers compiled.\n"}
+,{"stream_name":"stdout","time":726.947506903,"data":"train wells: 773 | test wells: 3\n"}
+,{"stream_name":"stdout","time":746.323935465,"data":"building lik-PF + features (test)…\n"}
+,{"stream_name":"stdout","time":833.999371903,"data":"INFERENCE mode — loading models from /kaggle/input/datasets/fleongg/rogii-claude-models-pub\n"}
+,{"stream_name":"stdout","time":835.943788775,"data":"submission.csv written (14151 rows) in 109s\n"}
+,{"stream_name":"stdout","time":836.716278801,"data":"                             file  w_sp45  w_fleongg  rows     mean_tvt    std_tvt  rmse_vs_sp45  p95_abs_vs_sp45\n"}
+,{"stream_name":"stdout","time":836.716324772,"data":"submission_sp45_fleongg_w0.50.csv    0.50       0.50 14151 11904.558154 278.307381      1.839422         3.970113\n"}
+,{"stream_name":"stdout","time":836.716343683,"data":"submission_sp45_fleongg_w0.52.csv    0.52       0.48 14151 11904.535910 278.322431      1.765845         3.811308\n"}
+,{"stream_name":"stdout","time":836.716350482,"data":"submission_sp45_fleongg_w0.55.csv    0.55       0.45 14151 11904.502544 278.345039      1.655480         3.573101\n"}
+,{"stream_name":"stdout","time":836.716356328,"data":"submission_sp45_fleongg_w0.58.csv    0.58       0.42 14151 11904.469178 278.367685      1.545114         3.334895\n"}
+,{"stream_name":"stdout","time":836.716361851,"data":"submission_sp45_fleongg_w0.60.csv    0.60       0.40 14151 11904.446934 278.382803      1.471537         3.176090\n"}
+,{"stream_name":"stdout","time":836.717146755,"data":"wrote final submission.csv from submission_sp45_fleongg_w0.55.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":847.07892939,"data":"[recovery] indexed 773 train wells in 9s\n"}
+,{"stream_name":"stdout","time":847.07898552,"data":"[recovery] 3/3 wells exact-recovered, 14151 rows overridden, 10s total\n"}
+,{"stream_name":"stdout","time":847.493285456,"data":"recovered 3/3 evaluation wells\n"}
+,{"stream_name":"stdout","time":847.786846724,"data":"blend vs recovered on this well: mean|d| = 1.103 ft, max|d| = 4.163 ft\n"}
+,{"stream_name":"stderr","time":853.767484332,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":853.767534024,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":854.0056214,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":854.00565671,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":854.889553779,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":855.37428891,"data":"[NbConvertApp] Writing 1439704 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":858.728730574,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":860.877217268,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":860.877282936,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.877773353,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.878002949,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.878275524,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.878551779,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.878845863,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.879106284,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.879314361,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.879675005,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.879903548,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":860.880206253,"data":"[NbConvertApp] Writing 1255713 bytes to __results__.html\n"}
+]

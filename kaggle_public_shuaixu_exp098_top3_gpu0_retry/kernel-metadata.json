@@ -1,0 +1,23 @@
+{
+  "id": "shuaixu123/rogii-exp-098-public-top3-gpu0-retry",
+  "id_no": 122869022,
+  "title": "rogii-exp-098-public-top3-gpu0-retry",
+  "code_file": "rogii-exp-098-public-top3-gpu0-retry.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:57e612b484cf3df5026ee4dcc3cb176974b22b2bc0937fb1e16132a8be4cb13c",
+  "machine_shape": "Gpu"
+}

@@ -1,0 +1,36 @@
+{
+  "experiment_id": "exp118",
+  "route": "extra_cached_catboost_members",
+  "source_run": "/Users/speakeasy/Projects/rogii-kaggle/local_runs/exp116_fast_cache",
+  "feature_count": 222,
+  "row_count": 3783989,
+  "reports": [
+    {
+      "name": "catboost-2",
+      "params": {
+        "learning_rate": 0.02,
+        "random_seed": 7,
+        "iterations": 3500,
+        "depth": 7,
+        "l2_leaf_reg": 2.0,
+        "min_data_in_leaf": 15,
+        "border_count": 254,
+        "loss_function": "RMSE",
+        "od_type": "Iter",
+        "od_wait": 150,
+        "verbose": 0,
+        "task_type": "CPU",
+        "thread_count": -1,
+        "allow_writing_files": false
+      },
+      "n_splits": 3,
+      "fold_scores": [
+        9.285665512084961,
+        9.57961368560791,
+        12.055087089538574
+      ],
+      "overall_oof_rmse": 10.381647109985352,
+      "oof_path": "/Users/speakeasy/Projects/rogii-kaggle/local_runs/exp118_cached_extra_models/catboost-2_oof_preds.pkl"
+    }
+  ]
+}

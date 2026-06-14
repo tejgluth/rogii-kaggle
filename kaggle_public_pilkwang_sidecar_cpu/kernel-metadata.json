@@ -1,0 +1,21 @@
+{
+  "id": "tejasgluth/rogii-sidecar-model-package-cpu",
+  "title": "ROGII sidecar model package CPU",
+  "code_file": "rogii_sidecar_model_package_cpu.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "pilkwang/rogii-model-package"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "None"
+}

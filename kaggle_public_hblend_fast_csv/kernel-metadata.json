@@ -1,0 +1,16 @@
+{
+  "id": "tejasgluth/rogii-hblend-fast-public-csv",
+  "title": "ROGII hblend fast public csv",
+  "code_file": "rogii_hblend_fast_csv_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [
+    "nina2025/rogii-03"
+  ]
+}

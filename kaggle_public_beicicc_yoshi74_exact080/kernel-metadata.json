@@ -1,0 +1,24 @@
+{
+  "id": "tejasgluth/rogii-beicicc-yoshi74-exact080-cpu-candidate",
+  "title": "rogii-beicicc-yoshi74-exact080-cpu-candidate",
+  "code_file": "rogii-0525-yoshi74-exact080.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "candidate",
+    "cpu",
+    "regression"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": []
+}

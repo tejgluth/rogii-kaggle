@@ -1,0 +1,20 @@
+{
+  "model_keys": [
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "catboost-1",
+    "catboost-2",
+    "catboost-3"
+  ],
+  "postprocess": {
+    "alpha": 1.0,
+    "tau": 75,
+    "w_pf": 0.06,
+    "score": 10.436994508067139
+  },
+  "fallback_tvt": 11545.650390625,
+  "lgb_device": "cpu",
+  "catboost_task_type": "CPU",
+  "n_splits": 5
+}

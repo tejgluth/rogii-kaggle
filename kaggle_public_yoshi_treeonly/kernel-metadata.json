@@ -1,0 +1,23 @@
+{
+  "id": "tejasgluth/rogii-yoshi-treeonly-blend",
+  "title": "ROGII yoshi treeonly blend",
+  "code_file": "yoshi_treeonly.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [
+    "packagemanager/pm-119385725-at-05-19-2026-10-39-14"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "None"
+}

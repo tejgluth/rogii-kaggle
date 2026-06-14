@@ -1,0 +1,23 @@
+{
+  "id": "tejasgluth/rogii-safar-lb-9633",
+  "title": "ROGII safar lb 9633",
+  "code_file": "safar_9633.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

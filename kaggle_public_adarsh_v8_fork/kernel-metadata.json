@@ -1,0 +1,20 @@
+{
+  "id": "tejasgluth/rogii-adarsh-v8-no-cnn-cpu-candidate",
+  "title": "ROGII Adarsh v8 No CNN CPU Candidate",
+  "code_file": "adarsh_v8_no_cnn.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": []
+}

@@ -1,0 +1,13 @@
+{
+  "columns": [
+    "id",
+    "tvt"
+  ],
+  "id_order_matches_sample": true,
+  "rows": 14151,
+  "sha256_submission_csv": "088fab7149bb38eb73ca7a6fcbb1f7d303de46a162c2157c45aa81cabd64d380",
+  "tvt_max": 12239.548352814909,
+  "tvt_mean": 11904.625463077144,
+  "tvt_min": 11592.780755360547,
+  "tvt_std": 278.48940125755473
+}

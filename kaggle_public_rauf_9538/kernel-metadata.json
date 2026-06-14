@@ -1,0 +1,28 @@
+{
+  "id": "tejasgluth/rogii-rauf-9538-cpu-candidate",
+  "title": "rogii-rauf-9538-cpu-candidate",
+  "code_file": "9-538-rogii-wellbore-geologyprediction-training.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "candidate",
+    "catboost",
+    "cpu",
+    "deep learning",
+    "lightgbm",
+    "multiclass classification",
+    "xgboost"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": []
+}

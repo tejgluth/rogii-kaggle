@@ -1,0 +1,54 @@
+[{"stream_name":"stderr","time":11.506105414,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.506166019,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.506171523999999,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.50617518,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.23971211,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":12.239741391999999,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":12.239748592,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":12.239751234,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.643883708,"data":"{'submission_profile': 'projected_ridge_pf_pretrained_lgbm_modelpkg_gated', 'final_candidate': 'projected_ridge_pf_pretrained_lgbm_modelpkg_gated_010', 'active_engine': 'projected ridge/PF + pretrained LGBM + gated model-package correction', 'ridge_weight_w_r': 0.3, 'pf_particles_N_p': 500, 'pf_seeds_S': 128, 'pf_init_spread_sigma_0': 4.5, 'projection_enabled': True, 'projection_degree_d': 4, 'projection_blend_beta': 0.75, 'pretrained_lgbm_projected_ridge_pf_weight_lambda': 0.55, 'pretrained_lgbm_auto_model_search': False, 'pretrained_lgbm_model_root_count': 2, 'modelpkg_gated_max_weight': 0.01, 'modelpkg_gated_scale': 5.0, 'exact_match_recovery': False, 'exact_match_weight_w_xr': None, 'exact_match_tvt_rmse_limit': None, 'exact_match_gr_mad_limit': None, 'exact_match_z_mad_limit': None, 'guarded_overlap_override': False, 'guarded_overlap_rmse_limit': 1.0}\n"}
+,{"stream_name":"stdout","time":15.141111552,"data":"DATA_DIR: /kaggle/input/competitions/rogii-wellbore-geology-prediction\n"}
+,{"stream_name":"stdout","time":15.141141092,"data":"train exists: True\n"}
+,{"stream_name":"stdout","time":15.14114715,"data":"test exists: True\n"}
+,{"stream_name":"stdout","time":15.141151613,"data":"sample_submission exists: True\n"}
+,{"stream_name":"stdout","time":15.141155913,"data":"OUTPUT_DIR: /kaggle/working\n"}
+,{"stream_name":"stdout","time":15.487240928,"data":"Super-stack final solution is skipped for projected_ridge_pf_pretrained_lgbm_modelpkg_gated profile.\n"}
+,{"stream_name":"stderr","time":29.846344946,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":29.846377706,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":29.846385601,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":29.846427523,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":29.846623736,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":29.846635460999998,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":29.846790807,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":29.846803337,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":29.846808309,"data":"Exception encountered at \"In [6]\":\n"}
+,{"stream_name":"stderr","time":29.846823913,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":29.846838944,"data":"ModuleNotFoundError                       Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":29.84684282,"data":"/tmp/ipykernel_23/3953184921.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":29.846846863,"data":"     13     try:\n"}
+,{"stream_name":"stderr","time":29.846851079,"data":"---\u003e 14         from koolbox import Trainer\n"}
+,{"stream_name":"stderr","time":29.846855367,"data":"     15     except ModuleNotFoundError as exc:\n"}
+,{"stream_name":"stderr","time":29.846859337,"data":"\n"}
+,{"stream_name":"stderr","time":29.846863343,"data":"ModuleNotFoundError: No module named 'koolbox'\n"}
+,{"stream_name":"stderr","time":29.846867431,"data":"\n"}
+,{"stream_name":"stderr","time":29.846871118,"data":"The above exception was the direct cause of the following exception:\n"}
+,{"stream_name":"stderr","time":29.84687471,"data":"\n"}
+,{"stream_name":"stderr","time":29.846877821,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":29.846881328,"data":"/tmp/ipykernel_23/3953184921.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":29.846884844,"data":"     14         from koolbox import Trainer\n"}
+,{"stream_name":"stderr","time":29.846888254,"data":"     15     except ModuleNotFoundError as exc:\n"}
+,{"stream_name":"stderr","time":29.84689166,"data":"---\u003e 16         raise RuntimeError('The ridge artifact profiles require the original notebook dependency: koolbox.') from exc\n"}
+,{"stream_name":"stderr","time":29.846895331,"data":"     17     from pathlib import Path\n"}
+,{"stream_name":"stderr","time":29.846898731,"data":"     18     from numba import njit\n"}
+,{"stream_name":"stderr","time":29.846902066,"data":"\n"}
+,{"stream_name":"stderr","time":29.846905242,"data":"RuntimeError: The ridge artifact profiles require the original notebook dependency: koolbox.\n"}
+,{"stream_name":"stderr","time":29.846908779,"data":"\n"}
+,{"stream_name":"stderr","time":32.008604288,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":32.008632892,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":32.202248186,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":32.202270727,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":32.937891949,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":33.246992456,"data":"[NbConvertApp] Writing 357439 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":35.649112691,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":37.974124801,"data":"[NbConvertApp] Writing 2001464 bytes to __results__.html\n"}
+]

@@ -1,0 +1,20 @@
+{
+  "id": "tejasgluth/rogii-improved-slsqp-ensemble-below-9-2",
+  "title": "ROGII improved SLSQP ensemble below 9.2",
+  "code_file": "rogii_dwt_improved_9_2.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [
+    "ravaghi/wellbore-geology-prediction-artifacts",
+    "tejasgluth/rogii-exp116-fast-model-cache"
+  ],
+  "kernel_sources": [
+    "packagemanager/pm-119017611-at-05-13-2026-06-30-43"
+  ]
+}

@@ -1,0 +1,104 @@
+[{"stream_name":"stderr","time":7.635182472,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.635245516,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.635253338,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.635258257,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.417583168,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.417620836,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.417626145,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.417629552,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.859070286,"data":"{'submission_profile': 'projected_ridge_pf_pretrained_lgbm_modelpkg_gated', 'final_candidate': 'projected_ridge_pf_pretrained_lgbm_modelpkg_gated_010', 'active_engine': 'projected ridge/PF + pretrained LGBM + gated model-package correction', 'ridge_weight_w_r': 0.3, 'pf_particles_N_p': 500, 'pf_seeds_S': 128, 'pf_init_spread_sigma_0': 4.5, 'projection_enabled': True, 'projection_degree_d': 4, 'projection_blend_beta': 0.75, 'pretrained_lgbm_projected_ridge_pf_weight_lambda': 0.6, 'pretrained_lgbm_auto_model_search': False, 'pretrained_lgbm_model_root_count': 2, 'modelpkg_gated_max_weight': 0.01, 'modelpkg_gated_scale': 5.0, 'exact_match_recovery': False, 'exact_match_weight_w_xr': None, 'exact_match_tvt_rmse_limit': None, 'exact_match_gr_mad_limit': None, 'exact_match_z_mad_limit': None, 'guarded_overlap_override': False, 'guarded_overlap_rmse_limit': 1.0}\n"}
+,{"stream_name":"stdout","time":10.948389377,"data":"DATA_DIR: /kaggle/input/competitions/rogii-wellbore-geology-prediction\n"}
+,{"stream_name":"stdout","time":10.94842923,"data":"train exists: True\n"}
+,{"stream_name":"stdout","time":10.948437315,"data":"test exists: True\n"}
+,{"stream_name":"stdout","time":10.948442065,"data":"sample_submission exists: True\n"}
+,{"stream_name":"stdout","time":10.948446437,"data":"OUTPUT_DIR: /kaggle/working\n"}
+,{"stream_name":"stdout","time":11.446443994,"data":"Super-stack final solution is skipped for projected_ridge_pf_pretrained_lgbm_modelpkg_gated profile.\n"}
+,{"stream_name":"stdout","time":13.720076749,"data":"install local koolbox wheel: /kaggle/input/notebooks/packagemanager/pm-121894185-at-06-13-2026-05-38-04/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":17.060439259,"data":"Processing /kaggle/input/notebooks/packagemanager/pm-121894185-at-06-13-2026-05-38-04/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":17.077027451,"data":"Installing collected packages: koolbox\n"}
+,{"stream_name":"stdout","time":17.145887156,"data":"Successfully installed koolbox-0.1.3\n"}
+,{"stream_name":"stdout","time":17.273144312,"data":"Processing /kaggle/input/notebooks/packagemanager/pm-121894185-at-06-13-2026-05-38-04/koolbox-0.1.3-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":17.273170001,"data":"Installing collected packages: koolbox\n"}
+,{"stream_name":"stdout","time":17.273174872,"data":"Successfully installed koolbox-0.1.3\n"}
+,{"stream_name":"stderr","time":282.601646345,"data":"[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":282.60169893,"data":"\n"}
+,{"stream_name":"stderr","time":282.60170548,"data":"[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":292.030725397,"data":"[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    9.7s finished\n"}
+,{"stream_name":"stderr","time":292.030869834,"data":"\n"}
+,{"stream_name":"stderr","time":292.030879784,"data":"[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    9.7s finished\n"}
+,{"stream_name":"stdout","time":293.668345277,"data":"Loading lightgbm-1 from disk...\n"}
+,{"stream_name":"stdout","time":295.590208609,"data":"Loaded lightgbm-1 with overall RMSE: 10.7668\n"}
+,{"stream_name":"stdout","time":295.590252332,"data":"\n"}
+,{"stream_name":"stdout","time":298.511314331,"data":"Loading lightgbm-2 from disk...\n"}
+,{"stream_name":"stdout","time":300.696080366,"data":"Loaded lightgbm-2 with overall RMSE: 10.4852\n"}
+,{"stream_name":"stdout","time":300.696124151,"data":"\n"}
+,{"stream_name":"stdout","time":311.824903465,"data":"Loading lightgbm-3 from disk...\n"}
+,{"stream_name":"stdout","time":313.29136737,"data":"Loaded lightgbm-3 with overall RMSE: 10.4733\n"}
+,{"stream_name":"stdout","time":313.291400387,"data":"\n"}
+,{"stream_name":"stdout","time":319.423693261,"data":"Loading catboost-1 from disk...\n"}
+,{"stream_name":"stdout","time":322.869436777,"data":"Loaded catboost-1 with overall RMSE: 10.5750\n"}
+,{"stream_name":"stdout","time":322.869473709,"data":"\n"}
+,{"stream_name":"stdout","time":322.869478767,"data":"Loading catboost-2 from disk...\n"}
+,{"stream_name":"stdout","time":326.369498058,"data":"Loaded catboost-2 with overall RMSE: 10.5550\n"}
+,{"stream_name":"stdout","time":326.369544593,"data":"\n"}
+,{"stream_name":"stdout","time":328.430782774,"data":"Training Ridge\n"}
+,{"stream_name":"stdout","time":328.430821547,"data":"\n"}
+,{"stream_name":"stdout","time":329.896333652,"data":"--- Fold 0 - root_mean_squared_error: 9.7208 - Time: 0.62 s\n"}
+,{"stream_name":"stdout","time":330.750822737,"data":"--- Fold 1 - root_mean_squared_error: 10.7276 - Time: 0.62 s\n"}
+,{"stream_name":"stdout","time":331.63397039,"data":"--- Fold 2 - root_mean_squared_error: 9.1033 - Time: 0.64 s\n"}
+,{"stream_name":"stdout","time":332.416147662,"data":"--- Fold 3 - root_mean_squared_error: 11.6101 - Time: 0.54 s\n"}
+,{"stream_name":"stdout","time":333.340911384,"data":"--- Fold 4 - root_mean_squared_error: 10.8230 - Time: 0.70 s\n"}
+,{"stream_name":"stdout","time":333.340973151,"data":"\n"}
+,{"stream_name":"stdout","time":333.340981592,"data":"------ Overall root_mean_squared_error: 10.4344 - Mean root_mean_squared_error: 10.3970 ± 0.8824 - Time: 6.75 s\n"}
+,{"stream_name":"stdout","time":333.589929598,"data":"\n"}
+,{"stream_name":"stdout","time":333.589991776,"data":"Processing 1/3: 000d7d20...\n"}
+,{"stream_name":"stdout","time":333.589999787,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":381.019890899,"data":"  PF lik-ensemble OK particles=500 seeds=128 init_spread=4.50 scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":381.01995992,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":381.019971083,"data":"  Selector code=0 variant=pf_scale_5_hold_0.2 n_eval=3836 z_span=100.020\n"}
+,{"stream_name":"stdout","time":381.313559972,"data":"  Added 3836 rows\n"}
+,{"stream_name":"stdout","time":381.313597806,"data":"\n"}
+,{"stream_name":"stdout","time":381.313604747,"data":"Processing 2/3: 00bbac68...\n"}
+,{"stream_name":"stdout","time":381.313610676,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":455.148399571,"data":"  PF lik-ensemble OK particles=500 seeds=128 init_spread=4.50 scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":455.148456613,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":455.148463942,"data":"  Selector code=3 variant=pf_scale_5_hold_0.15 n_eval=6014 z_span=176.490\n"}
+,{"stream_name":"stdout","time":455.663600101,"data":"  Added 6014 rows\n"}
+,{"stream_name":"stdout","time":455.663642343,"data":"\n"}
+,{"stream_name":"stdout","time":455.663648549,"data":"Processing 3/3: 00e12e8b...\n"}
+,{"stream_name":"stdout","time":455.66365357,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":508.519519407,"data":"  PF lik-ensemble OK particles=500 seeds=128 init_spread=4.50 scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":508.519568338,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":508.51957662,"data":"  Selector code=2 variant=pf_scale_12_beam_0.2_hold_0.15 n_eval=4301 z_span=144.810\n"}
+,{"stream_name":"stdout","time":508.876699123,"data":"  Added 4301 rows\n"}
+,{"stream_name":"stdout","time":508.998835844,"data":"Saved /kaggle/working/submission.csv using projected_ridge_pf_projection_d4_b075: w_r=0.300, heuristic=0.700, pf_particles=500, pf_seeds=128, init_spread=4.50, projection=True, degree=4, projection_blend=0.75\n"}
+,{"stream_name":"stdout","time":509.130980751,"data":"saved projected_ridge_pf_projection_submission.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":509.212988291,"data":"DATA: /kaggle/input/competitions/rogii-wellbore-geology-prediction | OUT: /kaggle/working | cores: 4 | FAST: False\n"}
+,{"stream_name":"stdout","time":515.768309591,"data":"trackers compiled.\n"}
+,{"stream_name":"stdout","time":516.509186713,"data":"train wells: 773 | test wells: 3\n"}
+,{"stream_name":"stdout","time":533.485170885,"data":"building lik-PF + features (test)…\n"}
+,{"stream_name":"stdout","time":622.992781504,"data":"INFERENCE mode — loading models from /kaggle/input/datasets/fleongg/rogii-claude-models-pub\n"}
+,{"stream_name":"stdout","time":624.994801077,"data":"submission.csv written (14151 rows) in 108s\n"}
+,{"stream_name":"stdout","time":625.322312825,"data":"                                                   file  w_projected_ridge_pf  w_pretrained_lgbm  selected_for_submission_csv  rows  mean_tvt  std_tvt  rmse_vs_projected_ridge_pf  p95_abs_vs_projected_ridge_pf\n"}
+,{"stream_name":"stdout","time":625.322362185,"data":"submission_projected_ridge_pf_pretrained_lgbm_w0.50.csv                   0.5                0.5                        False 14151     11904   278.33                      1.5097                         3.1057\n"}
+,{"stream_name":"stdout","time":625.322370531,"data":"submission_projected_ridge_pf_pretrained_lgbm_w0.52.csv                  0.52               0.48                        False 14151     11904   278.34                      1.4494                         2.9815\n"}
+,{"stream_name":"stdout","time":625.322377464,"data":"submission_projected_ridge_pf_pretrained_lgbm_w0.55.csv                  0.55               0.45                        False 14151     11904   278.36                      1.3588                         2.7951\n"}
+,{"stream_name":"stdout","time":625.322384207,"data":"submission_projected_ridge_pf_pretrained_lgbm_w0.58.csv                  0.58               0.42                        False 14151     11904   278.37                      1.2682                         2.6088\n"}
+,{"stream_name":"stdout","time":625.322390232,"data":"submission_projected_ridge_pf_pretrained_lgbm_w0.60.csv                   0.6                0.4                         True 14151     11904   278.38                      1.2078                         2.4845\n"}
+,{"stream_name":"stdout","time":625.325245341,"data":"                                        file  rows  tvt_mean  tvt_std                                                           sha256\n"}
+,{"stream_name":"stdout","time":625.325291336,"data":"projected_ridge_pf_projection_submission.csv 14151     11904   278.59 c7c8125b96e6b512eeeb1cb9464c160663c8adee7b9c4e1f7ca145d607ae8032\n"}
+,{"stream_name":"stdout","time":625.3252977,"data":"   pretrained_lgbm_pretrained_submission.csv 14151     11905   278.08 e2f02639f05d0d842a8081af51bd323b8770012cf7080f52a1448156e9453569\n"}
+,{"stream_name":"stdout","time":625.325302796,"data":"                              submission.csv 14151     11904   278.38 a36aa494963a854774afce6af95682c85e50b9dfcb2c38f7b5ea07fc27a3cecc\n"}
+,{"stream_name":"stdout","time":625.328291068,"data":"wrote final submission.csv from submission_projected_ridge_pf_pretrained_lgbm_w0.60.csv (14151, 2)\n"}
+,{"stream_name":"stdout","time":674.072455281,"data":"modelpkg p95 diff 27.496 \u003e 25.000\n"}
+,{"stream_name":"stdout","time":674.183356575,"data":"Exact-match recovery skipped.\n"}
+,{"stream_name":"stdout","time":674.296612114,"data":"Guarded overlap override skipped.\n"}
+,{"stream_name":"stderr","time":680.641700443,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":680.64174957,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":680.905035455,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":680.905110904,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":681.797883982,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":682.261284716,"data":"[NbConvertApp] Writing 383207 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":685.558911388,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":688.518880776,"data":"[NbConvertApp] Writing 2016591 bytes to __results__.html\n"}
+]

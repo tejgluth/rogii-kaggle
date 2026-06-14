@@ -1,0 +1,18 @@
+{
+  "id": "tejasgluth/rogii-torr-gbdt-stacking-9637-cpu",
+  "title": "ROGII Torr GBDT Stacking 9637 CPU",
+  "code_file": "torr_gbdt_stacking_9637.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": []
+}

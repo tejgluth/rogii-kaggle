@@ -1,0 +1,15 @@
+{
+  "id": "tejasgluth/rogii-exp116-honest-residual-no-artifacts",
+  "title": "ROGII exp116 honest residual no artifacts",
+  "code_file": "exp116_honest_residual_no_artifacts_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": []
+}

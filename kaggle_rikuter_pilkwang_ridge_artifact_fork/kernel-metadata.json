@@ -1,0 +1,24 @@
+{
+  "id": "tejasgluth/rogii-rikuter-pilkwang-ridge-artifact-fork",
+  "title": "ROGII Rikuter Pilkwang ridge artifact fork",
+  "code_file": "rogii-pilkwang-ridge-artifact-rikuter.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "phongnguyn23021656/koolbox-offline",
+    "pilkwang/rogii-model-package",
+    "fleongg/rogii-claude-models-pub",
+    "ravaghi/wellbore-geology-prediction-artifacts"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "None"
+}

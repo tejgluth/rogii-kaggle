@@ -1,0 +1,189 @@
+{
+  "created_unix": 1781374468.5587494,
+  "files": {
+    "blend_report": {
+      "columns": [
+        "file",
+        "w_sp45",
+        "w_fleongg",
+        "rows",
+        "mean_tvt",
+        "std_tvt",
+        "rmse_vs_sp45",
+        "p95_abs_vs_sp45"
+      ],
+      "exists": true,
+      "path": "/kaggle/working/sp45_fleongg_blend_report.csv",
+      "rows": 1,
+      "sha256": "251827448389f27f40277848bf1fa283fa0aef5305a366461ff1d197baf8e5af"
+    },
+    "final_submission": {
+      "columns": [
+        "id",
+        "tvt"
+      ],
+      "exists": true,
+      "head": [
+        {
+          "id": "000d7d20_1442",
+          "tvt": 11751.574538464454
+        },
+        {
+          "id": "000d7d20_1443",
+          "tvt": 11751.571504598654
+        },
+        {
+          "id": "000d7d20_1444",
+          "tvt": 11751.568696269906
+        },
+        {
+          "id": "000d7d20_1445",
+          "tvt": 11751.566101644015
+        },
+        {
+          "id": "000d7d20_1446",
+          "tvt": 11751.56370888681
+        }
+      ],
+      "max_tvt": 12239.19673462761,
+      "mean_tvt": 11904.476497316035,
+      "min_tvt": 11592.09657544044,
+      "path": "/kaggle/working/submission.csv",
+      "q01_tvt": 11593.054095113017,
+      "q50_tvt": 11746.53155816242,
+      "q99_tvt": 12237.704656111116,
+      "rows": 14151,
+      "sha256": "208cd986f51d8bb8b65fbcc1bb1250f66a740ab5305e2a5544c0c275ef7035c0",
+      "std_tvt": 278.68408990259894
+    },
+    "fleongg_pretrained_submission": {
+      "columns": [
+        "id",
+        "tvt"
+      ],
+      "exists": true,
+      "head": [
+        {
+          "id": "000d7d20_1442",
+          "tvt": 11747.412702478883
+        },
+        {
+          "id": "000d7d20_1443",
+          "tvt": 11747.418838121152
+        },
+        {
+          "id": "000d7d20_1444",
+          "tvt": 11747.425370268347
+        },
+        {
+          "id": "000d7d20_1445",
+          "tvt": 11747.432282329317
+        },
+        {
+          "id": "000d7d20_1446",
+          "tvt": 11747.439557712903
+        }
+      ],
+      "max_tvt": 12239.097026237348,
+      "mean_tvt": 11904.76320099398,
+      "min_tvt": 11596.373909034086,
+      "path": "/kaggle/working/fleongg_pretrained_submission.csv",
+      "q01_tvt": 11597.014645180294,
+      "q50_tvt": 11747.785824594865,
+      "q99_tvt": 12236.916182320943,
+      "rows": 14151,
+      "sha256": "e1feb764d781f7a7c05d95416a3f0e285080c55113a17563a8af752fc39d6ada",
+      "std_tvt": 278.20343867756094
+    },
+    "sp45_projection_submission": {
+      "columns": [
+        "id",
+        "tvt"
+      ],
+      "exists": true,
+      "head": [
+        {
+          "id": "000d7d20_1442",
+          "tvt": 11754.9796769981
+        },
+        {
+          "id": "000d7d20_1443",
+          "tvt": 11754.969140807518
+        },
+        {
+          "id": "000d7d20_1444",
+          "tvt": 11754.95869027118
+        },
+        {
+          "id": "000d7d20_1445",
+          "tvt": 11754.948317446955
+        },
+        {
+          "id": "000d7d20_1446",
+          "tvt": 11754.938014392734
+        }
+      ],
+      "max_tvt": 12239.29516389966,
+      "mean_tvt": 11904.241921579536,
+      "min_tvt": 11588.533540577762,
+      "path": "/kaggle/working/sp45_projection_submission.csv",
+      "q01_tvt": 11589.813645057977,
+      "q50_tvt": 11745.496503866229,
+      "q99_tvt": 12238.820969628821,
+      "rows": 14151,
+      "sha256": "b3c769274e2e1d8748df14b9698a47364ee336c67007ec524271072302ce175e",
+      "std_tvt": 279.0831702623811
+    }
+  },
+  "final_blend": {
+    "w_fleongg": 0.45,
+    "w_sp45": 0.55
+  },
+  "fleongg_model_dataset": "fleongg/rogii-claude-models-pub",
+  "fleongg_model_dirs": [
+    {
+      "dir": "/kaggle/input/datasets/fleongg/rogii-claude-models-pub",
+      "features_json": "/kaggle/input/datasets/fleongg/rogii-claude-models-pub/features.json",
+      "features_sha256": "ea9042f88cb3d8716b83e40c5c5ecb39f8bc8fcfeb52edb40d1871cd99496308",
+      "lgb_count": 3,
+      "lgb_files": [
+        "lgb0.pkl",
+        "lgb1.pkl",
+        "lgb2.pkl"
+      ],
+      "lgb_sha256": {
+        "lgb0.pkl": "a6451b3c42aeace6778e952b088287654946dca5412b818990d3f6b397e501e1",
+        "lgb1.pkl": "4d61ab162af864bd3cfe37bde4421299746f28147faa3239e1ad14f15453f547",
+        "lgb2.pkl": "1ee24121ecf455d904f3433bba49857d076fc33ca0b6b7a71ff9d538b3b8acf5"
+      }
+    }
+  ],
+  "koolbox_load_report": {
+    "candidates": [
+      "/kaggle/input/datasets/phongnguyn23021656/koolbox-offline/koolbox-0.1.3-py3-none-any.whl"
+    ],
+    "error": null,
+    "mode": "native_discovered",
+    "path": "/usr/local/lib/python3.12/dist-packages/koolbox/__init__.py"
+  },
+  "notebook": "45_rogii_sp45_fleongg_7519_per_well_seeded_sp45",
+  "reference_source": "references/rogii_sp45_fleongg_blend_v2-7.519",
+  "require_fleongg_pretrained": true,
+  "stability_controls": {
+    "CFG_n_jobs": 1,
+    "CFG_seed": 20260612,
+    "NCPU": 1,
+    "env_threads": {
+      "LIGHTGBM_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "force_single_thread": true,
+    "num_threads": 1,
+    "seed": 20260612,
+    "sp45_pf_seed_mode": "per_well_sha256_numba_pf"
+  }
+}

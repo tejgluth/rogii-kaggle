@@ -1,0 +1,25 @@
+[{"stream_name":"stdout","time":11.644989718,"data":"Loading predictions from training kernel...\n"}
+,{"stream_name":"stderr","time":11.698945763,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":11.699032888,"data":"  File \"/kaggle/src/script.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":11.699037274,"data":"    train_meta = pd.read_parquet(TRAIN_DIR / 'train_meta.parquet')\n"}
+,{"stream_name":"stderr","time":11.69929304,"data":"                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.699303288,"data":"  File \"/usr/local/lib/python3.12/dist-packages/pandas/io/parquet.py\", line 669, in read_parquet\n"}
+,{"stream_name":"stderr","time":11.701129628,"data":"    return impl.read(\n"}
+,{"stream_name":"stderr","time":11.70115318,"data":"           ^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.701156545,"data":"  File \"/usr/local/lib/python3.12/dist-packages/pandas/io/parquet.py\", line 258, in read\n"}
+,{"stream_name":"stderr","time":11.701307208,"data":"    path_or_handle, handles, filesystem = _get_path_or_handle(\n"}
+,{"stream_name":"stderr","time":11.701481357,"data":"                                          ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.701505078,"data":"  File \"/usr/local/lib/python3.12/dist-packages/pandas/io/parquet.py\", line 141, in _get_path_or_handle\n"}
+,{"stream_name":"stderr","time":11.701610979,"data":"    handles = get_handle(\n"}
+,{"stream_name":"stderr","time":11.701635787,"data":"              ^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.701648525,"data":"  File \"/usr/local/lib/python3.12/dist-packages/pandas/io/common.py\", line 882, in get_handle\n"}
+,{"stream_name":"stderr","time":11.703347335,"data":"    handle = open(handle, ioargs.mode)\n"}
+,{"stream_name":"stderr","time":11.703530301,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.703551274,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/notebooks/hongweiluan/rogii-wellbore-v6-gpu-script/train_meta.parquet'\n"}
+,{"stream_name":"stderr","time":14.567157762,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":14.56719736,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":14.893467507,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":14.893502319,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":15.880288735,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":17.538894982,"data":"[NbConvertApp] Writing 296965 bytes to __results__.html\n"}
+]

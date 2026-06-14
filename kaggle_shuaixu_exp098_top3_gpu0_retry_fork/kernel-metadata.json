@@ -1,0 +1,21 @@
+{
+  "id": "tejasgluth/rogii-shuaixu-exp098-top3-gpu0-retry-fork",
+  "title": "rogii-shuaixu-exp098-top3-gpu0-retry-fork",
+  "code_file": "rogii-exp-098-public-top3-gpu0-retry.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "tejasgluth/rogii-v10-dwt-sidecar-blend-grid",
+  "title": "ROGII v10 DWT sidecar blend grid",
+  "code_file": "rogii_v10_dwt_sidecar_blend.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "thbdh5765/rogii-v10-fresh-artifacts",
+    "needless090/rogii-tabicl-mirror",
+    "ravaghi/wellbore-geology-prediction-artifacts",
+    "pilkwang/rogii-model-package"
+  ],
+  "kernel_sources": [
+    "packagemanager/pm-119017611-at-05-13-2026-06-30-43"
+  ],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

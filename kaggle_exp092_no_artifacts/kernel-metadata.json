@@ -1,0 +1,15 @@
+{
+  "id": "tejasgluth/rogii-exp092-no-artifacts-submission",
+  "title": "ROGII exp092 no artifacts submission",
+  "code_file": "exp092_no_artifacts_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": []
+}

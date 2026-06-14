@@ -1,0 +1,29 @@
+[{"stream_name":"stderr","time":13.241069794,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":13.241154715,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":13.241163605,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":13.241168936,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":14.195669787,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":14.195712579,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":14.195719607,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":14.195724661,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":19.241918824,"data":"\r[Predict] Wells:   0%|          | 0/3 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":31.3363612,"data":"\r[Predict] Wells:   0%|          | 0/3 [00:00\u003c?, ?it/s]\r[Predict] Wells:  33%|███▎      | 1/3 [00:12\u003c00:24, 12.09s/it]\n"}
+,{"stream_name":"stdout","time":31.536507277,"data":"000d7d20: rows=5278 hidden=3836 TVT=[11236.02, 11756.12] sigma=8.7 q=0.86\n"}
+,{"stream_name":"stderr","time":49.596886201,"data":"\r[Predict] Wells:  33%|███▎      | 1/3 [00:12\u003c00:24, 12.09s/it]\r[Predict] Wells:  67%|██████▋   | 2/3 [00:30\u003c00:15, 15.72s/it]\n"}
+,{"stream_name":"stdout","time":49.793418096,"data":"00bbac68: rows=7559 hidden=6014 TVT=[11406.63, 12241.36] sigma=8.5 q=0.89\n"}
+,{"stream_name":"stderr","time":62.953653356,"data":"\r[Predict] Wells:  67%|██████▋   | 2/3 [00:30\u003c00:15, 15.72s/it]\r[Predict] Wells: 100%|██████████| 3/3 [00:43\u003c00:00, 14.64s/it]\n"}
+,{"stream_name":"stderr","time":62.985962065,"data":"\r[Predict] Wells: 100%|██████████| 3/3 [00:43\u003c00:00, 14.64s/it]\r[Predict] Wells: 100%|██████████| 3/3 [00:43\u003c00:00, 14.57s/it]\n"}
+,{"stream_name":"stdout","time":63.19060763,"data":"00e12e8b: rows=6384 hidden=4301 TVT=[10606.18, 11616.20] sigma=8.0 q=0.96\n"}
+,{"stream_name":"stderr","time":63.195290779,"data":"\r[Predict] Wells: 100%|██████████| 3/3 [00:43\u003c00:00, 14.57s/it]\n"}
+,{"stream_name":"stderr","time":63.195345939,"data":"\n"}
+,{"stream_name":"stderr","time":63.195352997,"data":"\n"}
+,{"stream_name":"stdout","time":63.252715582,"data":"Submission saved: /kaggle/working/submission.csv (14151 rows)\n"}
+,{"stream_name":"stderr","time":66.972518507,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":66.972566687,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":67.21652149,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":67.216555016,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":68.18737732,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":68.577442987,"data":"[NbConvertApp] Writing 44612 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":71.880950729,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":73.1281942,"data":"[NbConvertApp] Writing 426883 bytes to __results__.html\n"}
+]

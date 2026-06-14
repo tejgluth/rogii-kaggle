@@ -1,0 +1,18 @@
+{
+  "output_path": "submission.csv",
+  "output_size_bytes": 338371,
+  "submission_shape": [
+    14151,
+    2
+  ],
+  "sample_shape": [
+    14151,
+    2
+  ],
+  "ids_match_sample_order": true,
+  "finite_tvt": true,
+  "missing_tvt": 0,
+  "prediction_min": 11591.031,
+  "prediction_max": 12236.717,
+  "prediction_mean": 11905.606760617626
+}

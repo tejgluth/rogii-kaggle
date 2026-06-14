@@ -1,0 +1,52 @@
+[{"stream_name":"stdout","time":5.983668515,"data":"DATA: /kaggle/input/competitions/rogii-wellbore-geology-prediction | OUT: /kaggle/working | cores: 4 | seed: 42\n"}
+,{"stream_name":"stdout","time":6.045536009,"data":"Compiling Numba JIT...\n"}
+,{"stream_name":"stdout","time":17.02547501,"data":"Numba JIT ready OK\n"}
+,{"stream_name":"stdout","time":17.075111845,"data":"train wells: 773 | test wells: 3\n"}
+,{"stream_name":"stdout","time":45.32960703,"data":"Imputers built OK\n"}
+,{"stream_name":"stdout","time":45.349802786,"data":"\n"}
+,{"stream_name":"stdout","time":45.349837905,"data":"=== Building SP45 branch ===\n"}
+,{"stream_name":"stdout","time":45.350805231,"data":"Processing 1/3: 000d7d20...\n"}
+,{"stream_name":"stdout","time":45.395400006,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":277.048854994,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":277.162922866,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":277.163272872,"data":"  Selector code=0 variant=pf_scale_5_hold_0.2 n_eval=3836 z_span=100.020\n"}
+,{"stream_name":"stdout","time":277.403864542,"data":"  Added 3836 rows\n"}
+,{"stream_name":"stdout","time":277.403915272,"data":"Processing 2/3: 00bbac68...\n"}
+,{"stream_name":"stdout","time":277.464351297,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":646.949700129,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":647.129536661,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":647.129924165,"data":"  Selector code=3 variant=pf_scale_5_hold_0.15 n_eval=6014 z_span=176.490\n"}
+,{"stream_name":"stdout","time":647.505015246,"data":"  Added 6014 rows\n"}
+,{"stream_name":"stdout","time":647.505077282,"data":"Processing 3/3: 00e12e8b...\n"}
+,{"stream_name":"stdout","time":647.554427387,"data":"  Physical model OK\n"}
+,{"stream_name":"stdout","time":908.22487773,"data":"  PF 128-seed lik-ensemble OK scales=(3.0, 5.0, 8.0, 12.0)\n"}
+,{"stream_name":"stdout","time":908.335670614,"data":"  Beam 14-config ensemble OK\n"}
+,{"stream_name":"stdout","time":908.335939554,"data":"  Selector code=2 variant=pf_scale_12_beam_0.2_hold_0.15 n_eval=4301 z_span=144.810\n"}
+,{"stream_name":"stdout","time":908.603723473,"data":"  Added 4301 rows\n"}
+,{"stream_name":"stdout","time":908.677204563,"data":"SP45 branch done: 14151 rows\n"}
+,{"stream_name":"stdout","time":908.677240719,"data":"\n"}
+,{"stream_name":"stdout","time":908.677248483,"data":"=== Building fleongg branch ===\n"}
+,{"stream_name":"stdout","time":910.640565261,"data":"Loading fleongg models from /kaggle/input/datasets/fleongg/rogii-claude-models-pub\n"}
+,{"stream_name":"stdout","time":915.516368164,"data":"Loaded 3 fleongg models\n"}
+,{"stream_name":"stdout","time":1069.856421315,"data":"fleongg branch done: 14151 rows\n"}
+,{"stream_name":"stdout","time":1069.856468261,"data":"\n"}
+,{"stream_name":"stdout","time":1069.85647603,"data":"=== Blending 0.55 * SP45 + 0.45 * fleongg ===\n"}
+,{"stream_name":"stdout","time":1069.933936226,"data":"\n"}
+,{"stream_name":"stdout","time":1069.933968415,"data":"Final submission: 14151 rows\n"}
+,{"stream_name":"stdout","time":1069.939595874,"data":"           id          tvt\n"}
+,{"stream_name":"stdout","time":1069.939639811,"data":"000d7d20_1442 11745.382812\n"}
+,{"stream_name":"stdout","time":1069.939647427,"data":"000d7d20_1443 11745.313477\n"}
+,{"stream_name":"stdout","time":1069.939653639,"data":"000d7d20_1444 11745.239258\n"}
+,{"stream_name":"stdout","time":1069.939659819,"data":"000d7d20_1445 11745.171875\n"}
+,{"stream_name":"stdout","time":1069.939710006,"data":"000d7d20_1446 11745.099609\n"}
+,{"stream_name":"stdout","time":1069.939713601,"data":"000d7d20_1447 11745.035156\n"}
+,{"stream_name":"stdout","time":1069.939716707,"data":"000d7d20_1448 11744.963867\n"}
+,{"stream_name":"stdout","time":1069.939719657,"data":"000d7d20_1449 11744.901367\n"}
+,{"stream_name":"stdout","time":1069.939722651,"data":"Wrote /kaggle/working/submission.csv\n"}
+,{"stream_name":"stderr","time":1073.401959472,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1073.402129633,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1073.694547378,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1073.694580057,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1074.505659697,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1076.383562269,"data":"[NbConvertApp] Writing 556219 bytes to __results__.html\n"}
+]

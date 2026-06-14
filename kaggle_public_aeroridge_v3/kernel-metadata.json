@@ -1,0 +1,25 @@
+{
+  "id": "tejasgluth/rogii-aeroridge-v3-public-fork",
+  "title": "ROGII aeroridge v3 public fork",
+  "code_file": "aeroridge_v3.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "nina2025/rogii-03",
+    "thbdh5765/rogii-v10-fresh-artifacts",
+    "needless090/rogii-tabicl-mirror"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rogii-wellbore-geology-prediction"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

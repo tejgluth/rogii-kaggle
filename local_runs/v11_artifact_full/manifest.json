@@ -1,0 +1,38 @@
+{
+  "version": "v11_ravaghi_style_fresh_artifacts",
+  "goal": "public_score_9.4_range",
+  "created_at": "2026-05-12 16:14:15",
+  "features": "features.json",
+  "inference_config": "inference_config.json",
+  "climber_history": "climber_history.csv",
+  "scores": "scores.json",
+  "model_keys": [
+    "lightgbm-1",
+    "lightgbm-2",
+    "lightgbm-3",
+    "catboost-1",
+    "catboost-2",
+    "catboost-3"
+  ],
+  "models": {
+    "lightgbm-1": "models/lightgbm-1/models.pkl",
+    "lightgbm-2": "models/lightgbm-2/models.pkl",
+    "lightgbm-3": "models/lightgbm-3/models.pkl",
+    "catboost-1": "models/catboost-1/models.pkl",
+    "catboost-2": "models/catboost-2/models.pkl",
+    "catboost-3": "models/catboost-3/models.pkl"
+  },
+  "data": {
+    "train_df_shape": [
+      3783989,
+      198
+    ],
+    "test_df_shape": [
+      14151,
+      197
+    ],
+    "n_features": 195,
+    "saved_train_features": false
+  },
+  "submission": "Rogi\\v11\\local_full_artifact_det\\submission.csv"
+}
